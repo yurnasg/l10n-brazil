@@ -6,17 +6,30 @@
         <field name="inherit_id" ref="hr.view_employee_form" />
         <field name="priority">999</field>
         <field name="arch" type="xml">
+            <div name="button_box" position="after">
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="not needs_review"
+                    groups="hr.group_hr_user"
+                >
+                    <strong>Review needed:</strong>
+                    <field name="review_reasons" nolabel="1" class="d-block" />
+                </div>
+            </div>
             <field name="place_of_birth" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">is_born_in_brazil</attribute>
             </field>
             <field name="place_of_birth" position="after">
                 <field
                     name="birth_city_id"
+                    invisible="not is_born_in_brazil"
                     options="{'no_create': True, 'no_open': True}"
                 />
             </field>
             <xpath expr="//field[@name='identification_id']" position="replace">
-                <field name="cpf" />
+                <field name="civil_name" />
+                <field name="vat" />
             </xpath>
             <xpath expr="//page[@name='personal_information']" position="inside">
                 <group name="characteristics" string="Characteristics">
@@ -24,6 +37,10 @@
                         name="ethnicity"
                         options="{'no_create': True, 'no_open': True}"
                     />
+                </group>
+                <group name="parents_name" string="Filiation / Parents">
+                    <field name="father_name" />
+                    <field name="mother_name" />
                 </group>
             </xpath>
             <xpath expr="//field[@name='coach_id']" position="after">
@@ -33,74 +50,172 @@
                 <field name="alternate_phone" />
                 <field name="alternate_email" />
             </xpath>
+            <xpath
+                expr="//page[@name='personal_information']//field[@name='private_street']"
+                position="attributes"
+            >
+                <attribute name="invisible">private_address_is_br</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='personal_information']//field[@name='private_street']"
+                position="after"
+            >
+                <field
+                    name="private_street_name"
+                    placeholder="Street name..."
+                    class="o_address_street"
+                    invisible="not private_address_is_br"
+                />
+                <field
+                    name="private_street_number"
+                    placeholder="Number"
+                    class="o_address_street"
+                    invisible="not private_address_is_br"
+                />
+            </xpath>
+            <xpath
+                expr="//page[@name='personal_information']//field[@name='private_street2']"
+                position="after"
+            >
+                <field
+                    name="private_district"
+                    placeholder="District"
+                    class="o_address_street"
+                    invisible="not private_address_is_br"
+                />
+            </xpath>
+            <xpath
+                expr="//page[@name='personal_information']//field[@name='private_city']"
+                position="attributes"
+            >
+                <attribute name="invisible">private_address_is_br</attribute>
+            </xpath>
+            <xpath
+                expr="//page[@name='personal_information']//field[@name='private_city']"
+                position="after"
+            >
+                <field
+                    name="private_city_id"
+                    placeholder="City"
+                    class="o_address_city"
+                    invisible="not private_address_is_br"
+                    options="{'no_create': True, 'no_open': True}"
+                />
+            </xpath>
             <field name="work_contact_id" position="attributes">
                 <attribute name="domain">[('is_company','=',False)]</attribute>
                 <attribute name="required">1</attribute>
             </field>
+            <xpath
+                expr="//page[@name='hr_settings']//field[@name='employee_type']"
+                position="after"
+            >
+                <field
+                    name="worker_category_id"
+                    options="{'no_create': True, 'no_open': True}"
+                />
+                <field
+                    name="legacy_seconded_review"
+                    invisible="not legacy_seconded_review"
+                />
+                <field
+                    name="contractor_partner_id"
+                    invisible="employee_type != 'contractor'"
+                    required="employee_type == 'contractor'"
+                />
+            </xpath>
             <xpath expr="//page[@name='public']" position="after">
                 <page
                     name="documents"
                     string="Documents"
                     groups="hr.group_hr_manager,hr.group_hr_user"
                 >
-                    <form string="Documents" version="7.0">
-                        <group>
-                            <group name="ctps" string="CTPS">
-                                <field name="ctps" string="Number" />
-                                <field name="ctps_series" />
-                                <field name="ctps_date" />
-                                <field
-                                    name="ctps_uf_id"
-                                    groups="hr.group_hr_user"
-                                    domain="[('country_id','=',country_id)]"
-                                />
-                            </group>
-                            <group name="civil_certificate" string="Civil certificate">
-                                <field name="civil_certificate_type_id" />
-                            </group>
-                            <group name="identidade" string="Identidade">
-                                <!-- <field name="identity_type_id"/> -->
-                                <field name="l10n_br_rg_code" string="Number" />
-                                <field name="organ_exp" />
-                                <field name="rg_emission" />
-                                <field name="identity_validity" />
-                                <field
-                                    name="identity_uf_id"
-                                    groups="hr.group_hr_user"
-                                    domain="[('country_id','=',country_id)]"
-                                />
-                                <field
-                                    name="identity_city_id"
-                                    groups="hr.group_hr_user"
-                                />
-                            </group>
-                            <group name="reservist" string="Reservist">
-                                <field name="creservist" string="Number" />
-                                <field name="cresv_categ" />
-                            </group>
-                            <group name="vote_registration" string="Voter Registration">
-                                <field name="voter_title" string="Number" />
-                                <field name="voter_zone" />
-                                <field name="voter_section" />
-                            </group>
-                            <group name="diver_license" string="Driver License">
-                                <field name="driver_license" string="Number" />
-                                <field name="driver_categ" required="driver_license" />
-                                <field
-                                    name="expiration_date"
-                                    required="driver_license"
-                                />
-                            </group>
-                            <group name="pis_pasep" string="PIS/PASEP">
-                                <field name="pis_pasep" placeholder="XXX.XXXXX.XX-X" />
-                                <field name="pis_pasep_date" />
-                            </group>
-                            <group name="parents_name" string="Parents names">
-                                <field name="father_name" />
-                                <field name="mother_name" />
-                            </group>
+                    <group>
+                        <group name="ctps" string="Work Card (CTPS)">
+                            <field name="ctps" string="Number" />
+                            <field name="ctps_series" />
+                            <field name="ctps_date" />
+                            <field name="ctps_uf_id" groups="hr.group_hr_user" />
                         </group>
-                    </form>
+                        <group name="civil_certificate" string="Civil certificate">
+                            <field name="civil_certificate_type_id" />
+                        </group>
+                        <group name="identidade" string="Civil Identity (CIN / RG)">
+                            <field name="identity_doc_type" />
+                            <field
+                                name="l10n_br_rg_code"
+                                string="Document Number"
+                                readonly="l10n_br_identity_is_cpf_based"
+                            />
+                            <field name="organ_exp" string="Issuing Agency" />
+                            <field name="rg_emission" string="Emission Date" />
+                            <field name="identity_validity" string="Expiration Date" />
+                            <field
+                                name="identity_uf_id"
+                                groups="hr.group_hr_user"
+                                string="Expedition State"
+                            />
+                            <field
+                                name="identity_city_id"
+                                groups="hr.group_hr_user"
+                                string="Expedition City"
+                            />
+                            <field
+                                name="naturalization_decree"
+                                invisible="not is_naturalized"
+                            />
+                            <field
+                                name="naturalization_date"
+                                invisible="not is_naturalized"
+                            />
+                        </group>
+                        <group
+                            name="reservist"
+                            string="Military Reservist"
+                            invisible="is_foreign_worker"
+                        >
+                            <field name="creservist" string="Number" />
+                            <field name="cresv_categ" />
+                        </group>
+                        <group
+                            name="vote_registration"
+                            string="Voter Registration"
+                            invisible="is_foreign_worker"
+                        >
+                            <field name="voter_title" string="Number" />
+                            <field name="voter_zone" />
+                            <field name="voter_section" />
+                        </group>
+                        <group name="driver_license" string="Driver License">
+                            <field name="driver_license" string="Number" />
+                            <field name="driver_categ" required="driver_license" />
+                            <field name="expiration_date" required="driver_license" />
+                        </group>
+                        <group name="pis_pasep" string="PIS/PASEP">
+                            <field name="pis_pasep" placeholder="XXX.XXXXX.XX-X" />
+                            <field name="pis_pasep_date" />
+                        </group>
+                        <group
+                            name="professional_council"
+                            string="Professional Council"
+                        >
+                            <field
+                                name="professional_council_name"
+                                placeholder="e.g. CREA, CRM, OAB, CRC, COREN"
+                            />
+                            <field name="professional_council_number" />
+                            <field name="professional_council_state_id" />
+                            <field name="professional_council_validity" />
+                        </group>
+                        <group
+                            name="immigration"
+                            string="Immigration &amp; Residence"
+                            invisible="not is_foreign_worker"
+                        >
+                            <field name="residence_term" />
+                            <field name="entry_condition" />
+                        </group>
+                    </group>
                 </page>
             </xpath>
             <xpath expr="//page[@name='public']" position="after">
@@ -109,15 +224,55 @@
                     string="Health"
                     groups="hr.group_hr_manager,hr.group_hr_user"
                 >
+                    <div
+                        class="alert alert-warning"
+                        role="alert"
+                        invisible="not has_legacy_disability"
+                    >
+                        <strong
+                    >Attention:</strong> This employee's disability classification needs to be updated. Please review the medical report and select the corresponding category (Physical, Hearing, Visual, Intellectual, Mental, or Rehabilitated).
+                    </div>
                     <group>
-                        <field name="blood_type" />
-                        <field name="deficiency_id" />
-                        <field name="deficiency_description" />
+                        <group string="Medical Data">
+                            <field name="blood_type" />
+                        </group>
+                        <group string="Person with a Disability">
+                            <field
+                                name="disability_ids"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color', 'no_create': True, 'no_create_edit': True}"
+                                context="{'active_test': False}"
+                                placeholder="Select disabilities..."
+                            />
+                            <field name="is_disability_quota" />
+                            <field
+                                name="disability_notes"
+                                placeholder="e.g. Report #123/2026 - Keyboard adaptation..."
+                            />
+                        </group>
                     </group>
                 </page>
             </xpath>
-            <xpath expr="//field[@name='country_id']" position="replace">
-                <field name="country_id" invisible="1" />
+            <separator name="has_work_permit" position="attributes">
+                <attribute name="invisible">not is_foreign_worker</attribute>
+            </separator>
+            <field name="visa_no" position="attributes">
+                <attribute name="invisible">not is_foreign_worker</attribute>
+            </field>
+            <field name="permit_no" position="attributes">
+                <attribute name="invisible">not is_foreign_worker</attribute>
+            </field>
+            <field name="visa_expire" position="attributes">
+                <attribute name="invisible">not is_foreign_worker</attribute>
+            </field>
+            <field name="work_permit_expiration_date" position="attributes">
+                <attribute name="invisible">not is_foreign_worker</attribute>
+            </field>
+            <field name="has_work_permit" position="attributes">
+                <attribute name="invisible">not is_foreign_worker</attribute>
+            </field>
+            <xpath expr="//field[@name='certificate']" position="after">
+                <field name="education_level" />
             </xpath>
             <xpath
                 expr="//page[@name='hr_settings']//field[@name='employee_type']"
@@ -128,13 +283,15 @@
         </field>
     </record>
 
-    <record id="view_hr_deficiency_tree" model="ir.ui.view">
-        <field name="name">hr.deficiency.tree.view</field>
-        <field name="model">hr.deficiency</field>
+    <record id="view_hr_disability_tree" model="ir.ui.view">
+        <field name="name">hr.disability.tree.view</field>
+        <field name="model">hr.disability</field>
         <field name="arch" type="xml">
-            <list>
-                <field name="code" />
+            <list create="false" delete="false">
+                <field name="sequence" widget="handle" />
                 <field name="name" />
+                <field name="color" widget="color_picker" />
+                <field name="active" />
             </list>
         </field>
     </record>
@@ -167,7 +324,7 @@
         <field name="model">hr.ethnicity</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
-            <form string="Raça/Cor" edit="false" delete="false" create="false">
+            <form string="Ethnicity / Race" edit="false" delete="false" create="false">
                 <sheet>
                     <group>
                         <group name="geral" colspan="2" col="2">
@@ -180,10 +337,33 @@
         </field>
     </record>
 
-    <record id="action_hr_deficiency" model="ir.actions.act_window">
-        <field name="name">Deficiency</field>
-        <field name="res_model">hr.deficiency</field>
+    <record id="view_hr_disability_search" model="ir.ui.view">
+        <field name="name">hr.disability.search.view</field>
+        <field name="model">hr.disability</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="code" />
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('active', '=', True)]"
+                />
+                <filter
+                    name="archived"
+                    string="Archived"
+                    domain="[('active', '=', False)]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hr_disability" model="ir.actions.act_window">
+        <field name="name">Disabilities</field>
+        <field name="res_model">hr.disability</field>
         <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hr_disability_search" />
+        <field name="context">{'active_test': False}</field>
     </record>
 
     <record id="action_hr_identity_type" model="ir.actions.act_window">
@@ -204,125 +384,201 @@
         <field name="view_mode">list,form</field>
     </record>
     <menuitem
-        id="menu_hr_employee_register"
-        parent="hr.menu_human_resources_configuration"
-        name="Employee register"
-        sequence="20"
-        groups="hr.group_hr_manager"
-    />
-    <menuitem
-        action="action_hr_deficiency"
-        id="menu_hr_deficiency"
-        parent="menu_hr_employee_register"
-        sequence="1"
-    />
-    <menuitem
         action="action_hr_identity_type"
         id="menu_hr_identity_type"
-        parent="menu_hr_employee_register"
-        sequence="2"
+        parent="hr.menu_config_employee"
+        sequence="11"
     />
     <menuitem
         action="action_hr_civil_certificate_type"
         id="menu_hr_civil_certificate_type"
-        parent="menu_hr_employee_register"
-        sequence="3"
+        parent="hr.menu_config_employee"
+        sequence="12"
+    />
+    <menuitem
+        action="action_hr_disability"
+        id="menu_hr_disability"
+        parent="hr.menu_config_employee"
+        sequence="13"
     />
     <menuitem
         action="action_hr_ethnicity"
         id="menu_hr_ethnicity"
-        parent="menu_hr_employee_register"
-        sequence="6"
+        parent="hr.menu_config_employee"
+        sequence="14"
     />
-    <!-- Menu item de colaboradores -->
-    <menuitem
-        id="menu_hr_colaboradores"
-        name="Colaboradores"
-        sequence="1"
-        parent="hr.menu_hr_main"
-    />
-    <!-- Funcionários -->
-    <!--Action de Funcionários -->
 
-    <record id="hr.open_view_employee_list_my" model="ir.actions.act_window">
-        <field
-            name="context"
-        >{'default_employee_relationship_type': 'funcionario'}</field>
-        <field name="domain">[('employee_relationship_type','=', 'funcionario')]</field>
+    <!-- Submenus por Tipo de Colaborador sob hr.menu_hr_employee_payroll -->
+    <record id="hr.menu_hr_employee_user" model="ir.ui.menu">
+        <field name="name">All Collaborators</field>
+        <field name="sequence">1</field>
     </record>
-    <!-- Sub Menu de Funcionarios -->
-    <menuitem
-        action="hr.open_view_employee_list_my"
-        id="hr.menu_open_view_employee_list_my"
-        sequence="1"
-        parent="menu_hr_colaboradores"
-    />
-    <!-- Funcionários Autonomos -->
-    <!--Action de autonomos-->
 
-    <record id="hr_employee_autonomo_action" model="ir.actions.act_window">
-        <field name="name">Autônomos</field>
+    <!-- Funcionários CLT -->
+    <record id="hr_employee_clt_action" model="ir.actions.act_window">
+        <field name="name">Employees (CLT)</field>
         <field name="res_model">hr.employee</field>
-        <field name="view_mode">kanban,list,form</field>
-        <field name="context">{'default_employee_relationship_type': 'autonomo'}</field>
-        <field name="domain">[('employee_relationship_type','=', 'autonomo')]</field>
+        <field name="view_mode">kanban,list,form,activity</field>
+        <field name="context">{'default_employee_type': 'employee'}</field>
+        <field name="domain">[('employee_type', 'in', ['employee', 'worker'])]</field>
+        <field name="search_view_id" ref="hr.view_employee_filter" />
     </record>
     <menuitem
-        id="hr_menu_employee_autonomo"
-        action="hr_employee_autonomo_action"
-        name="Autônomos"
-        parent="menu_hr_colaboradores"
+        id="hr_menu_employee_clt"
+        action="hr_employee_clt_action"
+        name="Employees (CLT)"
+        parent="hr.menu_hr_employee_payroll"
         sequence="2"
-        groups="hr.group_hr_manager"
     />
-    <!--<record model="ir.actions.act_window.view" id="hr_employee_autonomo_action_tree">-->
-    <!--<field eval="1" name="sequence"/>-->
-    <!--<field name="view_mode">tree</field>-->
-    <!--<field name="act_window_id" ref="hr_employee_autonomo_action"/>-->
-    <!--</record>-->
-    <!--<record model="ir.actions.act_window.view" id="hr_employee_autonomo_action_form">-->
-    <!--<field eval="2" name="sequence"/>-->
-    <!--<field name="view_mode">form</field>-->
-    <!--<field name="act_window_id" ref="hr_employee_autonomo_action"/>-->
-    <!--</record>-->
-    <!-- Funcionarios Tercerizados -->
-    <!--Action de terceirizados-->
 
-    <record id="hr_employee_terceirizado_action" model="ir.actions.act_window">
-        <field name="name">Terceirizados</field>
+    <!-- Estagiários e Aprendizes -->
+    <record id="hr_employee_estagiario_action" model="ir.actions.act_window">
+        <field name="name">Interns &amp; Apprentices</field>
         <field name="res_model">hr.employee</field>
-        <field name="view_mode">kanban,list,form</field>
-        <field
-            name="context"
-        >{'default_employee_relationship_type': 'terceirizado'}</field>
-        <field
-            name="domain"
-        >[('employee_relationship_type','=', 'terceirizado')]</field>
+        <field name="view_mode">kanban,list,form,activity</field>
+        <field name="context">{'default_employee_type': 'trainee'}</field>
+        <field name="domain">[('employee_type', 'in', ['student', 'trainee'])]</field>
+        <field name="search_view_id" ref="hr.view_employee_filter" />
+    </record>
+    <menuitem
+        id="hr_menu_employee_estagiario"
+        action="hr_employee_estagiario_action"
+        name="Interns &amp; Apprentices"
+        parent="hr.menu_hr_employee_payroll"
+        sequence="3"
+    />
+
+    <!-- Prestadores Tercerizados / PJ -->
+    <record id="hr_employee_terceirizado_action" model="ir.actions.act_window">
+        <field name="name">Contractors (PJ)</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">kanban,list,form,activity</field>
+        <field name="context">{'default_employee_type': 'contractor'}</field>
+        <field name="domain">[('employee_type', '=', 'contractor')]</field>
+        <field name="search_view_id" ref="hr.view_employee_filter" />
     </record>
     <menuitem
         id="hr_menu_employee_terceirizado"
         action="hr_employee_terceirizado_action"
-        name="Terceirizados"
-        parent="menu_hr_colaboradores"
-        sequence="3"
-        groups="hr.group_hr_manager"
+        name="Contractors (PJ)"
+        parent="hr.menu_hr_employee_payroll"
+        sequence="4"
     />
 
-    <record
-        id="hr_employee_terceirizado_action_tree"
-        model="ir.actions.act_window.view"
-    >
-        <field eval="1" name="sequence" />
-        <field name="view_mode">list</field>
-        <field name="act_window_id" ref="hr_employee_terceirizado_action" />
+    <!-- Profissionais Autônomos (RPA) -->
+    <record id="hr_employee_autonomo_action" model="ir.actions.act_window">
+        <field name="name">Freelancers</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">kanban,list,form,activity</field>
+        <field name="context">{'default_employee_type': 'freelance'}</field>
+        <field name="domain">[('employee_type', '=', 'freelance')]</field>
+        <field name="search_view_id" ref="hr.view_employee_filter" />
+    </record>
+    <menuitem
+        id="hr_menu_employee_autonomo"
+        action="hr_employee_autonomo_action"
+        name="Freelancers"
+        parent="hr.menu_hr_employee_payroll"
+        sequence="4"
+    />
+
+    <record id="view_employee_filter_l10n_br" model="ir.ui.view">
+        <field name="name">hr.employee.search.l10n_br_hr</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator />
+                <filter
+                    name="filter_type_clt"
+                    string="CLT Employees"
+                    domain="[('employee_type', 'in', ['employee', 'worker'])]"
+                />
+                <filter
+                    name="filter_type_freelance"
+                    string="Freelancers"
+                    domain="[('employee_type', '=', 'freelance')]"
+                />
+                <filter
+                    name="filter_type_contractor"
+                    string="Outsourced"
+                    domain="[('employee_type', '=', 'contractor')]"
+                />
+                <filter
+                    name="filter_type_student"
+                    string="Interns / Apprentices"
+                    domain="[('employee_type', 'in', ['student', 'trainee'])]"
+                />
+                <separator />
+                <filter
+                    name="disability_quota"
+                    string="Disability Quota"
+                    domain="[('is_disability_quota', '=', True)]"
+                />
+                <filter
+                    name="has_disabilities"
+                    string="Person with a Disability"
+                    domain="[('disability_ids', '!=', False)]"
+                />
+                <filter
+                    name="filter_needs_review"
+                    string="Needs Review"
+                    domain="[('needs_review', '=', True)]"
+                />
+                <filter
+                    name="filter_legacy_disability"
+                    string="Disability Review Pending"
+                    domain="[('has_legacy_disability', '=', True)]"
+                />
+                <separator />
+                <filter
+                    name="filter_foreign_worker"
+                    string="Foreign Workers"
+                    domain="[('is_foreign_worker', '=', True)]"
+                />
+                <filter
+                    name="filter_naturalized"
+                    string="Naturalized Citizens"
+                    domain="[('is_naturalized', '=', True)]"
+                />
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter
+                    name="group_employee_type"
+                    string="Employee Type"
+                    domain="[]"
+                    context="{'group_by': 'employee_type'}"
+                />
+                <filter
+                    name="group_worker_category"
+                    string="Worker Category"
+                    domain="[]"
+                    context="{'group_by': 'worker_category_id'}"
+                />
+                <filter
+                    name="group_country"
+                    string="Nationality"
+                    domain="[]"
+                    context="{'group_by': 'country_id'}"
+                />
+            </xpath>
+        </field>
     </record>
 
-    <record
-        id="hr_employee_terceirizado_action_form"
-        model="ir.actions.act_window.view"
-    >
-        <field eval="2" name="sequence" />
-        <field name="view_mode">form</field>
-        <field name="act_window_id" ref="hr_employee_terceirizado_action" />
+    <record id="view_employee_tree_l10n_br" model="ir.ui.view">
+        <field name="name">hr.employee.list.l10n_br_hr</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='work_email']" position="before">
+                <field
+                    name="needs_review"
+                    string="Review"
+                    widget="boolean_toggle"
+                    readonly="1"
+                    optional="show"
+                />
+            </xpath>
+        </field>
     </record>
 </odoo>

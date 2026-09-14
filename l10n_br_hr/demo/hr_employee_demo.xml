@@ -9,7 +9,7 @@
         <field name="country_id" ref="base.br" />
         <field name="department_id" ref="demo_department_administrativo" />
         <field name="job_id" ref="demo_job_analista_admin" />
-        <field name="cnpj_cpf">529.982.247-25</field>
+        <field name="vat">529.982.247-25</field>
         <field name="pis_pasep">12345678900</field>
         <field name="ctps">12345</field>
         <field name="ctps_series">0001</field>
@@ -20,7 +20,7 @@
         <field name="ethnicity" ref="ethnicity_1" />
         <field name="blood_type">o+</field>
         <field name="registration">EMP001</field>
-        <field name="employee_relationship_type">funcionario</field>
+        <field name="employee_type">employee</field>
     </record>
 
     <!-- Maria Fernanda Santos — CLT periculosidade -->
@@ -32,7 +32,7 @@
         <field name="country_id" ref="base.br" />
         <field name="department_id" ref="demo_department_operacional" />
         <field name="job_id" ref="demo_job_tecnico_seguranca" />
-        <field name="cnpj_cpf">453.178.287-91</field>
+        <field name="vat">453.178.287-91</field>
         <field name="pis_pasep">23456789013</field>
         <field name="ctps">23456</field>
         <field name="ctps_series">0002</field>
@@ -43,7 +43,7 @@
         <field name="ethnicity" ref="ethnicity_2" />
         <field name="blood_type">a+</field>
         <field name="registration">EMP002</field>
-        <field name="employee_relationship_type">funcionario</field>
+        <field name="employee_type">employee</field>
     </record>
 
     <!-- Pedro Henrique Oliveira — CLT insalubridade -->
@@ -55,7 +55,7 @@
         <field name="country_id" ref="base.br" />
         <field name="department_id" ref="demo_department_operacional" />
         <field name="job_id" ref="demo_job_operador_industrial" />
-        <field name="cnpj_cpf">111.444.777-35</field>
+        <field name="vat">111.444.777-35</field>
         <field name="pis_pasep">34567890125</field>
         <field name="ctps">34567</field>
         <field name="ctps_series">0003</field>
@@ -66,7 +66,7 @@
         <field name="ethnicity" ref="ethnicity_3" />
         <field name="blood_type">b+</field>
         <field name="registration">EMP003</field>
-        <field name="employee_relationship_type">funcionario</field>
+        <field name="employee_type">employee</field>
     </record>
 
     <!-- Ana Beatriz Souza — Estatutário/RPPS -->
@@ -78,7 +78,7 @@
         <field name="country_id" ref="base.br" />
         <field name="department_id" ref="demo_department_ti" />
         <field name="job_id" ref="demo_job_analista_sistemas" />
-        <field name="cnpj_cpf">987.654.321-00</field>
+        <field name="vat">987.654.321-00</field>
         <field name="pis_pasep">45678901236</field>
         <field name="ctps">45678</field>
         <field name="ctps_series">0004</field>
@@ -89,7 +89,7 @@
         <field name="ethnicity" ref="ethnicity_1" />
         <field name="blood_type">ab+</field>
         <field name="registration">EMP004</field>
-        <field name="employee_relationship_type">funcionario</field>
+        <field name="employee_type">employee</field>
     </record>
 
     <!-- Lucas Gabriel Costa — CLT aprendiz -->
@@ -101,7 +101,7 @@
         <field name="country_id" ref="base.br" />
         <field name="department_id" ref="demo_department_administrativo" />
         <field name="job_id" ref="demo_job_aprendiz_admin" />
-        <field name="cnpj_cpf">321.654.987-91</field>
+        <field name="vat">321.654.987-91</field>
         <field name="pis_pasep">56789012346</field>
         <field name="ctps">56789</field>
         <field name="ctps_series">0005</field>
@@ -112,7 +112,7 @@
         <field name="ethnicity" ref="ethnicity_4" />
         <field name="blood_type">o-</field>
         <field name="registration">EMP005</field>
-        <field name="employee_relationship_type">funcionario</field>
+        <field name="employee_type">trainee</field>
     </record>
 
     <!-- Carla Regina Pereira — CLT PCD + moléstia grave -->
@@ -124,7 +124,7 @@
         <field name="country_id" ref="base.br" />
         <field name="department_id" ref="demo_department_administrativo" />
         <field name="job_id" ref="demo_job_analista_rh" />
-        <field name="cnpj_cpf">741.852.963-55</field>
+        <field name="vat">741.852.963-55</field>
         <field name="pis_pasep">67890123455</field>
         <field name="ctps">67890</field>
         <field name="ctps_series">0006</field>
@@ -135,10 +135,8 @@
         <field name="ethnicity" ref="ethnicity_1" />
         <field name="blood_type">a-</field>
         <field name="registration">EMP006</field>
-        <field name="employee_relationship_type">funcionario</field>
-        <field name="deficiency_id" ref="deficiency_1" />
-        <field
-            name="deficiency_description"
-        >Deficiência física - membro inferior</field>
+        <field name="employee_type">employee</field>
+                <field name="disability_ids" eval="[(6, 0, [ref('disability_physical')])]" />
+        <field name="disability_notes">Deficiência física - membro inferior</field>
     </record>
 </odoo>

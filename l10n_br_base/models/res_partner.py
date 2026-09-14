@@ -8,6 +8,7 @@ from erpbrasil.base.fiscal import cnpj_cpf
 
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+from odoo.osv import expression
 
 from ..tools import check_cnpj_cpf, check_ie
 
@@ -21,6 +22,23 @@ class Partner(models.Model):
         names = super()._rec_names_search
         # not "names +=": that would extend the parent class attribute in place
         return names + ["cnpj_cpf_stripped", "legal_name", "l10n_br_ie_code"]
+
+    @api.model
+    def _search_display_name(self, operator, value):
+        """Match a masked CNPJ/CPF typed in name_search (many2one fields).
+        The display_name leaf is only turned into "vat ilike <masked>" here,
+        after _expand_vat_search_domain ran, so the unmasked value must be
+        searched explicitly."""
+        domain = super()._search_display_name(operator, value)
+        if operator in ("ilike", "=ilike", "like", "=like", "=") and isinstance(
+            value, str
+        ):
+            stripped = "".join(char for char in value if char.isalnum())
+            if stripped and stripped != value:
+                domain = expression.OR(
+                    [domain, [("cnpj_cpf_stripped", operator, stripped)]]
+                )
+        return domain
 
     def _inverse_street_data(self):
         """In Brazil the address format is street_name, street_number
@@ -36,7 +54,26 @@ class Partner(models.Model):
             partner.street = street
         return super(Partner, not_br_partner)._inverse_street_data()
 
-    l10n_br_rg_code = fields.Char(string="RG")
+    l10n_br_identity_doc_type = fields.Many2one(
+        comodel_name="l10n_br_base.identity.document.type",
+        string="Identity Document Type",
+        help="Type of civil identity document (CIN, RG, CRNM, etc.). "
+        "For the National Identity Card (CIN), the number is the CPF.",
+    )
+
+    l10n_br_identity_is_cpf_based = fields.Boolean(
+        related="l10n_br_identity_doc_type.is_cpf_based",
+        string="Identity Document Number Is the CPF",
+    )
+
+    l10n_br_rg_code = fields.Char(
+        string="Identity Document",
+        compute="_compute_l10n_br_rg_code",
+        store=True,
+        readonly=False,
+        help="Identity document number. For the National Identity Card (CIN), "
+        "it is the CPF, filled in automatically.",
+    )
 
     pix_key_ids = fields.One2many(
         string="Pix Keys",
@@ -50,15 +87,34 @@ class Partner(models.Model):
         help="Is it a Brazilian partner?",
     )
 
-    @api.returns("self", lambda value: value.id)
-    def copy(self, default=None):
-        if self.is_br_partner:
-            if default is None:
-                default = {}
-            if "vat" not in default:
-                # CNPJ should be unique:
-                default["vat"] = None
-        return super().copy(default)
+    @api.model
+    def _get_l10n_br_identity_number(self, doc_type, cpf, number):
+        """The CIN number is the CPF. Other document types keep the typed
+        number; leaving the CIN drops the copied CPF."""
+        if doc_type.code == "cin":
+            return cpf
+        if doc_type and cpf and number == cpf:
+            return False
+        return number
+
+    @api.depends("cnpj_cpf_stripped", "l10n_br_identity_doc_type")
+    def _compute_l10n_br_rg_code(self):
+        for partner in self:
+            # always assigned: an unassigned stored compute is reset to False
+            partner.l10n_br_rg_code = partner._get_l10n_br_identity_number(
+                partner.l10n_br_identity_doc_type,
+                partner.cnpj_cpf_stripped,
+                partner.l10n_br_rg_code,
+            )
+
+    def copy_data(self, default=None):
+        vals_list = super().copy_data(default=default)
+        if not default or "vat" not in default:
+            for partner, vals in zip(self, vals_list, strict=True):
+                if partner.is_br_partner:
+                    # CNPJ/CPF should be unique:
+                    vals["vat"] = None
+        return vals_list
 
     def _commercial_sync_from_company(self):
         """
@@ -83,8 +139,10 @@ class Partner(models.Model):
             return super()._commercial_sync_to_children(fields_to_sync)
 
         commercial_partner = self.commercial_partner_id
+        if fields_to_sync is None:
+            fields_to_sync = self._commercial_fields()
         sync_vals = commercial_partner._update_fields_values(
-            [field for field in self._commercial_fields() if field != "vat"]
+            [field for field in fields_to_sync if field != "vat"]
         )
         sync_children = self.child_ids.filtered(lambda c: not c.is_company)
         for child in sync_children:
@@ -232,6 +290,22 @@ class Partner(models.Model):
                         self.env._(
                             "State Tax Number already used %(name)s",
                             name=duplicate_ie.name,
+                        )
+                    )
+                duplicate_other_ie = self.env["state.tax.numbers"].search(
+                    [
+                        ("state_id", "=", l10n_br_ie_code_line.state_id.id),
+                        ("l10n_br_ie_code", "=", l10n_br_ie_code_line.l10n_br_ie_code),
+                        ("partner_id", "!=", False),
+                        ("partner_id", "!=", record.id),
+                    ],
+                    limit=1,
+                )
+                if duplicate_other_ie:
+                    raise ValidationError(
+                        self.env._(
+                            "State Tax Number already used %(name)s",
+                            name=duplicate_other_ie.partner_id.name,
                         )
                     )
 

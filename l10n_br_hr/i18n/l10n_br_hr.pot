@@ -1,17 +1,177 @@
-# Translation of Odoo Server.
-# This file contains the translation of the following modules:
-# 	* l10n_br_hr
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-12 22:53+0000\n"
+"PO-Revision-Date: 2026-09-12 22:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__01
+msgid "01 - Illiterate"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__01
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__01
+msgid "01 - Spouse"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__02
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__02
+msgid "02 - Cohabitant with common child or civil union"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__02
+msgid "02 - Up to 5th grade incomplete (Primary Education)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__03
+msgid "03 - 5th grade complete (Primary Education)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__03
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__03
+msgid "03 - Child or stepchild"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__04
+msgid "04 - 6th to 9th grade incomplete (Lower Secondary Education)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__04
+msgid "04 - Child or stepchild university/technical student"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__05
+msgid "05 - Lower Secondary Education Complete"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__06
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__06
+msgid "06 - Sibling, grandchild, or great-grandchild under legal custody"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__06
+msgid "06 - Upper Secondary Education Incomplete"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__07
+msgid ""
+"07 - Sibling, grandchild, or great-grandchild university student under "
+"custody"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__07
+msgid "07 - Upper Secondary Education Complete"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__08
+msgid "08 - Incomplete Higher Education"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__09
+msgid "09 - Complete Higher Education (Bachelor's/Licentiate)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__09
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__09
+msgid "09 - Parents, grandparents, and great-grandparents"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__10
+msgid "10 - Postgraduate Complete (Specialization/MBA)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__10
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__10
+msgid "10 - Underprivileged minor under legal custody"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__11
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__11
+msgid "11 - Incapacitated person (ward under guardianship/curatorship)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__11
+msgid "11 - Master's Degree Complete"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__12
+msgid "12 - Doctorate Degree Complete"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__12
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__12
+msgid "12 - Former spouse"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__99
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__99
+msgid "99 - Other Dependent"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_job_form
+msgid ""
+"<strong>Attention:</strong> The selected CBO occupation has been "
+"discontinued. Please select an active CBO code for this job position."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid ""
+"<strong>Attention:</strong> This CBO occupation code is archived or extinct "
+"in official Ministry of Labor (MTE) classifications. It is preserved for "
+"historical contract integrity."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid ""
+"<strong>Attention:</strong> This employee's disability classification needs "
+"to be updated. Please review the medical report and select the corresponding"
+" category (Physical, Hearing, Visual, Intellectual, Mental, or "
+"Rehabilitated)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "<strong>Review needed:</strong>"
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "A dependent has a dependent type ended in 2023 (04 or 07)."
+msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__a+
@@ -34,8 +194,14 @@ msgid "AB-"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.department,name:l10n_br_hr.demo_department_administrativo
-msgid "Administrativo"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_data_abstract__active
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_disability_search
+msgid "Active"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -49,34 +215,40 @@ msgid "Alternate Phone"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_analista_admin
-msgid "Analista Administrativo"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_103
+msgid "Apprentice (Law 10.097/2000)"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_analista_rh
-msgid "Analista de RH"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_disability_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Archived"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_analista_sistemas
-msgid "Analista de Sistemas"
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_4
+msgid "Asian"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_aprendiz_admin
-msgid "Aprendiz Administrativo"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__2
+msgid "Asylum seeker"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__autonomo
-msgid "Autônomo"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_712
+msgid "Autonomous Freight Transporter"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_autonomo_action
-#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_autonomo
-msgid "Autônomos"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_711
+msgid "Autonomous Passenger Transporter"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_701
+msgid "Autonomous Worker / Individual Contributor"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -90,8 +262,25 @@ msgid "B-"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__6
+msgid ""
+"Beneficiary of the Brazil-Portugal Treaty of Friendship, Cooperation and "
+"Consultation"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__4
+msgid "Beneficiary of the Mercosur agreements"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__birth_city_id
 msgid "Birth City"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_2
+msgid "Black"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -100,8 +289,24 @@ msgid "Blood Type"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_born_in_brazil
+msgid "Born in Brazil"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_l10n_br_hr_cbo
-msgid "Brazilian Classification of Occupation"
+msgid "Brazilian Classification of Occupations (CBO 2002 - MTE)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.action_l10n_br_hr_cbo
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Brazilian Classification of Occupations (CBO)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_723
+msgid "Businessman, Partner, Board Member"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -111,44 +316,24 @@ msgid "CBO"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_res_company__cnpj_cei
-msgid "CNPJ/CEI Tomadora/Obra"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_job__cbo_is_archived
+msgid "CBO Archived Flag"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cnpj_cpf
-msgid "CNPJ/CPF"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "CLT Employees"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cpf
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__vat
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__vat
 msgid "CPF"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "CTPS"
-msgstr ""
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_uf_id
-msgid "CTPS district"
-msgstr ""
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_date
-msgid "CTPS emission date"
-msgstr ""
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps
-msgid "CTPS number"
-msgstr ""
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_series
-msgid "CTPS series"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cpf
+msgid "CPF (alias)"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -157,8 +342,32 @@ msgid "Characteristics"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__child_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Child CBOs"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_student
+msgid ""
+"Child, stepchild, sibling, grandchild or great-grandchild attending "
+"university or technical school: IRRF deduction up to 24 years old. Replaces "
+"dependent types 04 and 07, ended on 25/04/2023."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "City"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_civil_certificate_type
 msgid "Civil Certificate Type"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Civil Identity (CIN / RG)"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -174,23 +383,25 @@ msgid "Civil certificate type"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__civil_name
+msgid ""
+"Civil name, as in the identity documents. The employee name is the name in "
+"use, which may be the social name."
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__code
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__code
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__code
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__code
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__code
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_data_abstract__code
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
 msgid "Code"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_colaboradores
-msgid "Colaboradores"
-msgstr ""
-
-#. module: l10n_br_hr
-#. odoo-python
-#: code:addons/l10n_br_hr/models/hr_employee.py:0
-msgid "Common law marriage"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__color
+msgid "Color Index"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -199,77 +410,193 @@ msgid "Companies"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__cpf
+msgid "Compatibility alias pointing to vat."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__entry_condition
+msgid ""
+"Condition under which the immigrant worker entered Brazil, as reported to "
+"eSocial (condIng)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_308
+msgid "Conscript"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_res_partner
 msgid "Contact"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__contractor
+msgid "Contractor"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__contractor_partner_id
+msgid "Contractor / Service Provider"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_res_company__cnpj_cei
+msgid "Contractor/Construction CNPJ/CEI"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_terceirizado_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_terceirizado
+msgid "Contractors (PJ)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_738
+msgid "Cooperative Member (Production Cooperative)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_731
+msgid "Cooperative Member (Work Cooperative)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_734
+msgid "Cooperative Transporter (Work Cooperative)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__country_of_birth
+msgid "Country of Birth"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__create_uid
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__create_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__create_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__create_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__create_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__create_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__create_date
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__create_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__create_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__create_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__create_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__create_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
-msgid "Código"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative_relation__dependent_type
+msgid "Default Dependent Type"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
-msgid "Código Brasileiro de Ocupação"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__employee_type_default
+msgid "Default Employee Type"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.action_l10n_br_hr_cbo
-msgid "Código Brasileiro de Ocupações"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative_relation__dependent_type
+msgid "Default dependent classification for this relation."
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model,name:l10n_br_hr.model_hr_deficiency
-msgid "Deficiencies"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_worker_category__employee_type_default
+msgid "Default employee type associated with this category."
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.action_hr_deficiency
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__deficiency_id
-#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_deficiency
-msgid "Deficiency"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__dependent_type
+msgid "Dependent Type"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__deficiency_description
-msgid "Deficiency Description"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__5
+msgid ""
+"Dependent of a diplomatic or consular agent of a country with a reciprocity "
+"agreement for paid work in Brazil"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__organ_exp
-msgid "Dispatcher organ"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__dependent_type
+msgid "Dependent type classification for tax and social security purposes."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"Dependent types 04 and 07 ended on 25/04/2023: use type %(dependent_type)s "
+"and mark the dependent as a university or technical student."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"Describe in the notes the dependency of %(name)s (dependent type 99 - "
+"Other)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.action_hr_disability
+#: model:ir.model,name:l10n_br_hr.model_hr_disability
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__disability_ids
+#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_disability
+msgid "Disabilities"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__disability_notes
+msgid "Disability Notes / Accessibility"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Disability Quota"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__has_legacy_disability
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Disability Review Pending"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__display_name
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__display_name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__display_name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__display_name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__display_name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__display_name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "District"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Document Number"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Documents"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_104
+msgid "Domestic Employee"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -283,23 +610,53 @@ msgid "Driver license category"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__expiration_date
+msgid "Driver license expiration date"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__driver_license
 msgid "Driver license number"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__rg_emission
-msgid "Emission date"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__education_level
+msgid "Education Level"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_761
+msgid "Elected Director of Cooperative / Association / Condominium"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_303
+msgid "Elective Mandate Holder"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Emission Date"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_employee
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__employee
 msgid "Employee"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_employee_register
-msgid "Employee register"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Employee Type"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__legacy_seconded_review
+msgid ""
+"Employee registered as seconded before the upgrade, which didn't tell "
+"whether the worker was received from or lent to another employer. Confirm "
+"the worker category (410 when received) and uncheck; setting the worker "
+"category also unchecks it."
 msgstr ""
 
 #. module: l10n_br_hr
@@ -308,25 +665,66 @@ msgid "Employees"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_clt_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_clt
+msgid "Employees (CLT)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__entry_condition
+msgid "Entry Condition"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_ethnicity
-msgid "Ethnicities"
+msgid "Ethnicities / Race"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.actions.act_window,name:l10n_br_hr.action_hr_ethnicity
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ethnicity
 #: model:ir.ui.menu,name:l10n_br_hr.menu_hr_ethnicity
 msgid "Ethnicity"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__expiration_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ethnicity
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_ethnicity_form
+msgid "Ethnicity / Race"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Expedition City"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Expedition State"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Expiration Date"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_family_allowance_dependent
+msgid "Family Allowance"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__father_name
-msgid "Father Name"
+msgid "Father name"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Filiation / Parents"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_disability_quota
+msgid "Fills Disability Quota"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -335,13 +733,70 @@ msgid "First Category"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__funcionario
-msgid "Funcionário"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__residence_term__2
+msgid "Fixed term"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__cedido
-msgid "Funcionário Cedido"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_105
+msgid "Fixed-Term Employee (Law 9.601/1998)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_foreign_worker
+msgid "Foreign Worker"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Foreign Workers"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__formatted_code
+msgid "Formatted Code"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__freelance
+msgid "Freelancer"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_autonomo_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_autonomo
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Freelancers"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__civil_name
+msgid "Full Civil Name"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_101
+msgid "General Employee - CLT Indeterminate"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_108
+msgid "Green and Yellow Contract with FGTS Advance"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_107
+msgid "Green and Yellow Contract without FGTS Advance"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Group By"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_771
+msgid "Guardianship Council Member (Law 8.069/1990)"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -350,15 +805,36 @@ msgid "HR Data Abstract"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model,name:l10n_br_hr.model_hr_employee_relative
+msgid "HR Employee Relative"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model,name:l10n_br_hr.model_hr_employee_relative_relation
+msgid "HR Employee Relative Relation"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Health"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_hearing
+msgid "Hearing impairment"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Hierarchical Groups (View)"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__id
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__id
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__id
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__id
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__id
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__id
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__id
 msgid "ID"
 msgstr ""
@@ -384,13 +860,18 @@ msgid "ID type"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "Identidade"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_irrf_dependent
+msgid "IRRF Deduction"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__cpf
-msgid "Identification Number for selected type"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__l10n_br_rg_code
+msgid "Identity Document"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__identity_doc_type
+msgid "Identity Document Type"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -406,8 +887,118 @@ msgid "Identity type"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Immigration & Residence"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_incapable
+msgid "Incapable for Work"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__residence_term__1
+msgid "Indefinite term"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_incapable
+msgid ""
+"Indicates if the dependent is incapable of working / invalid (extends "
+"allowance and deduction beyond age limits)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_family_allowance_dependent
+msgid ""
+"Indicates if the dependent qualifies for Family Allowance (Salário-Família)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_irrf_dependent
+msgid ""
+"Indicates if the dependent qualifies for Income Tax (IRRF) monthly "
+"deduction."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_disability_quota
+msgid ""
+"Indicates if the employee fills the legal quota as a person with a "
+"disability (Law 8.213/1991, Art. 93)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_foreign_worker
+msgid "Indicates if the employee has a nationality other than Brazil."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_naturalized
+msgid ""
+"Indicates if the employee is a naturalized Brazilian citizen (born abroad)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_born_in_brazil
+msgid "Indicates whether the employee was born in Brazil."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_5
+msgid "Indigenous"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_741
+msgid "Individual Microentrepreneur (MEI)"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__initials
 msgid "Initials"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_intellectual_mental_legacy
+msgid "Intellectual / Mental"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_intellectual
+msgid "Intellectual disability"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_111
+msgid "Intermittent Employee"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_901
+msgid "Intern (Law 11.788/2008)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__internal_type
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Internal Type"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_disability__code
+msgid "Internal identifier for the disability type."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_estagiario_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_estagiario
+msgid "Interns & Apprentices"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Interns / Apprentices"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -417,52 +1008,137 @@ msgid "Invalid PIS/PASEP"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Issuing Agency"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__organ_exp
+msgid "Issuing agency"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_job
 msgid "Job Position"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__write_uid
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__write_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__write_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__write_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__write_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__write_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__write_date
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__write_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__write_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__write_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__write_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__write_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__marital
-msgid "Marital Status"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_312
+msgid "Local Assistant"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Market alternative titles and synonyms..."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_902
+msgid "Medical / Health Resident"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Medical Data"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_mental
+msgid "Mental health condition"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Military Reservist"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cresv_categ
-msgid "Military service status category"
+msgid "Military certificate category"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__creservist
-msgid "Military service status certificate"
+msgid "Military certificate number"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_314
+msgid "Military of the Armed Forces"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_307
+msgid "Military of the States and Federal District"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__cresv_categ
+msgid "Military service certificate category (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__creservist
+msgid "Military service certificate number (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_781
+msgid "Minister of Religion / Religious Member"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_311
+msgid ""
+"Ministers, Judges, Prosecutors or Court Officers at the Disposal of the "
+"Electoral Justice"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_3
+msgid "Mixed-race"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__mother_name
-msgid "Mother Name"
+msgid "Mother name"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_multiple_legacy
+msgid "Multiple"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__private_city_id
+msgid "Municipality with its IBGE code, kept in sync with the private city."
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__name
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_data_abstract__name
 msgid "Name"
@@ -470,7 +1146,27 @@ msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__l10n_br_rg_code
-msgid "National ID number"
+msgid "National ID / RG / CIN number"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__rg_emission
+msgid "National ID emission date"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__vat
+msgid "National Taxpayer ID (CPF) synchronized with the work contact partner."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_906
+msgid "National Voluntary Civil Service Beneficiary"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Nationality"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -479,8 +1175,56 @@ msgid "Nationality (Country)"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__naturalization_date
+msgid "Naturalization Date"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__naturalization_decree
+msgid "Naturalization Ordinance / Decree"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_naturalized
+msgid "Naturalized Citizen"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Naturalized Citizens"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__needs_review
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Needs Review"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_202
+msgid "Non-Port Casual Worker"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__l10n_br_hr_cbo__internal_type__normal
+msgid "Normal / Analytical Occupation"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_6
+msgid "Not informed"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Number"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__naturalization_decree
+msgid ""
+"Number of the Naturalization Ordinance / Decree published in the Official "
+"Gazette (DOU)."
 msgstr ""
 
 #. module: l10n_br_hr
@@ -494,18 +1238,39 @@ msgid "O-"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_310
+msgid "Occasional Public Servant"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
-msgid "Ocupação"
+msgid "Occupation"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.department,name:l10n_br_hr.demo_department_operacional
-msgid "Operacional"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Occupation Title"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_operador_industrial
-msgid "Operador Industrial"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_tree
+msgid "Occupations"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Occupations (Normal)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__7
+msgid "Other condition"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Outsourced"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -520,18 +1285,153 @@ msgid "PIS/PASEP emission date"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__pis_pasep
+msgid ""
+"PIS/PASEP registration number. Optional field, as worker identification and "
+"government records have been unified under the CPF."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__parent_id
+msgid "Parent CBO"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Parent CBO / Family"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "Parents names"
+msgid "Person with a Disability"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__l10n_br_rg_code
-msgid "RG"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps
+msgid ""
+"Physical CTPS booklet number (optional, replaced by CPF for Digital CTPS "
+"under Portaria SEPRT 1.065/2019)."
 msgstr ""
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_ethnicity_form
-msgid "Raça/Cor"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps_series
+msgid "Physical CTPS booklet series (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_date
+msgid "Physical CTPS emission date"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps_date
+msgid "Physical CTPS emission date (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps
+msgid "Physical CTPS number"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_series
+msgid "Physical CTPS series"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_uf_id
+msgid "Physical CTPS state"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps_uf_id
+msgid "Physical CTPS state (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_physical
+msgid "Physical disability"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_201
+msgid "Port Casual Worker"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_address_is_br
+msgid "Private Address Is Br"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_district
+msgid "Private District"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_city_id
+msgid "Private Municipality"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_street_name
+msgid "Private Street Name"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_street_number
+msgid "Private Street Number"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_309
+msgid "Public Agent - Other"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_904
+msgid "Public Contest Training Course Participant"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_302
+msgid "Public Servant - Commission Only"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_301
+msgid "Public Servant - Tenured / Effective"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_313
+msgid ""
+"Public Servant Acting as Instructor, in Courses or Public Exams, or Summoned"
+" for Technical Opinions, Testimonies or Attaché Work Abroad"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_305
+msgid "Public Servant Appointed to Deliberative Council"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_304
+msgid ""
+"Public Servant Holding an Elected Office (including Commissioned Position)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__naturalization_date
+msgid ""
+"Publication date of the Naturalization Ordinance in the Official Gazette "
+"(DOU)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__1
+msgid "Refugee"
 msgstr ""
 
 #. module: l10n_br_hr
@@ -540,18 +1440,59 @@ msgid "Registration number"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.ui.menu,name:l10n_br_hr.menu_l10n_br_hr_relatorios_root
-msgid "Relatórios"
+#: model:hr.disability,name:l10n_br_hr.disability_rehabilitated
+msgid "Rehabilitated / Readapted"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "Reservist"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__residence_term
+msgid "Residence Term"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_tree_l10n_br
+msgid "Review"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__review_reasons
+msgid "Review Reasons"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_102
+msgid "Rural Employee - Short Term (Law 11.718/2008)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_903
+msgid "Scholarship Holder"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__cresv_categ__2
 msgid "Second Category"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_410
+msgid "Seconded / Assigned Worker"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__legacy_seconded_review
+msgid "Seconded Worker to Confirm"
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "Seconded worker: confirm the worker category."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Select disabilities..."
 msgstr ""
 
 #. module: l10n_br_hr
@@ -561,19 +1502,136 @@ msgid "Separated"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.department,name:l10n_br_hr.demo_department_ti
-msgid "Tecnologia da Informação"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__sequence
+msgid "Sequence"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__terceirizado
-msgid "Terceirizado"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_501
+msgid "Special Insured Union Leader"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_terceirizado_action
-#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_terceirizado
-msgid "Terceirizados"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__disability_notes
+msgid ""
+"Specific details regarding accessibility, medical reports, or workplace "
+"adaptations (max 255 characters)."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_disability.py:0
+msgid ""
+"Standard disability categories cannot be deleted from the system. If you do "
+"not wish to use them, you may archive them."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_721
+msgid "Statutory Director with FGTS"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_722
+msgid "Statutory Director without FGTS"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__3
+msgid "Stay in Brazil for family reunion"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Street name..."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__student
+msgid "Student"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_l10n_br_hr_cbo__synonyms
+msgid ""
+"Synonymous and market job titles recognized by MTE for this occupation."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__synonyms
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Synonyms"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Synonyms & Alternative Titles"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__vat
+msgid "Taxpayer ID (CPF) of the dependent. Mandatory for tax dependency."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__code
+msgid "Technical Code"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_751
+msgid ""
+"Temporary Lay Judge of the Labor or Electoral Justice, Retired under Any "
+"Social Security Regime"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_306
+msgid "Temporary Public Servant (Special Administrative Regime)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_106
+msgid "Temporary Worker (Law 6.019/1974)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__residence_term
+msgid ""
+"Term of residence in Brazil of the immigrant worker, as reported to eSocial "
+"(tmpResid)."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "The CBO of the job position is discontinued."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"The CPF of the dependent %(name)s is required for the income tax (IRRF) "
+"deduction."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"The dependent's CPF must contain exactly 11 digits (received: %(vat)s)."
+msgstr ""
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "The disability classification must be updated."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__needs_review
+msgid "The employee has data to review; the reasons are shown on the form."
 msgstr ""
 
 #. module: l10n_br_hr
@@ -582,13 +1640,24 @@ msgid "Third Category"
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__employee_relationship_type
-msgid "Tipo de Colaborador"
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid ""
+"To indicate that the employee fills the disability quota, at least one "
+"disability must be selected."
 msgstr ""
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_tecnico_seguranca
-msgid "Técnico de Segurança do Trabalho"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__trainee
+msgid "Trainee"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__identity_doc_type
+msgid ""
+"Type of civil identity document. Under Law 14.534/2023 and Decree "
+"10.977/2022, CIN adopts the CPF as the sole and unique national ID number. "
+"Foreign workers typically use CRNM (formerly RNE)."
 msgstr ""
 
 #. module: l10n_br_hr
@@ -598,26 +1667,126 @@ msgid "Union Entity code"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_401
+msgid "Union Leader (Reported by Union)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_student
+msgid "University / Technical Student"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__contractor_partner_id
+msgid "Vendor / Outsourcing service provider employing this worker."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__l10n_br_hr_cbo__internal_type__view
+msgid "View / Synthetic Group"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_visual
+msgid "Visual impairment"
+msgstr ""
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Voter Registration"
 msgstr ""
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__voter_section
+msgid "Voter registration electoral section (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__voter_zone
+msgid "Voter registration electoral zone (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__voter_title
+msgid "Voter registration title number (optional)."
+msgstr ""
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__voter_section
-msgid "Voter Section"
+msgid "Voter section"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__voter_title
-msgid "Voter Title"
+msgid "Voter title"
 msgstr ""
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__voter_zone
-msgid "Voter Zone"
+msgid "Voter zone"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_1
+msgid "White"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Work Card (CTPS)"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__permit_no
+msgid "Work Permit No"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__permit_no
+msgid ""
+"Work authorization number. The immigration registration number (RNM) goes in"
+" the identity document number."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__worker
+msgid "Worker"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model,name:l10n_br_hr.model_hr_worker_category
+msgid "Worker Categories"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__worker_category_id
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Worker Category"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__worker_category_id
+msgid ""
+"Worker employment category (e.g. CLT, Apprentice, Autonomous/Freelancer, "
+"Intern)."
+msgstr ""
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__education_level
+msgid "Worker formal education level."
 msgstr ""
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "XXX.XXXXX.XX-X"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "e.g. Analista de desenvolvimento de sistemas"
+msgstr ""
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "e.g. Report #123/2026 - Keyboard adaptation..."
 msgstr ""

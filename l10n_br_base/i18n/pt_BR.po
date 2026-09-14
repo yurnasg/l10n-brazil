@@ -20180,9 +20180,56 @@ msgstr "Quixeré"
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_rg_code
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_rg_code
+msgid "Identity Document"
+msgstr "Documento de Identidade"
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_identity_doc_type
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_identity_doc_type
+msgid "Identity Document Type"
+msgstr "Tipo de Documento de Identidade"
+
+
+#. module: l10n_br_base
+#: model:ir.model.fields,help:l10n_br_base.field_res_partner__l10n_br_rg_code
+#: model:ir.model.fields,help:l10n_br_base.field_res_users__l10n_br_rg_code
+msgid ""
+"Identity document number. For the National Identity Card (CIN), it is the "
+"CPF, filled in automatically."
+msgstr ""
+"Número do documento de identidade. Na Carteira de Identidade Nacional "
+"(CIN), é o próprio CPF preenchido automaticamente."
+
+#. module: l10n_br_base
+#: model:ir.model.fields,help:l10n_br_base.field_res_partner__l10n_br_identity_doc_type
+#: model:ir.model.fields,help:l10n_br_base.field_res_users__l10n_br_identity_doc_type
+msgid ""
+"Type of civil identity document (CIN, RG, CRNM, etc.). For the National "
+"Identity Card (CIN), the number is the CPF."
+msgstr ""
+"Tipo de documento de identificação (CIN, RG, CRNM, etc.). No caso da "
+"Carteira de Identidade Nacional (CIN), o número é o próprio CPF."
+
+#. module: l10n_br_base
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
-msgid "RG"
-msgstr "RG"
+msgid "Number"
+msgstr "Número"
+
+#. module: l10n_br_base
+msgid "Other"
+msgstr "Outro"
+
+#. module: l10n_br_base
+msgid "General Registry / Identity Card (RG)"
+msgstr "Registro Geral / Carteira de Identidade (RG)"
+
+#. module: l10n_br_base
+msgid "National Identity Card (CIN)"
+msgstr "Carteira de Identidade Nacional (CIN)"
+
+#. module: l10n_br_base
+msgid "National Migration Registration Card (CRNM / RNE)"
+msgstr "Carteira de Registro Nacional Migratório (CRNM / RNE)"
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_2410504
@@ -26324,6 +26371,7 @@ msgstr "Tutóia"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_pix__key_type
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
 msgid "Type"
 msgstr "Tipo"
 

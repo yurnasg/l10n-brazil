@@ -8,11 +8,13 @@ class DataAbstract(models.AbstractModel):
     _name = "l10n_br_hr.data.abstract"
     _description = "HR Data Abstract"
     _order = "code"
-    _rec_names_search = ["code", "name"]
+    _rec_names_search = ("code", "name")
 
     code = fields.Char(required=True, index=True)
 
-    name = fields.Text(required=True, index=True)
+    name = fields.Text(required=True, index=True, translate=True)
+
+    active = fields.Boolean(default=True, index=True)
 
     @api.depends("code", "name")
     def _compute_display_name(self):

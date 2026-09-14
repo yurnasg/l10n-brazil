@@ -3,7 +3,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from num2words.lang_PT_BR import Num2Word_PT_BR
-
 from odoo.tests import TransactionCase
 
 
@@ -22,13 +21,13 @@ class Num2WordsPTBRTest(TransactionCase):
     def test_02_amount_to_text(self):
         self.assertEqual(
             self.n2w.to_currency(1999.99),
-            "mil, novecentos e noventa e nove reais" " e noventa e nove centavos",
+            "mil, novecentos e noventa e nove reais e noventa e nove centavos",
         )
 
     def test_03_amount_to_text(self):
         self.assertEqual(
             self.n2w.to_currency(77777.0),
-            "setenta e sete mil, setecentos e setenta" " e sete reais",
+            "setenta e sete mil, setecentos e setenta e sete reais",
         )
 
     def test_04_amount_to_text(self):

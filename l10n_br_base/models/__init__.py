@@ -1,12 +1,15 @@
-from . import format_address_mixin
-from . import res_bank
-from . import res_city
-from . import res_country_state
-from . import res_country
-from . import party_mixin
-from . import res_partner_bank
-from . import res_partner
-from . import state_tax_numbers
-from . import res_company
-from . import res_config_settings
-from . import res_partner_pix
+from . import (
+    format_address_mixin,
+    l10n_br_identity_document_type,
+    party_mixin,
+    res_bank,
+    res_city,
+    res_company,
+    res_config_settings,
+    res_country,
+    res_country_state,
+    res_partner,
+    res_partner_bank,
+    res_partner_pix,
+    state_tax_numbers,
+)

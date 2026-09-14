@@ -1,0 +1,51 @@
+[project]
+name = "l10n-brazil"
+version = "18.0.1.0.0"
+description = "Odoo 18 Brazilian Localization (OCA)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "email-validator>=2.0.0",
+    "erpbrasil-base>=2.4.2",
+    "markupsafe>=3.0.3",
+    "num2words>=0.5.13",
+    "odoo_utils[dev] @ git+https://github.com/Enersol-Brasil/odoo_utils.git",
+    "packaging>=24.0",
+    "phonenumbers>=9.0.35",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "pylint>=4.0.6",
+    "pylint-odoo>=10.0.8",
+    "pyyaml>=6.0.3",
+    "ruff>=0.16.4",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+ignore = [
+    # RUF012: _sql_constraints/_inherit/_order etc. são atributos de classe lidos
+    # pela metaclasse do ORM do Odoo, não "mutable defaults" no sentido da regra.
+    "RUF012",
+    # DTZ: o ORM do Odoo exige datetime naive (odoo/fields.py lança ValueError se receber tzinfo).
+    "DTZ",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Padrão Odoo: __init__.py só registra submódulos, nunca usa os nomes importados.
+"__init__.py" = ["F401"]
+# __manifest__.py é um dict solto no módulo — é assim que o Odoo espera,
+# não uma "expressão inútil" (equivalente ao C8101/C8103 do .pylintrc).
+"__manifest__.py" = ["B018"]
+# Testes podem conter asserts e estruturas de simulação sem docstrings obrigatórias.
+"**/tests/**" = ["D", "S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

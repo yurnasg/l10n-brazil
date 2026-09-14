@@ -6,7 +6,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from erpbrasil.base.fiscal import cnpj_cpf, ie
-
 from odoo.exceptions import ValidationError
 
 

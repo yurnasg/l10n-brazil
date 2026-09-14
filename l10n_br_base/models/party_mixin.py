@@ -3,7 +3,6 @@
 
 from erpbrasil.base import misc
 from erpbrasil.base.fiscal import cnpj_cpf
-
 from odoo import api, fields, models
 
 
@@ -27,6 +26,8 @@ class PartyMixin(models.AbstractModel):
     vat_formatted_cnpj = fields.Char(
         string="VAT Formatted (Brazil)",
         compute="_compute_vat_formatted_cnpj",
+        # editable: the partner and company forms show this field instead of
+        # vat for Brazilian records
         inverse="_inverse_vat_formatted_cnpj",
         help="CNPJ or CPF formatted with proper punctuation and special characters",
     )
@@ -170,6 +171,13 @@ class PartyMixin(models.AbstractModel):
                 else False
             )
 
+    @api.onchange("vat_formatted_cnpj")
+    def _onchange_vat_formatted_cnpj(self):
+        # the form also sends the hidden vat on save, so it must follow the
+        # typed value (the inverse alone runs too late)
+        if self.vat_formatted_cnpj != cnpj_cpf.formata(self.vat or ""):
+            self.vat = self.vat_formatted_cnpj
+
     @api.depends_context("company")
     def _compute_show_br_vat_format(self):
         br_company = self.env.company.country_id.code == "BR"
@@ -216,8 +224,10 @@ class PartyMixin(models.AbstractModel):
         country_id = vals.get("country_id")
         if country_id:
             country = self.env["res.country"].browse(country_id)
-        elif self and len(self) == 1:
-            country = self.country_id
+        elif self:
+            # write() only calls this on records sharing the same BR/non-BR
+            # country, so the first record is representative
+            country = self[:1].country_id
         else:
             country = self.env.company.country_id
         if country and country.code == "BR":
@@ -230,6 +240,16 @@ class PartyMixin(models.AbstractModel):
         return super().create(vals_list)
 
     def write(self, vals):
+        if vals.get("vat") and not vals.get("country_id") and len(self) > 1:
+            br_records = self.filtered(lambda r: r.country_id.code == "BR")
+            if br_records and br_records != self:
+                # Mixed countries: only the Brazilian records get the VAT
+                # unformatted, so write each group separately.
+                br_vals = dict(vals)
+                br_records._normalize_vat(br_vals)
+                super(PartyMixin, br_records).write(br_vals)
+                super(PartyMixin, self - br_records).write(vals)
+                return True
         self._normalize_vat(vals)
         return super().write(vals)
 

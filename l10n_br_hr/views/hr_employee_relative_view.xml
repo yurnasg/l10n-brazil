@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_employee_relative_view_tree_l10n_br" model="ir.ui.view">
+        <field name="name">hr.employee.relative.view.list.l10n_br</field>
+        <field name="model">hr.employee.relative</field>
+        <field
+            name="inherit_id"
+            ref="hr_employee_relative.hr_employee_relative_view_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="notes" position="attributes">
+                <attribute name="required">dependent_type == '99'</attribute>
+            </field>
+            <field name="gender" position="after">
+                <field name="vat" required="is_irrf_dependent" />
+                <field name="dependent_type" optional="show" />
+                <field
+                    name="is_student"
+                    optional="show"
+                    invisible="dependent_type not in ('03', '06')"
+                />
+                <field name="is_irrf_dependent" optional="show" />
+                <field name="is_family_allowance_dependent" optional="show" />
+                <field name="is_incapable" optional="hide" />
+            </field>
+        </field>
+    </record>
+</odoo>

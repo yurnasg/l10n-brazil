@@ -73,14 +73,29 @@
                     nolabel="1"
                     invisible="not show_l10n_br"
                 />
-                <div invisible="not show_l10n_br">
-                    <label for="l10n_br_rg_code" string="RG" invisible="is_company" />
+                <!-- Also shown for foreign individuals: the NF-e uses the
+                     number as idEstrangeiro -->
+                <div invisible="is_company">
+                    <label for="l10n_br_rg_code" />
                 </div>
-                <field
-                    name="l10n_br_rg_code"
-                    nolabel="1"
-                    invisible="is_company or not show_l10n_br"
-                />
+                <div
+                    name="l10n_br_identity_document"
+                    class="o_row"
+                    invisible="is_company"
+                >
+                    <field
+                        name="l10n_br_identity_doc_type"
+                        placeholder="Type"
+                        class="oe_inline"
+                    />
+                    <field
+                        name="l10n_br_rg_code"
+                        placeholder="Number"
+                        class="oe_inline"
+                        readonly="l10n_br_identity_is_cpf_based"
+                    />
+                </div>
+
                 <div name="l10n_br_ie_code" invisible="not show_l10n_br">
                     <label
                         for="l10n_br_ie_code"
@@ -92,7 +107,7 @@
                     colspan="4"
                     name="l10n_br_ie_code"
                     nolabel="1"
-                    invisible="not is_company and parent_id and not show_l10n_br"
+                    invisible="not show_l10n_br or (not is_company and parent_id)"
                 />
             </xpath>
             <page position="after" name="sales_purchases">

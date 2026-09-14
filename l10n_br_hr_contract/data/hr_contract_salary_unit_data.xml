@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!-- SALARY UNIT -->
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Órgão / Sistema: eSocial - Governo Federal / Ministério do Trabalho e Emprego
+    - Tabela / Evento Oficial: Evento S-2200 (Cadastramento Inicial e Admissão)
+      Campo: undSalFixo (Unidade de Pagamento da Parte Fixa da Remuneração)
+    - Versão do Leiaute: eSocial Versão S-1.3 (NT 06/2026 rev.)
+    - Base Legal: CLT Art. 458 e seguintes
+    ==============================================================================
+    -->
     <record id="salary_unit_5" model="hr.contract.salary.unit">
         <field name="name">Hourly</field>
         <field name="code">1</field>
@@ -32,7 +41,7 @@
     </record>
 
     <record id="salary_unit_7" model="hr.contract.salary.unit">
-        <field name="name">Não aplicável - salário exclusivamente variável</field>
+        <field name="name">Not applicable - Variable salary only</field>
         <field name="code">7</field>
     </record>
 </odoo>

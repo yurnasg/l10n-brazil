@@ -6,6 +6,14 @@
         <field name="inherit_id" ref="hr.view_hr_job_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='department_id']" position="after">
+                <field name="cbo_is_archived" invisible="1" />
+                <div
+                    class="alert alert-warning mb-2"
+                    role="alert"
+                    invisible="not cbo_is_archived"
+                >
+                    <strong>Attention:</strong> The selected CBO occupation has been discontinued. Please select an active CBO code for this job position.
+                </div>
                 <field name="cbo_id" />
             </xpath>
         </field>

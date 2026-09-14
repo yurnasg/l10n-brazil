@@ -185,6 +185,30 @@ class CrmLeadTest(TransactionCase):
         )
         self.assertTrue(self.obj_partner.l10n_br_ie_code, "The field RG was not filled")
 
+    def test_create_contact_keeps_identity_document(self):
+        """The partner created from the lead keeps the lead's identity
+        document number, also after a later CPF change (no document type)."""
+        partner = self.crm_lead_contact._create_customer()
+        self.assertEqual(partner.l10n_br_rg_code, "99.888.777-1")
+        self.assertFalse(partner.l10n_br_identity_doc_type)
+        partner.vat = "529.982.247-25"
+        self.assertEqual(partner.l10n_br_rg_code, "99.888.777-1")
+
+    def test_lead_from_cin_partner_gets_cpf_as_document(self):
+        partner = self.env["res.partner"].create(
+            {
+                "name": "CIN Person",
+                "country_id": self.env.ref("base.br").id,
+                "vat": "52998224725",
+                "l10n_br_identity_doc_type": self.env.ref(
+                    "l10n_br_base.identity_doc_type_cin"
+                ).id,
+            }
+        )
+        lead = self.env["crm.lead"].new({"name": "Lead CIN", "partner_id": partner.id})
+        lead._onchange_partner_id()
+        self.assertEqual(lead.l10n_br_rg_code, "52998224725")
+
     def test_lead_won_contact(self):
         """Test to mark the Lead as won"""
         self.crm_lead_company.action_set_won()

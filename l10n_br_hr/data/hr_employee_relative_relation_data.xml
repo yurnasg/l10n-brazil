@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Órgão / Sistema: eSocial / Receita Federal do Brasil (RFB)
+    - Tabela Oficial: Tabela 07 - Tipos de Dependente
+    - Versão do Leiaute: eSocial Versão S-1.3 (NT 06/2026 rev.) / Evento S-2200 e S-2205
+    - Base Legal: IN RFB nº 1.500/2014 e Regulamento do Imposto de Renda (RIR/2018)
+    - Observação de Vigência: Códigos 04 e 07 foram encerrados em 25/04/2023,
+      sendo unificados nos códigos 03 (Filho/Enteado) e 06 (Irmão/Neto).
+    ==============================================================================
+    -->
+    <record id="hr_employee_relative.relation_spouse" model="hr.employee.relative.relation">
+        <field name="dependent_type">01</field>
+    </record>
+    <record id="hr_employee_relative.relation_significant_other" model="hr.employee.relative.relation">
+        <field name="dependent_type">02</field>
+    </record>
+    <record id="hr_employee_relative.relation_child" model="hr.employee.relative.relation">
+        <field name="dependent_type">03</field>
+    </record>
+    <record id="hr_employee_relative.relation_parent" model="hr.employee.relative.relation">
+        <field name="dependent_type">09</field>
+    </record>
+    <record id="hr_employee_relative.relation_grandparent" model="hr.employee.relative.relation">
+        <field name="dependent_type">09</field>
+    </record>
+    <record id="hr_employee_relative.relation_sibling" model="hr.employee.relative.relation">
+        <field name="dependent_type">06</field>
+    </record>
+    <record id="hr_employee_relative.relation_grandchild" model="hr.employee.relative.relation">
+        <field name="dependent_type">06</field>
+    </record>
+</odoo>

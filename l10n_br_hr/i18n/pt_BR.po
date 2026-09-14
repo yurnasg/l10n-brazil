@@ -1,10 +1,7 @@
-# Translation of Odoo Server.
-# This file contains the translation of the following modules:
-#
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-26 11:58+0000\n"
 "PO-Revision-Date: 2024-09-17 20:06+0000\n"
@@ -14,18 +11,196 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Weblate 5.6.2\n"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__01
+msgid "01 - Illiterate"
+msgstr "01 - Analfabeto, inclusive o que assina o próprio nome"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__01
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__01
+msgid "01 - Spouse"
+msgstr "01 - Cônjuge"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__02
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__02
+msgid "02 - Cohabitant with common child or civil union"
+msgstr ""
+"02 - Companheiro(a) com o(a) qual tenha filho ou viva há mais de 5 anos ou "
+"possua declaração de união estável"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__02
+msgid "02 - Up to 5th grade incomplete (Primary Education)"
+msgstr "02 - Até o 5º ano incompleto do ensino fundamental"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__03
+msgid "03 - 5th grade complete (Primary Education)"
+msgstr "03 - 5º ano completo do ensino fundamental"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__03
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__03
+msgid "03 - Child or stepchild"
+msgstr "03 - Filho(a) ou enteado(a)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__04
+msgid "04 - 6th to 9th grade incomplete (Lower Secondary Education)"
+msgstr "04 - Do 6º ao 9º ano incompleto do ensino fundamental"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__04
+msgid "04 - Child or stepchild university/technical student"
+msgstr ""
+"04 - Filho(a) ou enteado(a), universitário(a) ou cursando escola técnica "
+"(Termo Descontinuado)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__05
+msgid "05 - Lower Secondary Education Complete"
+msgstr "05 - Ensino fundamental completo"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__06
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__06
+msgid "06 - Sibling, grandchild, or great-grandchild under legal custody"
+msgstr "06 - Irmão(ã), neto(a) ou bisneto(a) sob guarda judicial"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__06
+msgid "06 - Upper Secondary Education Incomplete"
+msgstr "06 - Ensino médio incompleto"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__07
+msgid ""
+"07 - Sibling, grandchild, or great-grandchild university student under "
+"custody"
+msgstr ""
+"07 - Irmão(ã), neto(a) ou bisneto(a), universitário(a) ou cursando escola "
+"técnica sob guarda judicial (Termo Descontinuado)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__07
+msgid "07 - Upper Secondary Education Complete"
+msgstr "07 - Ensino médio completo"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__08
+msgid "08 - Incomplete Higher Education"
+msgstr "08 - Educação superior incompleta"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__09
+msgid "09 - Complete Higher Education (Bachelor's/Licentiate)"
+msgstr "09 - Educação superior completa"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__09
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__09
+msgid "09 - Parents, grandparents, and great-grandparents"
+msgstr "09 - Pais, avós e bisavós"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__10
+msgid "10 - Postgraduate Complete (Specialization/MBA)"
+msgstr "10 - Pós-graduação completa"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__10
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__10
+msgid "10 - Underprivileged minor under legal custody"
+msgstr ""
+"10 - Menor pobre que o declarante crie e eduque e de quem detenha a guarda "
+"judicial"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__11
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__11
+msgid "11 - Incapacitated person (ward under guardianship/curatorship)"
+msgstr "11 - A pessoa absolutamente incapaz da qual seja tutor ou curador"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__11
+msgid "11 - Master's Degree Complete"
+msgstr "11 - Mestrado completo"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__education_level__12
+msgid "12 - Doctorate Degree Complete"
+msgstr "12 - Doutorado completo"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__12
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__12
+msgid "12 - Former spouse"
+msgstr "12 - Ex-cônjuge"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative__dependent_type__99
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee_relative_relation__dependent_type__99
+msgid "99 - Other Dependent"
+msgstr "99 - Agregado / Outros"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_job_form
+msgid ""
+"<strong>Attention:</strong> The selected CBO occupation has been "
+"discontinued. Please select an active CBO code for this job position."
+msgstr ""
+"<strong>Atenção:</strong> A ocupação CBO selecionada foi descontinuada. Por "
+"favor, selecione um código CBO ativo para este cargo."
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid ""
+"<strong>Attention:</strong> This CBO occupation code is archived or extinct "
+"in official Ministry of Labor (MTE) classifications. It is preserved for "
+"historical contract integrity."
+msgstr ""
+"<strong>Atenção:</strong> Este código de ocupação da CBO está arquivado ou "
+"extinto nas classificações oficiais do Ministério do Trabalho e Emprego "
+"(MTE). Ele é mantido para preservar o histórico dos contratos."
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid ""
+"<strong>Attention:</strong> This employee's disability classification needs "
+"to be updated. Please review the medical report and select the corresponding"
+" category (Physical, Hearing, Visual, Intellectual, Mental, or "
+"Rehabilitated)."
+msgstr ""
+"<strong>Atenção:</strong> O cadastro de deficiência deste colaborador "
+"precisa de atualização. Por favor, consulte o laudo médico e selecione a "
+"categoria correspondente (Física, Auditiva, Visual, Intelectual, Mental ou "
+"Reabilitado)."
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "<strong>Review needed:</strong>"
+msgstr "<strong>Revisão necessária:</strong>"
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "A dependent has a dependent type ended in 2023 (04 or 07)."
+msgstr "Um dependente tem tipo de dependente encerrado em 2023 (04 ou 07)."
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__a+
 msgid "A+"
-msgstr ""
+msgstr "A+"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__a-
 msgid "A-"
-msgstr ""
+msgstr "A-"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__ab+
@@ -38,9 +213,15 @@ msgid "AB-"
 msgstr "AB-"
 
 #. module: l10n_br_hr
-#: model:hr.department,name:l10n_br_hr.demo_department_administrativo
-msgid "Administrativo"
-msgstr ""
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__active
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_data_abstract__active
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_disability_search
+msgid "Active"
+msgstr "Ativo"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__alternate_email
@@ -53,50 +234,75 @@ msgid "Alternate Phone"
 msgstr "Telefone Alternativo"
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_analista_admin
-msgid "Analista Administrativo"
-msgstr ""
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_103
+msgid "Apprentice (Law 10.097/2000)"
+msgstr "Empregado - Aprendiz (Lei 10.097/2000)"
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_analista_rh
-msgid "Analista de RH"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_disability_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Archived"
+msgstr "Arquivado"
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_analista_sistemas
-msgid "Analista de Sistemas"
-msgstr ""
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_4
+msgid "Asian"
+msgstr "Amarela"
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_aprendiz_admin
-msgid "Aprendiz Administrativo"
-msgstr ""
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__2
+msgid "Asylum seeker"
+msgstr "Solicitante de refúgio"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__autonomo
-msgid "Autônomo"
-msgstr "Autônomo"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_712
+msgid "Autonomous Freight Transporter"
+msgstr "Contribuinte individual - Transportador autônomo de carga"
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_autonomo_action
-#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_autonomo
-msgid "Autônomos"
-msgstr "Autônomos"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_711
+msgid "Autonomous Passenger Transporter"
+msgstr "Contribuinte individual - Transportador autônomo de passageiros"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_701
+msgid "Autonomous Worker / Individual Contributor"
+msgstr "Contribuinte individual - Autônomo em geral"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__b+
 msgid "B+"
-msgstr ""
+msgstr "B+"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__b-
 msgid "B-"
+msgstr "B-"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__6
+msgid ""
+"Beneficiary of the Brazil-Portugal Treaty of Friendship, Cooperation and "
+"Consultation"
 msgstr ""
+"Beneficiado pelo Tratado de Amizade, Cooperação e Consulta entre a República"
+" Federativa do Brasil e a República Portuguesa"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__4
+msgid "Beneficiary of the Mercosur agreements"
+msgstr "Beneficiado pelo acordo entre países do Mercosul"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__birth_city_id
 msgid "Birth City"
-msgstr ""
+msgstr "Município de Nascimento"
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_2
+msgid "Black"
+msgstr "Preta"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__blood_type
@@ -104,9 +310,25 @@ msgid "Blood Type"
 msgstr "Tipo sanguíneo"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_born_in_brazil
+msgid "Born in Brazil"
+msgstr "Nascido no Brasil"
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_l10n_br_hr_cbo
-msgid "Brazilian Classification of Occupation"
-msgstr "Classificação Brasileira de Ocupação"
+msgid "Brazilian Classification of Occupations (CBO 2002 - MTE)"
+msgstr "Classificação Brasileira de Ocupações (CBO 2002 - MTE)"
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.action_l10n_br_hr_cbo
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Brazilian Classification of Occupations (CBO)"
+msgstr "Classificação Brasileira de Ocupações (CBO)"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_723
+msgid "Businessman, Partner, Board Member"
+msgstr "Contribuinte individual - Empresário, sócio e conselho"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_job__cbo_id
@@ -115,45 +337,25 @@ msgid "CBO"
 msgstr "CBO"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_res_company__cnpj_cei
-msgid "CNPJ/CEI Tomadora/Obra"
-msgstr "CNPJ / CEI Tomadora / Obra"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_job__cbo_is_archived
+msgid "CBO Archived Flag"
+msgstr "Flag de CBO Arquivado"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cnpj_cpf
-msgid "CNPJ/CPF"
-msgstr "CNPJ/CPF"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "CLT Employees"
+msgstr "Empregados CLT"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cpf
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__vat
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__vat
 msgid "CPF"
 msgstr "CPF"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "CTPS"
-msgstr "CTPS"
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_uf_id
-msgid "CTPS district"
-msgstr "Distrito da CTPS"
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_date
-msgid "CTPS emission date"
-msgstr "Data de emissão do CTPS"
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps
-msgid "CTPS number"
-msgstr "Número CTPS"
-
-#. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_series
-msgid "CTPS series"
-msgstr "Série CTPS"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cpf
+msgid "CPF (alias)"
+msgstr "CPF (alias)"
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
@@ -161,9 +363,36 @@ msgid "Characteristics"
 msgstr "Características"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__child_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Child CBOs"
+msgstr "CBOs Filhas"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_student
+msgid ""
+"Child, stepchild, sibling, grandchild or great-grandchild attending "
+"university or technical school: IRRF deduction up to 24 years old. Replaces "
+"dependent types 04 and 07, ended on 25/04/2023."
+msgstr ""
+"Filho(a), enteado(a), irmão(ã), neto(a) ou bisneto(a) cursando universidade "
+"ou escola técnica: dedução de IRRF até 24 anos. Substitui os tipos de "
+"dependente 04 e 07, encerrados em 25/04/2023."
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "City"
+msgstr "Cidade"
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_civil_certificate_type
 msgid "Civil Certificate Type"
 msgstr "Tipo de Certificado Civil"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Civil Identity (CIN / RG)"
+msgstr "Identidade Civil (CIN / RG)"
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
@@ -178,24 +407,28 @@ msgid "Civil certificate type"
 msgstr "Tipo de certificado civil"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__civil_name
+msgid ""
+"Civil name, as in the identity documents. The employee name is the name in "
+"use, which may be the social name."
+msgstr ""
+"Nome civil, como nos documentos de identidade. O nome do colaborador é o "
+"nome de uso, que pode ser o nome social."
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__code
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__code
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__code
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__code
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__code
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_data_abstract__code
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
 msgid "Code"
 msgstr "Código"
 
 #. module: l10n_br_hr
-#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_colaboradores
-msgid "Colaboradores"
-msgstr "Colaboradores"
-
-#. module: l10n_br_hr
-#. odoo-python
-#: code:addons/l10n_br_hr/models/hr_employee.py:0
-msgid "Common law marriage"
-msgstr "União estável"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__color
+msgid "Color Index"
+msgstr "Índice de Cor"
 
 #. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_res_company
@@ -203,78 +436,206 @@ msgid "Companies"
 msgstr "Empresas"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__cpf
+msgid "Compatibility alias pointing to vat."
+msgstr "Alias de compatibilidade apontando para vat."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__entry_condition
+msgid ""
+"Condition under which the immigrant worker entered Brazil, as reported to "
+"eSocial (condIng)."
+msgstr ""
+"Condição de ingresso do trabalhador imigrante no Brasil, conforme informado "
+"ao eSocial (condIng)."
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_308
+msgid "Conscript"
+msgstr "Conscrito"
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_res_partner
 msgid "Contact"
 msgstr "Contato"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__contractor
+msgid "Contractor"
+msgstr "Terceirizado"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__contractor_partner_id
+msgid "Contractor / Service Provider"
+msgstr "Prestador de Serviço / Terceirizado"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_res_company__cnpj_cei
+msgid "Contractor/Construction CNPJ/CEI"
+msgstr "CNPJ/CEI Tomadora/Obra"
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_terceirizado_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_terceirizado
+msgid "Contractors (PJ)"
+msgstr "Terceirizados (PJ)"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_738
+msgid "Cooperative Member (Production Cooperative)"
+msgstr "Contribuinte individual - Cooperado filiado a cooperativa de produção"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_731
+msgid "Cooperative Member (Work Cooperative)"
+msgstr "Contribuinte individual - Cooperado (Cooperativa de trabalho)"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_734
+msgid "Cooperative Transporter (Work Cooperative)"
+msgstr ""
+"Contribuinte individual - Transportador cooperado que presta serviços por "
+"intermédio de cooperativa de trabalho"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__country_of_birth
+msgid "Country of Birth"
+msgstr "País de Nascimento"
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__create_uid
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__create_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__create_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__create_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__create_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__create_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__create_uid
 msgid "Created by"
 msgstr "Criado por"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__create_date
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__create_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__create_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__create_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__create_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__create_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__create_date
 msgid "Created on"
 msgstr "Criado em"
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
-msgid "Código"
-msgstr "Código"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative_relation__dependent_type
+msgid "Default Dependent Type"
+msgstr "Tipo Padrão de Dependente"
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
-msgid "Código Brasileiro de Ocupação"
-msgstr "Código Brasileiro de Ocupação"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__employee_type_default
+msgid "Default Employee Type"
+msgstr "Tipo Padrão de Colaborador"
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.action_l10n_br_hr_cbo
-msgid "Código Brasileiro de Ocupações"
-msgstr "Código Brasileiro de Ocupações"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative_relation__dependent_type
+msgid "Default dependent classification for this relation."
+msgstr "Classificação padrão de dependente para esta relação de parentesco."
 
 #. module: l10n_br_hr
-#: model:ir.model,name:l10n_br_hr.model_hr_deficiency
-msgid "Deficiencies"
-msgstr "Deficiência"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_worker_category__employee_type_default
+msgid "Default employee type associated with this category."
+msgstr "Tipo padrão de colaborador associado a esta categoria."
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.action_hr_deficiency
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__deficiency_id
-#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_deficiency
-msgid "Deficiency"
-msgstr "Deficiência"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__dependent_type
+msgid "Dependent Type"
+msgstr "Tipo de Dependente"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__deficiency_description
-msgid "Deficiency Description"
-msgstr "Descrição da Deficiência"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__5
+msgid ""
+"Dependent of a diplomatic or consular agent of a country with a reciprocity "
+"agreement for paid work in Brazil"
+msgstr ""
+"Dependente de agente diplomático e/ou consular de países que mantêm convênio"
+" de reciprocidade para o exercício de atividade remunerada no Brasil"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__organ_exp
-msgid "Dispatcher organ"
-msgstr "Órgão despachante"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__dependent_type
+msgid "Dependent type classification for tax and social security purposes."
+msgstr ""
+"Classificação do tipo de dependente para fins fiscais e previdenciários."
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"Dependent types 04 and 07 ended on 25/04/2023: use type %(dependent_type)s "
+"and mark the dependent as a university or technical student."
+msgstr ""
+"Os tipos de dependente 04 e 07 foram encerrados em 25/04/2023: use o tipo "
+"%(dependent_type)s e marque o dependente como universitário(a) ou de escola "
+"técnica."
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"Describe in the notes the dependency of %(name)s (dependent type 99 - "
+"Other)."
+msgstr ""
+"Descreva nas notas a dependência de %(name)s (tipo de dependente 99 - "
+"Agregado/Outros)."
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.action_hr_disability
+#: model:ir.model,name:l10n_br_hr.model_hr_disability
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__disability_ids
+#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_disability
+msgid "Disabilities"
+msgstr "Tipos de Deficiência"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__disability_notes
+msgid "Disability Notes / Accessibility"
+msgstr "Observações / Acessibilidade"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Disability Quota"
+msgstr "Cota de PcD"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__has_legacy_disability
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Disability Review Pending"
+msgstr "Revisão de Deficiência Pendente"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__display_name
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__display_name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__display_name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__display_name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__display_name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__display_name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__display_name
 msgid "Display Name"
 msgstr "Nome Exibido"
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "District"
+msgstr "Bairro"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Document Number"
+msgstr "Número do Documento"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Documents"
 msgstr "Documentos"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_104
+msgid "Domestic Employee"
+msgstr "Empregado - Doméstico"
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
@@ -287,24 +648,60 @@ msgid "Driver license category"
 msgstr "Categoria da carteira de motorista"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__expiration_date
+msgid "Driver license expiration date"
+msgstr "Data de Validade da CNH"
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__driver_license
 msgid "Driver license number"
 msgstr "Número da carteira de motorista"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__rg_emission
-msgid "Emission date"
-msgstr "Data de emissão"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__education_level
+msgid "Education Level"
+msgstr "Grau de Instrução"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_761
+msgid "Elected Director of Cooperative / Association / Condominium"
+msgstr ""
+"Contribuinte individual - Associado eleito para direção de cooperativa, "
+"associação ou entidade de classe, ou síndico/administrador de condomínio"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_303
+msgid "Elective Mandate Holder"
+msgstr "Exercente de mandato eletivo"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Emission Date"
+msgstr "Data de Emissão"
 
 #. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_employee
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__employee
 msgid "Employee"
 msgstr "Funcionário"
 
 #. module: l10n_br_hr
-#: model:ir.ui.menu,name:l10n_br_hr.menu_hr_employee_register
-msgid "Employee register"
-msgstr "Cadastro de funcionários"
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Employee Type"
+msgstr "Tipo de Colaborador"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__legacy_seconded_review
+msgid ""
+"Employee registered as seconded before the upgrade, which didn't tell "
+"whether the worker was received from or lent to another employer. Confirm "
+"the worker category (410 when received) and uncheck; setting the worker "
+"category also unchecks it."
+msgstr ""
+"Colaborador cadastrado como cedido antes da atualização, que não indicava se"
+" o trabalhador foi recebido de outro empregador ou cedido a ele. Confirme a "
+"categoria do trabalhador (410 quando recebido) e desmarque; definir a "
+"categoria também desmarca."
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__employee_ids
@@ -312,26 +709,67 @@ msgid "Employees"
 msgstr "Funcionários"
 
 #. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_clt_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_clt
+msgid "Employees (CLT)"
+msgstr "Empregados (CLT)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__entry_condition
+msgid "Entry Condition"
+msgstr "Condição de Ingresso"
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_ethnicity
-msgid "Ethnicities"
-msgstr "Etnias"
+msgid "Ethnicities / Race"
+msgstr "Raça e Etnia"
 
 #. module: l10n_br_hr
 #: model:ir.actions.act_window,name:l10n_br_hr.action_hr_ethnicity
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ethnicity
 #: model:ir.ui.menu,name:l10n_br_hr.menu_hr_ethnicity
 msgid "Ethnicity"
 msgstr "Etnia"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__expiration_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ethnicity
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_ethnicity_form
+msgid "Ethnicity / Race"
+msgstr "Raça / Cor"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Expedition City"
+msgstr "Município de Expedição"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Expedition State"
+msgstr "UF de Expedição"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Expiration Date"
-msgstr "Data de Expiração"
+msgstr "Data de Validade"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_family_allowance_dependent
+msgid "Family Allowance"
+msgstr "Salário-Família"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__father_name
-msgid "Father Name"
-msgstr "Nome do pai"
+msgid "Father name"
+msgstr "Nome do Pai"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Filiation / Parents"
+msgstr "Filiação / Pais"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_disability_quota
+msgid "Fills Disability Quota"
+msgstr "Preenche Cota de PcD / Reabilitado"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__cresv_categ__1
@@ -339,14 +777,77 @@ msgid "First Category"
 msgstr "Primeira Categoria"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__funcionario
-msgid "Funcionário"
-msgstr "Funcionário"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__residence_term__2
+msgid "Fixed term"
+msgstr "Prazo determinado"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__cedido
-msgid "Funcionário Cedido"
-msgstr "Funcionário Cedido"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_105
+msgid "Fixed-Term Employee (Law 9.601/1998)"
+msgstr "Empregado - Contrato a termo (Lei 9.601/1998)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_foreign_worker
+msgid "Foreign Worker"
+msgstr "Trabalhador Estrangeiro"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Foreign Workers"
+msgstr "Trabalhadores Estrangeiros"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__formatted_code
+msgid "Formatted Code"
+msgstr "Código Formatado"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__freelance
+msgid "Freelancer"
+msgstr "Autônomo"
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_autonomo_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_autonomo
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Freelancers"
+msgstr "Autônomos"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__civil_name
+msgid "Full Civil Name"
+msgstr "Nome Civil Completo"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_101
+msgid "General Employee - CLT Indeterminate"
+msgstr "Empregado - Geral, inclusive CLT"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_108
+msgid "Green and Yellow Contract with FGTS Advance"
+msgstr ""
+"Empregado - Contrato de trabalho Verde e Amarelo - com acordo para "
+"antecipação mensal da multa rescisória do FGTS"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_107
+msgid "Green and Yellow Contract without FGTS Advance"
+msgstr ""
+"Empregado - Contrato de trabalho Verde e Amarelo - sem acordo para "
+"antecipação mensal da multa rescisória do FGTS"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Group By"
+msgstr "Agrupar Por"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_771
+msgid "Guardianship Council Member (Law 8.069/1990)"
+msgstr ""
+"Contribuinte individual - Membro de conselho tutelar, nos termos da Lei "
+"8.069/1990"
 
 #. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_l10n_br_hr_data_abstract
@@ -354,15 +855,36 @@ msgid "HR Data Abstract"
 msgstr "Resumo de Dados do RH"
 
 #. module: l10n_br_hr
+#: model:ir.model,name:l10n_br_hr.model_hr_employee_relative
+msgid "HR Employee Relative"
+msgstr "Dependente do Colaborador"
+
+#. module: l10n_br_hr
+#: model:ir.model,name:l10n_br_hr.model_hr_employee_relative_relation
+msgid "HR Employee Relative Relation"
+msgstr "Relação de Parentesco de Dependente"
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Health"
 msgstr "Saúde"
 
 #. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_hearing
+msgid "Hearing impairment"
+msgstr "Deficiência auditiva"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Hierarchical Groups (View)"
+msgstr "Grupos Hierárquicos (Sintéticos)"
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__id
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__id
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__id
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__id
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__id
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__id
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__id
 msgid "ID"
 msgstr "ID"
@@ -388,14 +910,19 @@ msgid "ID type"
 msgstr "Tipo de identificação"
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "Identidade"
-msgstr "Identidade"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_irrf_dependent
+msgid "IRRF Deduction"
+msgstr "Dependente IRRF"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__cpf
-msgid "Identification Number for selected type"
-msgstr ""
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__l10n_br_rg_code
+msgid "Identity Document"
+msgstr "Documento de Identidade"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__identity_doc_type
+msgid "Identity Document Type"
+msgstr "Tipo de Documento de Identidade"
 
 #. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_identity_type
@@ -410,9 +937,126 @@ msgid "Identity type"
 msgstr "Tipo de Identidade"
 
 #. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Immigration & Residence"
+msgstr "Imigração e Residência"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_incapable
+msgid "Incapable for Work"
+msgstr "Incapaz para o Trabalho"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__residence_term__1
+msgid "Indefinite term"
+msgstr "Prazo indeterminado"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_incapable
+msgid ""
+"Indicates if the dependent is incapable of working / invalid (extends "
+"allowance and deduction beyond age limits)."
+msgstr ""
+"Indica se o dependente é incapaz para o trabalho / inválido (estende o "
+"salário-família e a dedução de IRRF além dos limites de idade)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_family_allowance_dependent
+msgid ""
+"Indicates if the dependent qualifies for Family Allowance (Salário-Família)."
+msgstr "Indica se o dependente qualifica para percepção de Salário-Família."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__is_irrf_dependent
+msgid ""
+"Indicates if the dependent qualifies for Income Tax (IRRF) monthly "
+"deduction."
+msgstr ""
+"Indica se o dependente qualifica para dedução mensal do Imposto de Renda "
+"(IRRF)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_disability_quota
+msgid ""
+"Indicates if the employee fills the legal quota as a person with a "
+"disability (Law 8.213/1991, Art. 93)."
+msgstr ""
+"Indica se o colaborador preenche a cota legal de pessoa com deficiência (Lei"
+" 8.213/1991, Art. 93)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_foreign_worker
+msgid "Indicates if the employee has a nationality other than Brazil."
+msgstr "Indica se o colaborador possui nacionalidade diferente do Brasil."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_naturalized
+msgid ""
+"Indicates if the employee is a naturalized Brazilian citizen (born abroad)."
+msgstr ""
+"Indica se o funcionário é brasileiro naturalizado (nascido no exterior)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__is_born_in_brazil
+msgid "Indicates whether the employee was born in Brazil."
+msgstr "Indica se o funcionário nasceu no Brasil."
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_5
+msgid "Indigenous"
+msgstr "Indígena"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_741
+msgid "Individual Microentrepreneur (MEI)"
+msgstr "Contribuinte individual - Microempreendedor individual (MEI)"
+
+#. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__initials
 msgid "Initials"
 msgstr "Iniciais"
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_intellectual_mental_legacy
+msgid "Intellectual / Mental"
+msgstr "Intelectual / Mental (Termo Descontinuado)"
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_intellectual
+msgid "Intellectual disability"
+msgstr "Deficiência intelectual"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_111
+msgid "Intermittent Employee"
+msgstr "Empregado - Contrato de trabalho intermitente"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_901
+msgid "Intern (Law 11.788/2008)"
+msgstr "Estagiário (Lei 11.788/2008)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__internal_type
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Internal Type"
+msgstr "Tipo Interno"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_disability__code
+msgid "Internal identifier for the disability type."
+msgstr "Identificador interno do tipo de deficiência."
+
+#. module: l10n_br_hr
+#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_estagiario_action
+#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_estagiario
+msgid "Interns & Apprentices"
+msgstr "Estagiários e Aprendizes"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Interns / Apprentices"
+msgstr "Estagiários e Aprendizes"
 
 #. module: l10n_br_hr
 #. odoo-python
@@ -421,52 +1065,143 @@ msgid "Invalid PIS/PASEP"
 msgstr "PIS / PASEP inválido"
 
 #. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Issuing Agency"
+msgstr "Órgão Emissor"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__organ_exp
+msgid "Issuing agency"
+msgstr "Órgão Emissor"
+
+#. module: l10n_br_hr
 #: model:ir.model,name:l10n_br_hr.model_hr_job
 msgid "Job Position"
 msgstr "Cargo"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__write_uid
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__write_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__write_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__write_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__write_uid
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__write_uid
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__write_uid
 msgid "Last Updated by"
 msgstr "Última Atualização por"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__write_date
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__write_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__write_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__write_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_identity_type__write_date
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__write_date
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__write_date
 msgid "Last Updated on"
 msgstr "Última Atualização em"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__marital
-msgid "Marital Status"
-msgstr "Estado civil"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_312
+msgid "Local Assistant"
+msgstr "Auxiliar local"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Market alternative titles and synonyms..."
+msgstr "Títulos alternativos e sinônimos de mercado..."
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_902
+msgid "Medical / Health Resident"
+msgstr "Médico residente / Residente em área de saúde"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Medical Data"
+msgstr "Dados Médicos e Acessibilidade"
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_mental
+msgid "Mental health condition"
+msgstr "Deficiência mental / Psicossocial"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Military Reservist"
+msgstr "Certificado de Reservista"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__cresv_categ
-msgid "Military service status category"
-msgstr "Categoria de status de serviço militar"
+msgid "Military certificate category"
+msgstr "Categoria da Reservista"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__creservist
-msgid "Military service status certificate"
-msgstr "Certificado de status de serviço militar"
+msgid "Military certificate number"
+msgstr "Número do Certificado de Reservista"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_314
+msgid "Military of the Armed Forces"
+msgstr "Militar das Forças Armadas"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_307
+msgid "Military of the States and Federal District"
+msgstr "Militar dos Estados e Distrito Federal"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__cresv_categ
+msgid "Military service certificate category (optional)."
+msgstr "Categoria do certificado de reservista militar (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__creservist
+msgid "Military service certificate number (optional)."
+msgstr ""
+"Número do certificado de alistamento ou reservista militar (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_781
+msgid "Minister of Religion / Religious Member"
+msgstr ""
+"Ministro de confissão religiosa ou membro de vida consagrada, de congregação"
+" ou de ordem religiosa"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_311
+msgid ""
+"Ministers, Judges, Prosecutors or Court Officers at the Disposal of the "
+"Electoral Justice"
+msgstr ""
+"Ministros, juízes, procuradores, promotores ou oficiais de justiça à "
+"disposição da Justiça Eleitoral"
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_3
+msgid "Mixed-race"
+msgstr "Parda"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__mother_name
-msgid "Mother Name"
-msgstr "Nome da mãe"
+msgid "Mother name"
+msgstr "Nome da Mãe"
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_multiple_legacy
+msgid "Multiple"
+msgstr "Múltipla (Termo Descontinuado)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__private_city_id
+msgid "Municipality with its IBGE code, kept in sync with the private city."
+msgstr ""
+"Município com código IBGE, sincronizado com a cidade do endereço particular."
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_civil_certificate_type__name
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_deficiency__name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_ethnicity__name
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_worker_category__name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__name
 #: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_data_abstract__name
 msgid "Name"
@@ -474,8 +1209,30 @@ msgstr "Nome"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__l10n_br_rg_code
-msgid "National ID number"
-msgstr "Número de Identificação Nacional"
+msgid "National ID / RG / CIN number"
+msgstr "Número do Documento de Identidade (RG / CIN)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__rg_emission
+msgid "National ID emission date"
+msgstr "Data de Emissão do RG"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__vat
+msgid "National Taxpayer ID (CPF) synchronized with the work contact partner."
+msgstr ""
+"Cadastro de Pessoas Físicas (CPF) sincronizado com o contato profissional."
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_906
+msgid "National Voluntary Civil Service Beneficiary"
+msgstr ""
+"Beneficiário do Programa Nacional de Prestação de Serviço Civil Voluntário"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Nationality"
+msgstr "Nacionalidade"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__country_id
@@ -483,34 +1240,103 @@ msgid "Nationality (Country)"
 msgstr "Nacionalidade (País)"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__naturalization_date
+msgid "Naturalization Date"
+msgstr "Data da Naturalização"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__naturalization_decree
+msgid "Naturalization Ordinance / Decree"
+msgstr "Portaria / Decreto de Naturalização"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__is_naturalized
+msgid "Naturalized Citizen"
+msgstr "Cidadão Naturalizado"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Naturalized Citizens"
+msgstr "Cidadãos Naturalizados"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__needs_review
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Needs Review"
+msgstr "Requer Revisão"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_202
+msgid "Non-Port Casual Worker"
+msgstr "Trabalhador avulso não portuário"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__l10n_br_hr_cbo__internal_type__normal
+msgid "Normal / Analytical Occupation"
+msgstr "Ocupação Normal / Analítica"
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_6
+msgid "Not informed"
+msgstr "Não Informado"
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Number"
 msgstr "Número"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__naturalization_decree
+msgid ""
+"Number of the Naturalization Ordinance / Decree published in the Official "
+"Gazette (DOU)."
+msgstr "Número da Portaria ou Decreto de Naturalização publicado no DOU."
+
+#. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__o+
 msgid "O+"
-msgstr ""
+msgstr "O+"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__blood_type__o-
 msgid "O-"
-msgstr ""
+msgstr "O-"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_310
+msgid "Occasional Public Servant"
+msgstr "Servidor público eventual"
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
-msgid "Ocupação"
+msgid "Occupation"
 msgstr "Ocupação"
 
 #. module: l10n_br_hr
-#: model:hr.department,name:l10n_br_hr.demo_department_operacional
-msgid "Operacional"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Occupation Title"
+msgstr "Título da Ocupação"
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_operador_industrial
-msgid "Operador Industrial"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_tree
+msgid "Occupations"
+msgstr "Ocupações"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Occupations (Normal)"
+msgstr "Ocupações (Normais)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__7
+msgid "Other condition"
+msgstr "Outra condição"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Outsourced"
+msgstr "Terceirizados"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__pis_pasep
@@ -524,19 +1350,166 @@ msgid "PIS/PASEP emission date"
 msgstr "Data de Emissão PIS/PASEP"
 
 #. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__pis_pasep
+msgid ""
+"PIS/PASEP registration number. Optional field, as worker identification and "
+"government records have been unified under the CPF."
+msgstr ""
+"Número de inscrição no PIS/PASEP. Campo opcional, pois a identificação do "
+"trabalhador foi centralizada no CPF."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__parent_id
+msgid "Parent CBO"
+msgstr "CBO Pai"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Parent CBO / Family"
+msgstr "CBO Pai / Família"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "Parents names"
-msgstr "Nome dos pais"
+msgid "Person with a Disability"
+msgstr "Pessoa com Deficiência"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__l10n_br_rg_code
-msgid "RG"
-msgstr "RG"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps
+msgid ""
+"Physical CTPS booklet number (optional, replaced by CPF for Digital CTPS "
+"under Portaria SEPRT 1.065/2019)."
+msgstr ""
+"Número da CTPS física em papel (campo opcional, substituído pelo CPF na CTPS"
+" Digital pela Portaria SEPRT nº 1.065/2019)."
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_hr_ethnicity_form
-msgid "Raça/Cor"
-msgstr "Raça / Cor"
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps_series
+msgid "Physical CTPS booklet series (optional)."
+msgstr "Série da CTPS física em papel (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_date
+msgid "Physical CTPS emission date"
+msgstr "Data de Emissão da CTPS Física"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps_date
+msgid "Physical CTPS emission date (optional)."
+msgstr "Data de emissão da CTPS física (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps
+msgid "Physical CTPS number"
+msgstr "Número da CTPS Física"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_series
+msgid "Physical CTPS series"
+msgstr "Série da CTPS Física"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__ctps_uf_id
+msgid "Physical CTPS state"
+msgstr "UF da CTPS Física"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__ctps_uf_id
+msgid "Physical CTPS state (optional)."
+msgstr "UF de expedição da CTPS física (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_physical
+msgid "Physical disability"
+msgstr "Deficiência física"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_201
+msgid "Port Casual Worker"
+msgstr "Trabalhador avulso portuário"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_address_is_br
+msgid "Private Address Is Br"
+msgstr "Endereço Particular Brasileiro"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_district
+msgid "Private District"
+msgstr "Bairro (Particular)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_city_id
+msgid "Private Municipality"
+msgstr "Município (Particular)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_street_name
+msgid "Private Street Name"
+msgstr "Logradouro (Particular)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__private_street_number
+msgid "Private Street Number"
+msgstr "Número (Particular)"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_309
+msgid "Public Agent - Other"
+msgstr "Agente público - Outros"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_904
+msgid "Public Contest Training Course Participant"
+msgstr ""
+"Participante de curso de formação, como etapa de concurso público, sem "
+"vínculo de emprego/estatutário"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_302
+msgid "Public Servant - Commission Only"
+msgstr "Servidor público ocupante de cargo exclusivo em comissão"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_301
+msgid "Public Servant - Tenured / Effective"
+msgstr "Servidor público titular de cargo efetivo"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_313
+msgid ""
+"Public Servant Acting as Instructor, in Courses or Public Exams, or Summoned"
+" for Technical Opinions, Testimonies or Attaché Work Abroad"
+msgstr ""
+"Servidor público exercente de atividade de instrutoria, curso ou concurso, "
+"convocado para pareceres técnicos, depoimentos ou aditância no exterior"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_305
+msgid "Public Servant Appointed to Deliberative Council"
+msgstr ""
+"Servidor público indicado para conselho ou órgão deliberativo, na condição "
+"de representante do governo, órgão ou entidade da administração pública"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_304
+msgid ""
+"Public Servant Holding an Elected Office (including Commissioned Position)"
+msgstr ""
+"Servidor público exercente de mandato eletivo, inclusive com exercício de "
+"cargo em comissão"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__naturalization_date
+msgid ""
+"Publication date of the Naturalization Ordinance in the Official Gazette "
+"(DOU)."
+msgstr "Data da publicação da Portaria de Naturalização no DOU."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__1
+msgid "Refugee"
+msgstr "Refugiado"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__registration
@@ -544,19 +1517,60 @@ msgid "Registration number"
 msgstr "Número de registro"
 
 #. module: l10n_br_hr
-#: model:ir.ui.menu,name:l10n_br_hr.menu_l10n_br_hr_relatorios_root
-msgid "Relatórios"
-msgstr "Relatórios"
+#: model:hr.disability,name:l10n_br_hr.disability_rehabilitated
+msgid "Rehabilitated / Readapted"
+msgstr "Reabilitado / Readaptado"
 
 #. module: l10n_br_hr
-#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
-msgid "Reservist"
-msgstr "Reservista"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__residence_term
+msgid "Residence Term"
+msgstr "Tempo de Residência"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_tree_l10n_br
+msgid "Review"
+msgstr "Revisão"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__review_reasons
+msgid "Review Reasons"
+msgstr "Motivos da Revisão"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_102
+msgid "Rural Employee - Short Term (Law 11.718/2008)"
+msgstr "Empregado - Trabalhador rural por pequeno prazo (Lei 11.718/2008)"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_903
+msgid "Scholarship Holder"
+msgstr "Bolsista"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__cresv_categ__2
 msgid "Second Category"
 msgstr "Segunda categoria"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_410
+msgid "Seconded / Assigned Worker"
+msgstr "Trabalhador cedido / em exercício em outro órgão"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__legacy_seconded_review
+msgid "Seconded Worker to Confirm"
+msgstr "Cedido a Confirmar"
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "Seconded worker: confirm the worker category."
+msgstr "Trabalhador cedido: confirme a categoria do trabalhador."
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Select disabilities..."
+msgstr "Selecione as deficiências..."
 
 #. module: l10n_br_hr
 #. odoo-python
@@ -565,20 +1579,153 @@ msgid "Separated"
 msgstr "Separado"
 
 #. module: l10n_br_hr
-#: model:hr.department,name:l10n_br_hr.demo_department_ti
-msgid "Tecnologia da Informação"
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_501
+msgid "Special Insured Union Leader"
+msgstr "Dirigente sindical - Segurado especial"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__disability_notes
+msgid ""
+"Specific details regarding accessibility, medical reports, or workplace "
+"adaptations (max 255 characters)."
 msgstr ""
+"Detalhes específicos sobre acessibilidade, laudo médico ou adaptações do "
+"posto de trabalho (máx. 255 caracteres)."
 
 #. module: l10n_br_hr
-#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__employee_relationship_type__terceirizado
-msgid "Terceirizado"
-msgstr "Terceirizado"
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_disability.py:0
+msgid ""
+"Standard disability categories cannot be deleted from the system. If you do "
+"not wish to use them, you may archive them."
+msgstr ""
+"As categorias padrão de deficiência não podem ser excluídas do sistema. Se "
+"não desejar utilizá-las, você pode arquivá-las."
 
 #. module: l10n_br_hr
-#: model:ir.actions.act_window,name:l10n_br_hr.hr_employee_terceirizado_action
-#: model:ir.ui.menu,name:l10n_br_hr.hr_menu_employee_terceirizado
-msgid "Terceirizados"
-msgstr "Terceirizados"
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_721
+msgid "Statutory Director with FGTS"
+msgstr "Contribuinte individual - Diretor não empregado, com FGTS"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_722
+msgid "Statutory Director without FGTS"
+msgstr "Contribuinte individual - Diretor não empregado, sem FGTS"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__entry_condition__3
+msgid "Stay in Brazil for family reunion"
+msgstr "Permanência no Brasil em razão de reunião familiar"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Street name..."
+msgstr "Logradouro..."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__student
+msgid "Student"
+msgstr "Estudante"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_l10n_br_hr_cbo__synonyms
+msgid ""
+"Synonymous and market job titles recognized by MTE for this occupation."
+msgstr ""
+"Sinônimos e títulos de mercado reconhecidos pelo MTE para esta ocupação."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_l10n_br_hr_cbo__synonyms
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_filter
+msgid "Synonyms"
+msgstr "Sinônimos"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "Synonyms & Alternative Titles"
+msgstr "Sinônimos e Títulos Alternativos"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee_relative__vat
+msgid "Taxpayer ID (CPF) of the dependent. Mandatory for tax dependency."
+msgstr ""
+"Número de Inscrição no CPF do dependente. Obrigatório para dependência "
+"fiscal."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_disability__code
+msgid "Technical Code"
+msgstr "Código Técnico"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_751
+msgid ""
+"Temporary Lay Judge of the Labor or Electoral Justice, Retired under Any "
+"Social Security Regime"
+msgstr ""
+"Magistrado classista temporário da Justiça do Trabalho ou da Justiça "
+"Eleitoral que seja aposentado de qualquer regime previdenciário"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_306
+msgid "Temporary Public Servant (Special Administrative Regime)"
+msgstr ""
+"Servidor público contratado por tempo determinado, sujeito a regime "
+"administrativo especial definido em lei própria"
+
+#. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_106
+msgid "Temporary Worker (Law 6.019/1974)"
+msgstr "Trabalhador temporário (Lei 6.019/1974)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__residence_term
+msgid ""
+"Term of residence in Brazil of the immigrant worker, as reported to eSocial "
+"(tmpResid)."
+msgstr ""
+"Tempo de residência do trabalhador imigrante no Brasil, conforme informado "
+"ao eSocial (tmpResid)."
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "The CBO of the job position is discontinued."
+msgstr "O CBO do cargo foi descontinuado."
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"The CPF of the dependent %(name)s is required for the income tax (IRRF) "
+"deduction."
+msgstr ""
+"O CPF do dependente %(name)s é obrigatório para a dedução do imposto de "
+"renda (IRRF)."
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee_relative.py:0
+msgid ""
+"The dependent's CPF must contain exactly 11 digits (received: %(vat)s)."
+msgstr ""
+"O CPF do dependente deve conter exatamente 11 dígitos (recebido: %(vat)s)."
+
+#. module: l10n_br_hr
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid "The disability classification must be updated."
+msgstr "A classificação da deficiência precisa ser atualizada."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__needs_review
+msgid "The employee has data to review; the reasons are shown on the form."
+msgstr "O colaborador tem dados a revisar; os motivos aparecem no formulário."
 
 #. module: l10n_br_hr
 #: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_employee__cresv_categ__3
@@ -586,14 +1733,30 @@ msgid "Third Category"
 msgstr "Terceira categoria"
 
 #. module: l10n_br_hr
-#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__employee_relationship_type
-msgid "Tipo de Colaborador"
-msgstr "Tipo de Colaborador"
+#. odoo-python
+#: code:addons/l10n_br_hr/models/hr_employee.py:0
+msgid ""
+"To indicate that the employee fills the disability quota, at least one "
+"disability must be selected."
+msgstr ""
+"Para indicar que o colaborador preenche a cota de PcD, é necessário "
+"selecionar ao menos uma deficiência."
 
 #. module: l10n_br_hr
-#: model:hr.job,name:l10n_br_hr.demo_job_tecnico_seguranca
-msgid "Técnico de Segurança do Trabalho"
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__trainee
+msgid "Trainee"
+msgstr "Estagiário / Aprendiz"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__identity_doc_type
+msgid ""
+"Type of civil identity document. Under Law 14.534/2023 and Decree "
+"10.977/2022, CIN adopts the CPF as the sole and unique national ID number. "
+"Foreign workers typically use CRNM (formerly RNE)."
 msgstr ""
+"Tipo de documento de identificação civil. Sob a Lei 14.534/2023 e Decreto "
+"10.977/2022, a CIN adota o CPF como número único de identificação nacional. "
+"Trabalhadores estrangeiros geralmente utilizam a CRNM (antigo RNE)."
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_res_partner__union_entity_code
@@ -602,29 +1765,179 @@ msgid "Union Entity code"
 msgstr "Código do Sindicato"
 
 #. module: l10n_br_hr
+#: model:hr.worker.category,name:l10n_br_hr.worker_category_401
+msgid "Union Leader (Reported by Union)"
+msgstr "Dirigente sindical - Informação prestada pelo sindicato"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee_relative__is_student
+msgid "University / Technical Student"
+msgstr "Universitário(a) / Escola Técnica"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__contractor_partner_id
+msgid "Vendor / Outsourcing service provider employing this worker."
+msgstr ""
+"Fornecedor / Empresa prestadora de serviços empregadora deste trabalhador."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__l10n_br_hr_cbo__internal_type__view
+msgid "View / Synthetic Group"
+msgstr "Visão / Grupo Sintético"
+
+#. module: l10n_br_hr
+#: model:hr.disability,name:l10n_br_hr.disability_visual
+msgid "Visual impairment"
+msgstr "Deficiência visual"
+
+#. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "Voter Registration"
-msgstr "Registro de Eleitor"
+msgstr "Título de Eleitor"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__voter_section
+msgid "Voter registration electoral section (optional)."
+msgstr "Seção eleitoral do título de eleitor (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__voter_zone
+msgid "Voter registration electoral zone (optional)."
+msgstr "Zona eleitoral do título de eleitor (campo opcional)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__voter_title
+msgid "Voter registration title number (optional)."
+msgstr "Número do título de eleitor (campo opcional)."
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__voter_section
-msgid "Voter Section"
+msgid "Voter section"
 msgstr "Seção Eleitoral"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__voter_title
-msgid "Voter Title"
-msgstr "Título Eleitoral"
+msgid "Voter title"
+msgstr "Título de Eleitor"
 
 #. module: l10n_br_hr
 #: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__voter_zone
-msgid "Voter Zone"
+msgid "Voter zone"
 msgstr "Zona Eleitoral"
+
+#. module: l10n_br_hr
+#: model:hr.ethnicity,name:l10n_br_hr.ethnicity_1
+msgid "White"
+msgstr "Branca"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Work Card (CTPS)"
+msgstr "Carteira de Trabalho (CTPS)"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__permit_no
+msgid "Work Permit No"
+msgstr "Nº da autorização de trabalho"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__permit_no
+msgid ""
+"Work authorization number. The immigration registration number (RNM) goes in"
+" the identity document number."
+msgstr ""
+"Número da autorização de trabalho. O número do Registro Nacional Migratório "
+"(RNM) vai no número do documento de identidade."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields.selection,name:l10n_br_hr.selection__hr_worker_category__employee_type_default__worker
+msgid "Worker"
+msgstr "Trabalhador Rural / Operário"
+
+#. module: l10n_br_hr
+#: model:ir.model,name:l10n_br_hr.model_hr_worker_category
+msgid "Worker Categories"
+msgstr "Categorias de Trabalhadores"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "Professional Council"
+msgstr "Conselho Profissional"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__professional_council_name
+msgid "Council / Board"
+msgstr "Conselho / Órgão de Classe"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__professional_council_name
+msgid "Professional council or board name (e.g. CREA, CRM, OAB, CRC, COREN)."
+msgstr "Nome do conselho profissional ou órgão de classe (ex.: CREA, CRM, OAB, CRC, COREN)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__professional_council_number
+msgid "Council Registration Number"
+msgstr "Número de Inscrição / Registro"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__professional_council_number
+msgid "Professional council registration or license number."
+msgstr "Número de inscrição ou registro no conselho profissional."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__professional_council_state_id
+msgid "Council State"
+msgstr "UF do Conselho"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__professional_council_state_id
+msgid "State (UF) where the professional council registration was issued."
+msgstr "Estado (UF) onde a inscrição no conselho profissional foi emitida."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__professional_council_validity
+msgid "Council Expiration Date"
+msgstr "Data de Validade do Registro"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__professional_council_validity
+msgid "Expiration date of the professional council license if applicable."
+msgstr "Data de validade da carteira/registro profissional, quando aplicável."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,field_description:l10n_br_hr.field_hr_employee__worker_category_id
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_employee_filter_l10n_br
+msgid "Worker Category"
+msgstr "Categoria de Trabalhador"
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__worker_category_id
+msgid ""
+"Worker employment category (e.g. CLT, Apprentice, Autonomous/Freelancer, "
+"Intern)."
+msgstr ""
+"Categoria de contratação do trabalhador (ex: CLT, Aprendiz, Autônomo, "
+"Estagiário)."
+
+#. module: l10n_br_hr
+#: model:ir.model.fields,help:l10n_br_hr.field_hr_employee__education_level
+msgid "Worker formal education level."
+msgstr "Nível de escolaridade formal do colaborador."
 
 #. module: l10n_br_hr
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
 msgid "XXX.XXXXX.XX-X"
 msgstr "XXX.XXXXX.XX-X"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_cbo_form
+msgid "e.g. Analista de desenvolvimento de sistemas"
+msgstr "ex.: Analista de desenvolvimento de sistemas"
+
+#. module: l10n_br_hr
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr.view_l10n_br_hr_employee_form
+msgid "e.g. Report #123/2026 - Keyboard adaptation..."
+msgstr "ex.: Laudo nº 123/2026 - Adaptação de teclado..."
 
 #~ msgid "Emergency contact name"
 #~ msgstr "Nome de contato de emergência"
@@ -637,11 +1950,10 @@ msgstr "XXX.XXXXX.XX-X"
 
 #, python-format
 #~ msgid ""
-#~ "A dependent with the same level of relatedness already exists for "
-#~ "dependent %s"
-#~ msgstr ""
-#~ "Já existe um dependente com o mesmo nível de parentesco para o dependente "
+#~ "A dependent with the same level of relatedness already exists for dependent "
 #~ "%s"
+#~ msgstr ""
+#~ "Já existe um dependente com o mesmo nível de parentesco para o dependente %s"
 
 #~ msgid "Account Payable"
 #~ msgstr "Conta a Pagar"
@@ -677,8 +1989,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Agentes"
 
 #~ msgid ""
-#~ "All the emails and documents sent to this contact will be translated in "
-#~ "this language."
+#~ "All the emails and documents sent to this contact will be translated in this"
+#~ " language."
 #~ msgstr ""
 #~ "Todos os e-mails e documentos enviados para esse contato serão traduzidos "
 #~ "para este idioma."
@@ -696,9 +2008,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "Automatically send a confirmation email to the vendor X days before the "
 #~ "expected receipt date, asking him to confirm the exact date."
 #~ msgstr ""
-#~ "Enviar automaticamente um e-mail de confirmação ao fornecedor X dias "
-#~ "antes da data prevista de recebimento, solicitando a confirmação da data "
-#~ "exata."
+#~ "Enviar automaticamente um e-mail de confirmação ao fornecedor X dias antes "
+#~ "da data prevista de recebimento, solicitando a confirmação da data exata."
 
 #~ msgid "Bank"
 #~ msgstr "Banco"
@@ -746,8 +2057,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Marque a opção se este contato for um Funcionário."
 
 #~ msgid ""
-#~ "Check this box to ensure every address created in that country has a "
-#~ "'City' chosen in the list of the country's cities."
+#~ "Check this box to ensure every address created in that country has a 'City' "
+#~ "chosen in the list of the country's cities."
 #~ msgstr ""
 #~ "Marque essa caixa para garantir que todo endereço criado para aquele país "
 #~ "possui uma 'Cidade' selecionada na lista de cidades daquele país."
@@ -760,9 +2071,6 @@ msgstr "XXX.XXXXX.XX-X"
 
 #~ msgid "City of Address"
 #~ msgstr "Cidade do Endereço"
-
-#~ msgid "Color Index"
-#~ msgstr "Índice de Cores"
 
 #~ msgid "Commercial Entity"
 #~ msgstr "Entidade Comercial"
@@ -871,8 +2179,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "partner is a customer without access or with a limited access created for "
 #~ "sharing data."
 #~ msgstr ""
-#~ "Cliente (não usuário), usuário compartilhado. Indicou que o parceiro "
-#~ "atual é um cliente sem acesso ou com um acesso limitado criado para o "
+#~ "Cliente (não usuário), usuário compartilhado. Indicou que o parceiro atual é"
+#~ " um cliente sem acesso ou com um acesso limitado criado para o "
 #~ "compartilhamento de dados."
 
 #~ msgid "Email"
@@ -891,15 +2199,15 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Impor cidades"
 
 #~ msgid ""
-#~ "Enter the various label found on your bank statement separated by a ; If "
-#~ "one of this label is include in the bank statement line, the partner will "
-#~ "be automatically filled (as long as you use this method/rules in your "
-#~ "statement profile)."
+#~ "Enter the various label found on your bank statement separated by a ; If one"
+#~ " of this label is include in the bank statement line, the partner will be "
+#~ "automatically filled (as long as you use this method/rules in your statement"
+#~ " profile)."
 #~ msgstr ""
-#~ "Digite os vários rótulos encontrados em seu extrato bancário separados "
-#~ "por ; Se uma desses rótulos for incluída na linha do extrato bancário, o "
-#~ "parceiro será preenchido automaticamente (desde que você use este método/"
-#~ "regras em seu perfil de extrato)."
+#~ "Digite os vários rótulos encontrados em seu extrato bancário separados por ;"
+#~ " Se uma desses rótulos for incluída na linha do extrato bancário, o parceiro"
+#~ " será preenchido automaticamente (desde que você use este método/regras em "
+#~ "seu perfil de extrato)."
 
 #~ msgid "Escolaridade"
 #~ msgstr "Escolaridade"
@@ -981,8 +2289,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "If the email address is on the blacklist, the contact won't receive mass "
 #~ "mailing anymore, from any list"
 #~ msgstr ""
-#~ "Se o endereço de email estiver na lista negra, o contato não receberá "
-#~ "mais emails em massa, de qualquer lista"
+#~ "Se o endereço de email estiver na lista negra, o contato não receberá mais "
+#~ "emails em massa, de qualquer lista"
 
 #~ msgid "Image"
 #~ msgstr "Imagem"
@@ -1008,13 +2316,13 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid ""
 #~ "Indicates whether the entity in question is a public organization or "
 #~ "government-related entity. It encompasses a range of entities such as "
-#~ "municipal governments, state-owned enterprises (where the government is "
-#~ "the largest shareholder), and other government-controlled organizations."
+#~ "municipal governments, state-owned enterprises (where the government is the "
+#~ "largest shareholder), and other government-controlled organizations."
 #~ msgstr ""
 #~ "Indica se a entidade em questão é uma organização pública ou uma entidade "
 #~ "relacionada ao governo. Abrange uma gama de entidades, como governos "
-#~ "municipais, empresas estatais (onde o governo é o maior acionista) e "
-#~ "outras organizações controladas pelo governo."
+#~ "municipais, empresas estatais (onde o governo é o maior acionista) e outras "
+#~ "organizações controladas pelo governo."
 
 #~ msgid "Industry"
 #~ msgstr "Industria"
@@ -1030,8 +2338,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Fatura"
 
 #~ msgid ""
-#~ "Invoice & Delivery addresses are used in sales orders. Private addresses "
-#~ "are only visible by authorized users."
+#~ "Invoice & Delivery addresses are used in sales orders. Private addresses are"
+#~ " only visible by authorized users."
 #~ msgstr ""
 #~ "Endereços de fatura e entrega são usados em pedidos de vendas. Endereços "
 #~ "privados são visíveis apenas por usuários autorizados."
@@ -1076,9 +2384,9 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Última notificação marcada como lida a partir do Calendário Base"
 
 #~ msgid ""
-#~ "Last time the invoices & payments matching was performed for this "
-#~ "partner. It is set either if there's not at least an unreconciled debit "
-#~ "and an unreconciled credit or if you click the \"Done\" button."
+#~ "Last time the invoices & payments matching was performed for this partner. "
+#~ "It is set either if there's not at least an unreconciled debit and an "
+#~ "unreconciled credit or if you click the \"Done\" button."
 #~ msgstr ""
 #~ "A última vez que a correspondência de faturas e pagamentos foi realizada "
 #~ "para este parceiro. Ele é definido se não houver pelo menos um débito não "
@@ -1151,11 +2459,10 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Number of Actions"
 #~ msgstr "Número de Ações"
 
-#~ msgid ""
-#~ "Number of days to send reminder email before the promised receipt date"
+#~ msgid "Number of days to send reminder email before the promised receipt date"
 #~ msgstr ""
-#~ "Número de dias para enviar e-mail de lembrete antes da data de "
-#~ "recebimento prometida"
+#~ "Número de dias para enviar e-mail de lembrete antes da data de recebimento "
+#~ "prometida"
 
 #~ msgid "Number of errors"
 #~ msgstr "Número de erros"
@@ -1182,8 +2489,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Número de Outras Inscrição Estaduais"
 
 #~ msgid ""
-#~ "Over the past x days; the number of products received on time divided by "
-#~ "the number of ordered products.x is either the System Parameter "
+#~ "Over the past x days; the number of products received on time divided by the"
+#~ " number of ordered products.x is either the System Parameter "
 #~ "purchase_stock.on_time_delivery_days or the default 365"
 #~ msgstr ""
 #~ "Nos últimos x dias; o número de produtos recebidos no prazo dividido pelo "
@@ -1225,13 +2532,13 @@ msgstr "XXX.XXXXX.XX-X"
 
 #~ msgid ""
 #~ "Preferred payment method when paying this vendor. This is used to filter "
-#~ "vendor bills by preferred payment method to register payments in mass. "
-#~ "Use cases: create bank files for batch wires, check runs."
+#~ "vendor bills by preferred payment method to register payments in mass. Use "
+#~ "cases: create bank files for batch wires, check runs."
 #~ msgstr ""
 #~ "Método de pagamento preferido ao pagar este fornecedor. Isto é usado para "
 #~ "filtrar contas de fornecedores por método de pagamento preferido para "
-#~ "registrar pagamentos em massa. Casos de uso: criar arquivos bancários "
-#~ "para transferências em lote, execuções de cheques."
+#~ "registrar pagamentos em massa. Casos de uso: criar arquivos bancários para "
+#~ "transferências em lote, execuções de cheques."
 
 #~ msgid "Pricelist"
 #~ msgstr "Lista de Preços"
@@ -1301,12 +2608,12 @@ msgstr "XXX.XXXXX.XX-X"
 
 #~ msgid ""
 #~ "Selecting the \"Warning\" option will notify user with the message, "
-#~ "Selecting \"Blocking Message\" will throw an exception with the message "
-#~ "and block the flow. The Message has to be written in the next field."
+#~ "Selecting \"Blocking Message\" will throw an exception with the message and "
+#~ "block the flow. The Message has to be written in the next field."
 #~ msgstr ""
 #~ "Selecionando a opção \"Aviso\" notificará o usuário com a mensagem, "
-#~ "Selecionando \"Mensagem de Bloqueio\" lançará uma exceção com a mensagem "
-#~ "e bloqueará o fluxo. A mensagem deve ser escrita no próximo campo."
+#~ "Selecionando \"Mensagem de Bloqueio\" lançará uma exceção com a mensagem e "
+#~ "bloqueará o fluxo. A mensagem deve ser escrita no próximo campo."
 
 #~ msgid "Self"
 #~ msgstr "Mesmo"
@@ -1398,8 +2705,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "The Tax Identification Number. Complete it if the contact is subjected to "
 #~ "government taxes. Used in some legal statements."
 #~ msgstr ""
-#~ "O número de identificação fiscal. Preencha-o se o contato estiver sujeito "
-#~ "a impostos governamentais. Usado em algumas declarações legais."
+#~ "O número de identificação fiscal. Preencha-o se o contato estiver sujeito a "
+#~ "impostos governamentais. Usado em algumas declarações legais."
 
 #~ msgid ""
 #~ "The fiscal position determines the taxes/accounts used for this contact."
@@ -1416,8 +2723,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "O número de pedidos de ponto de venda relacionados a este cliente"
 
 #~ msgid ""
-#~ "The partner has at least one unreconciled debit and credit since last "
-#~ "time the invoices & payments matching was performed."
+#~ "The partner has at least one unreconciled debit and credit since last time "
+#~ "the invoices & payments matching was performed."
 #~ msgstr ""
 #~ "O parceiro tem pelo menos um débito e crédito não reconciliados desde a "
 #~ "última vez em que a correspondência de faturas e pagamentos foi realizada."
@@ -1434,8 +2741,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "O local do estoque usado como fonte ao receber mercadorias desse contato."
 
 #~ msgid ""
-#~ "This account will be used instead of the default one as the payable "
-#~ "account for the current partner"
+#~ "This account will be used instead of the default one as the payable account "
+#~ "for the current partner"
 #~ msgstr ""
 #~ "Essa conta a pagar será usada para o parceiro atual, substituindo a padrão"
 
@@ -1443,19 +2750,18 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "This account will be used instead of the default one as the receivable "
 #~ "account for the current partner"
 #~ msgstr ""
-#~ "Essa conta a receber será usada para o parceiro atual, substituindo a "
-#~ "padrão"
+#~ "Essa conta a receber será usada para o parceiro atual, substituindo a padrão"
 
 #~ msgid ""
-#~ "This currency will be used, instead of the default one, for purchases "
-#~ "from the current partner"
+#~ "This currency will be used, instead of the default one, for purchases from "
+#~ "the current partner"
 #~ msgstr ""
 #~ "Esta moeda será usada, em vez da moeda padrão, para compras do parceiro "
 #~ "atual"
 
 #~ msgid ""
-#~ "This field is used to search on email address as the primary email field "
-#~ "can contain more than strictly an email address."
+#~ "This field is used to search on email address as the primary email field can"
+#~ " contain more than strictly an email address."
 #~ msgstr ""
 #~ "Este campo é usado para pesquisar por endereço de e-mail, pois o campo de "
 #~ "e-mail principal pode conter mais do que apenas um endereço de e-mail."
@@ -1464,19 +2770,19 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "This is the default commission used in the sales where this agent is "
 #~ "assigned. It can be changed on each operation if needed."
 #~ msgstr ""
-#~ "Esta é a comissão padrão usada nas vendas onde este agente é designado. "
-#~ "Ela pode ser alterada em cada operação, se necessário."
+#~ "Esta é a comissão padrão usada nas vendas onde este agente é designado. Ela "
+#~ "pode ser alterada em cada operação, se necessário."
 
 #~ msgid ""
 #~ "This payment term will be used instead of the default one for purchase "
 #~ "orders and vendor bills"
 #~ msgstr ""
-#~ "Esse prazo de pagamento será usado para pedidos e faturas de "
-#~ "fornecedores, substituindo o padrão"
+#~ "Esse prazo de pagamento será usado para pedidos e faturas de fornecedores, "
+#~ "substituindo o padrão"
 
 #~ msgid ""
-#~ "This payment term will be used instead of the default one for sales "
-#~ "orders and customer invoices"
+#~ "This payment term will be used instead of the default one for sales orders "
+#~ "and customer invoices"
 #~ msgstr ""
 #~ "Esse prazo de pagamento será usado para pedidos de vendas e faturas de "
 #~ "clientes, substituindo o padrão"
@@ -1485,8 +2791,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "This pricelist will be used, instead of the default one, for sales to the "
 #~ "current partner"
 #~ msgstr ""
-#~ "Essa lista de preços será usada, em vez da padrão, para vendas ao "
-#~ "parceiro atual"
+#~ "Essa lista de preços será usada, em vez da padrão, para vendas ao parceiro "
+#~ "atual"
 
 #~ msgid "Timezone"
 #~ msgstr "Fuso horário"
@@ -1564,18 +2870,13 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Histórico de comunicação do website"
 
 #~ msgid ""
-#~ "When printing documents and exporting/importing data, time values are "
-#~ "computed according to this timezone.\n"
+#~ "When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
 #~ "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-#~ "Anywhere else, time values are computed according to the time offset of "
-#~ "your web client."
+#~ "Anywhere else, time values are computed according to the time offset of your web client."
 #~ msgstr ""
-#~ "Ao imprimir documentos e exportar/importar dados, os valores de tempo são "
-#~ "computados de acordo com este fuso horário.\n"
-#~ "Se o fuso horário não estiver definido, UTC (Tempo Universal Coordenado) "
-#~ "é usado.\n"
-#~ "Em qualquer outro lugar, os valores de tempo são computados de acordo com "
-#~ "o deslocamento de tempo do seu cliente web."
+#~ "Ao imprimir documentos e exportar/importar dados, os valores de tempo são computados de acordo com este fuso horário.\n"
+#~ "Se o fuso horário não estiver definido, UTC (Tempo Universal Coordenado) é usado.\n"
+#~ "Em qualquer outro lugar, os valores de tempo são computados de acordo com o deslocamento de tempo do seu cliente web."
 
 #~ msgid "Zip"
 #~ msgstr "CEP"
@@ -1593,11 +2894,11 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "ID do banco de dados da Empresa"
 
 #~ msgid ""
-#~ "Field used to store sanitized phone number. Helps speeding up searches "
-#~ "and comparisons."
+#~ "Field used to store sanitized phone number. Helps speeding up searches and "
+#~ "comparisons."
 #~ msgstr ""
-#~ "Campo usado para armazenar número de telefone higienizado. Ajuda a "
-#~ "acelerar pesquisas e comparações."
+#~ "Campo usado para armazenar número de telefone higienizado. Ajuda a acelerar "
+#~ "pesquisas e comparações."
 
 #~ msgid "Phone Blacklisted"
 #~ msgstr "Telefone na Lista Negra"
@@ -1633,21 +2934,6 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Expiration date"
 #~ msgstr "Data de validade"
 
-#~ msgid "Father name"
-#~ msgstr "Nome do pai"
-
-#~ msgid "Mother name"
-#~ msgstr "Nome da mãe"
-
-#~ msgid "Voter section"
-#~ msgstr "Seção do eleitor"
-
-#~ msgid "Voter title"
-#~ msgstr "Título do eleitor"
-
-#~ msgid "Voter zone"
-#~ msgstr "Zona do eleitor"
-
 #~ msgid "Partner Contracts"
 #~ msgstr "Contratos de Parceiro"
 
@@ -1655,15 +2941,15 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "Check this box if this contact is a customer. It can be selected in sales "
 #~ "orders."
 #~ msgstr ""
-#~ "Selecione esta opção se este contacto for um cliente. Pode ser "
-#~ "selecionado para ordens de venda."
+#~ "Selecione esta opção se este contacto for um cliente. Pode ser selecionado "
+#~ "para ordens de venda."
 
 #~ msgid ""
-#~ "Check this box if this contact is a vendor. It can be selected in "
-#~ "purchase orders."
+#~ "Check this box if this contact is a vendor. It can be selected in purchase "
+#~ "orders."
 #~ msgstr ""
-#~ "Marque esta caixa se este contato for um fornecedor. Pode ser selecionado "
-#~ "em pedidos."
+#~ "Marque esta caixa se este contato for um fornecedor. Pode ser selecionado em"
+#~ " pedidos."
 
 #~ msgid "Contacts"
 #~ msgstr "Contatos"
@@ -1684,8 +2970,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Se marcado, novas mensagens solicitarão sua atenção."
 
 #~ msgid ""
-#~ "If set, this Sales Team will be used for sales and assignations related "
-#~ "to this partner"
+#~ "If set, this Sales Team will be used for sales and assignations related to "
+#~ "this partner"
 #~ msgstr ""
 #~ "Se definido, este Time de Vendas será utilizado para vendas e atribuições "
 #~ "relacionadas a este parceiro"
@@ -1710,8 +2996,8 @@ msgstr "XXX.XXXXX.XX-X"
 
 #~ msgid ""
 #~ "Medium-sized image of this contact. It is automatically resized as a "
-#~ "128x128px image, with aspect ratio preserved. Use this field in form "
-#~ "views or some kanban views."
+#~ "128x128px image, with aspect ratio preserved. Use this field in form views "
+#~ "or some kanban views."
 #~ msgstr ""
 #~ "Imagem média deste contato. Ela é automaticamente redimensionada como uma "
 #~ "imagem de 128x128px, mantendo o aspecto original. Utilize este campo em "
@@ -1730,29 +3016,28 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Imagem pequena"
 
 #~ msgid ""
-#~ "Small-sized image of this contact. It is automatically resized as a "
-#~ "64x64px image, with aspect ratio preserved. Use this field anywhere a "
-#~ "small image is required."
+#~ "Small-sized image of this contact. It is automatically resized as a 64x64px "
+#~ "image, with aspect ratio preserved. Use this field anywhere a small image is"
+#~ " required."
 #~ msgstr ""
 #~ "Imagem em tamannho reduzido do contato. O tamanho da imagem será "
-#~ "automaticamente ajustado para 64x64px, mantendo-se as proporções da "
-#~ "imagem original. Utilize esse campo em lugares onde uma pequena imagem "
-#~ "for necessária."
+#~ "automaticamente ajustado para 64x64px, mantendo-se as proporções da imagem "
+#~ "original. Utilize esse campo em lugares onde uma pequena imagem for "
+#~ "necessária."
 
 #~ msgid "State Tax Number/RG"
 #~ msgstr "Número da Inscrição Estadual/RG"
 
 #~ msgid ""
 #~ "The partner's timezone, used to output proper date and time values inside "
-#~ "printed reports. It is important to set a value for this field. You "
-#~ "should use the same timezone that is otherwise used to pick and render "
-#~ "date and time values: your computer's timezone."
+#~ "printed reports. It is important to set a value for this field. You should "
+#~ "use the same timezone that is otherwise used to pick and render date and "
+#~ "time values: your computer's timezone."
 #~ msgstr ""
 #~ "Fuso horário do parceiro, usado para produzir valores adequados de data e "
-#~ "hora dentro de relatórios impressos. É importante definir um valor para "
-#~ "este campo. Você deve usar o mesmo fuso horário que é de outra maneira "
-#~ "usado para escolher os valores de data e hora: o fuso horário do seu "
-#~ "computador."
+#~ "hora dentro de relatórios impressos. É importante definir um valor para este"
+#~ " campo. Você deve usar o mesmo fuso horário que é de outra maneira usado "
+#~ "para escolher os valores de data e hora: o fuso horário do seu computador."
 
 #~ msgid "This delivery method will be used when invoicing from picking."
 #~ msgstr "Este método de entrega será usado ao faturar a partir da separação."
@@ -1761,16 +3046,16 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "This field holds the image used as avatar for this contact, limited to "
 #~ "1024x1024px"
 #~ msgstr ""
-#~ "Este campo contém a imagem usada como avatar para este contato, limitado "
-#~ "a 1024x1024px"
+#~ "Este campo contém a imagem usada como avatar para este contato, limitado a "
+#~ "1024x1024px"
 
 #~ msgid "Use a barcode to identify this contact from the Point of Sale."
 #~ msgstr ""
 #~ "Use um código de barras para identificar esse contato no ponto de venda."
 
 #~ msgid ""
-#~ "Used by Sales and Purchase Apps to select the relevant address depending "
-#~ "on the context."
+#~ "Used by Sales and Purchase Apps to select the relevant address depending on "
+#~ "the context."
 #~ msgstr ""
 #~ "Usado pelos aplicativos de vendas e compras para selecionar o endereço "
 #~ "relevante, dependendo do contexto."
@@ -1778,9 +3063,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Widower"
 #~ msgstr "Viúvo"
 
-#, fuzzy
 #~ msgid "Dependent name"
-#~ msgstr "Informações dependentes"
+#~ msgstr "Nome do dependente"
 
 #~ msgid "Invalid CPF for dependent %s"
 #~ msgstr "CPF inválido para %s dependente"
@@ -1791,9 +3075,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Nationality Code"
 #~ msgstr "Código da nacionalidade"
 
-#, fuzzy
 #~ msgid "Nationality Codes"
-#~ msgstr "Código da nacionalidade"
+#~ msgstr "Códigos de nacionalidade"
 
 #~ msgid "Nationality code"
 #~ msgstr "Código de nacionalidade"
@@ -3574,11 +4857,9 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Diretor de programas de televisão"
 
 #~ msgid ""
-#~ "Diretor de recuperação de créditos em operações de intermediação "
-#~ "financeira"
+#~ "Diretor de recuperação de créditos em operações de intermediação financeira"
 #~ msgstr ""
-#~ "Diretor de recuperação de créditos em operações de intermediação "
-#~ "financeira"
+#~ "Diretor de recuperação de créditos em operações de intermediação financeira"
 
 #~ msgid "Diretor de recursos humanos"
 #~ msgstr "Diretor de recursos humanos"
@@ -3613,8 +4894,7 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Diretor financeiro"
 #~ msgstr "Diretor financeiro"
 
-#~ msgid ""
-#~ "Diretor geral de empresa e organizações (exceto de interesse público)"
+#~ msgid "Diretor geral de empresa e organizações (exceto de interesse público)"
 #~ msgstr "Diretor geral de empresa e organizações (exceto interesse público)"
 
 #~ msgid "Diretor teatral"
@@ -4548,8 +5828,7 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Gerente de produção e operações agropecuárias"
 
 #~ msgid "Gerente de produção e operações da construção civil e obras públicas"
-#~ msgstr ""
-#~ "Gerente de produção e operações de construção civil e obras públicas"
+#~ msgstr "Gerente de produção e operações de construção civil e obras públicas"
 
 #~ msgid "Gerente de produção e operações pesqueiras"
 #~ msgstr "Gerente de produção e operações pesqueiras"
@@ -4755,8 +6034,7 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Inspetor de risco"
 #~ msgstr "Inspetor de risco"
 
-#~ msgid ""
-#~ "Inspetor de serviços de transportes rodoviários (passageiros e cargas)"
+#~ msgid "Inspetor de serviços de transportes rodoviários (passageiros e cargas)"
 #~ msgstr ""
 #~ "Inspetor de serviços de transportes rodoviários (passageiros e cargas)"
 
@@ -4813,10 +6091,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Instalador de tubulações (embarcações)"
 #~ msgstr "Instalador de tubulações (embarcações)"
 
-#~ msgid ""
-#~ "Instalador de tubulações de gás combustível (produção e distribuição)"
-#~ msgstr ""
-#~ "Instalador de tubulações de gás combustível (produção e distribuição)"
+#~ msgid "Instalador de tubulações de gás combustível (produção e distribuição)"
+#~ msgstr "Instalador de tubulações de gás combustível (produção e distribuição)"
 
 #~ msgid "Instalador de tubulações de vapor (produção e distribuição)"
 #~ msgstr "Instalador de tubulações de vapor (produção e distribuição)"
@@ -5194,11 +6470,11 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Mecânico de manutenção de redutores"
 
 #~ msgid ""
-#~ "Mecânico de manutenção de sistema hidráulico de aeronaves (serviços de "
-#~ "pista e hangar)"
+#~ "Mecânico de manutenção de sistema hidráulico de aeronaves (serviços de pista"
+#~ " e hangar)"
 #~ msgstr ""
-#~ "Mecânico de manutenção do sistema hidráulico de aeronaves (serviços de "
-#~ "pista e hangar)"
+#~ "Mecânico de manutenção do sistema hidráulico de aeronaves (serviços de pista"
+#~ " e hangar)"
 
 #~ msgid "Mecânico de manutenção de tratores"
 #~ msgstr "Mecânico de manutenção de tratores"
@@ -5843,9 +7119,6 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Narrador em programas de rádio e televisão"
 #~ msgstr "Narrador de programas de rádio e televisão"
 
-#~ msgid "Nationality"
-#~ msgstr "Nacionalidade"
-
 #~ msgid "Neuropsicólogo"
 #~ msgstr "Neuropsicólogo"
 
@@ -6090,8 +7363,7 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Operador de câmera de televisão"
 
 #~ msgid "Operador de desempenadeira na usinagem convencional de madeira"
-#~ msgstr ""
-#~ "Operador de desempenho de madeira na usinagem convencional de madeira"
+#~ msgstr "Operador de desempenho de madeira na usinagem convencional de madeira"
 
 #~ msgid "Operador de desgaseificação"
 #~ msgstr "Operador de desgaseificação"
@@ -6383,8 +7655,7 @@ msgstr "XXX.XXXXX.XX-X"
 
 #~ msgid ""
 #~ "Operador de máquina de fabricação de produtos de higiene e limpeza (sabão"
-#~ msgstr ""
-#~ "Operador de máquina de fabricar produtos de higiene e limpeza (sabão"
+#~ msgstr "Operador de máquina de fabricar produtos de higiene e limpeza (sabão"
 
 #~ msgid "Operador de máquina de fundir sob pressão"
 #~ msgstr "Operador de máquina de fundir sob pressão"
@@ -6396,8 +7667,7 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Operador de máquina de moldar automatizado"
 
 #~ msgid ""
-#~ "Operador de máquina de preparação de matéria prima para produção de "
-#~ "cigarros"
+#~ "Operador de máquina de preparação de matéria prima para produção de cigarros"
 #~ msgstr ""
 #~ "Operador de máquina de preparação de matérias prima para produção de "
 #~ "cigarros"
@@ -7299,8 +8569,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Proeiro"
 
 #~ msgid ""
-#~ "Professor da  educação de jovens e adultos do ensino fundamental "
-#~ "(primeira a quarta série)"
+#~ "Professor da  educação de jovens e adultos do ensino fundamental (primeira a"
+#~ " quarta série)"
 #~ msgstr "Professor da educação de jovens e adultos do ensino fundamental"
 
 #~ msgid "Professor da área de meio ambiente"
@@ -7343,11 +8613,9 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Professor de artes no ensino médio"
 
 #~ msgid ""
-#~ "Professor de artes visuais no ensino superior (artes plásticas e "
-#~ "multimídia)"
+#~ "Professor de artes visuais no ensino superior (artes plásticas e multimídia)"
 #~ msgstr ""
-#~ "Professor de artes visuais no ensino superior (artes plásticas e "
-#~ "multimídia)"
+#~ "Professor de artes visuais no ensino superior (artes plásticas e multimídia)"
 
 #~ msgid "Professor de astronomia (ensino superior)"
 #~ msgstr "Professor de astronomia (ensino superior)"
@@ -7575,14 +8843,11 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Professor de nível médio no ensino profissionalizante"
 
 #~ msgid ""
-#~ "Professor de nível superior do ensino fundamental (primeira a quarta "
-#~ "série)"
+#~ "Professor de nível superior do ensino fundamental (primeira a quarta série)"
 #~ msgstr "Professor de nível superior do ensino fundamental"
 
-#~ msgid ""
-#~ "Professor de nível superior na educação infantil (quatro a seis anos)"
-#~ msgstr ""
-#~ "Professor de nível superior na educação infantil (quatro a seis anos)"
+#~ msgid "Professor de nível superior na educação infantil (quatro a seis anos)"
+#~ msgstr "Professor de nível superior na educação infantil (quatro a seis anos)"
 
 #~ msgid "Professor de nível superior na educação infantil (zero a três anos)"
 #~ msgstr "Professor de nível superior na educação infantil (zero a três anos)"
@@ -8694,10 +9959,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgid "Trabalhador de serviços de limpeza e conservação de áreas públicas"
 #~ msgstr "Trabalhador de serviços de limpeza e conservação de áreas públicas"
 
-#~ msgid ""
-#~ "Trabalhador de tratamento do leite e fabricação de laticínios e afins"
-#~ msgstr ""
-#~ "Trabalhador de tratamento de leite e fabricação de laticínios e afins"
+#~ msgid "Trabalhador de tratamento do leite e fabricação de laticínios e afins"
+#~ msgstr "Trabalhador de tratamento de leite e fabricação de laticínios e afins"
 
 #~ msgid "Trabalhador do acabamento de artefatos de tecidos e couros"
 #~ msgstr "Trabalhador de acabamento de artefatos de tecidos e couros"
@@ -8754,31 +10017,26 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Trabalhador na olericultura"
 
 #~ msgid ""
-#~ "Trabalhador na operação de sistema de irrigação localizada (microaspersão "
-#~ "e gotejamento)"
+#~ "Trabalhador na operação de sistema de irrigação localizada (microaspersão e "
+#~ "gotejamento)"
 #~ msgstr ""
-#~ "Trabalhador na operação de sistema de irrigação localizada (microaspersão "
-#~ "e controle)"
+#~ "Trabalhador na operação de sistema de irrigação localizada (microaspersão e "
+#~ "controle)"
 
 #~ msgid ""
-#~ "Trabalhador na operação de sistema de irrigação por aspersão (pivô "
-#~ "central)"
+#~ "Trabalhador na operação de sistema de irrigação por aspersão (pivô central)"
 #~ msgstr ""
-#~ "Trabalhador na operação de sistema de irrigação por aspersão (pivô "
-#~ "central)"
+#~ "Trabalhador na operação de sistema de irrigação por aspersão (pivô central)"
 
 #~ msgid ""
-#~ "Trabalhador na operação de sistemas convencionais de irrigação por "
-#~ "aspersão"
+#~ "Trabalhador na operação de sistemas convencionais de irrigação por aspersão"
 #~ msgstr ""
 #~ "Trabalhador na operação de sistemas instalados de irrigação por aspersão"
 
 #~ msgid ""
-#~ "Trabalhador na operação de sistemas de irrigação e aspersão (alto "
-#~ "propelido)"
+#~ "Trabalhador na operação de sistemas de irrigação e aspersão (alto propelido)"
 #~ msgstr ""
-#~ "Trabalhador na operação de sistemas de irrigação e aspersão (alto "
-#~ "propelido)"
+#~ "Trabalhador na operação de sistemas de irrigação e aspersão (alto propelido)"
 
 #~ msgid ""
 #~ "Trabalhador na operação de sistemas de irrigação por superfície e drenagem"
@@ -8894,10 +10152,8 @@ msgstr "XXX.XXXXX.XX-X"
 #~ "Técnico de apoio à pesquisa e desenvolvimento (exceto agropecuário e "
 #~ "florestal)"
 
-#~ msgid ""
-#~ "Técnico de apoio em pesquisa e desenvolvimento agropecuário florestal"
-#~ msgstr ""
-#~ "Técnico de apoio em pesquisa e desenvolvimento agropecuário florestal"
+#~ msgid "Técnico de apoio em pesquisa e desenvolvimento agropecuário florestal"
+#~ msgstr "Técnico de apoio em pesquisa e desenvolvimento agropecuário florestal"
 
 #~ msgid "Técnico de apoio à bioengenharia"
 #~ msgstr "Técnico de apoio à bioengenharia"
@@ -8945,8 +10201,7 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Técnico de imobilização ortopédica"
 
 #~ msgid ""
-#~ "Técnico de laboratório de análises físico-químicas (materiais de "
-#~ "construção)"
+#~ "Técnico de laboratório de análises físico-químicas (materiais de construção)"
 #~ msgstr "Técnico de laboratório de química física (materiais de construção)"
 
 #~ msgid "Técnico de laboratório e fiscalização desportiva"
@@ -9229,11 +10484,11 @@ msgstr "XXX.XXXXX.XX-X"
 #~ msgstr "Técnico em operação de equipamento de exibição de televisão"
 
 #~ msgid ""
-#~ "Técnico em operação de equipamentos de produção para televisão  e "
-#~ "produtoras de vídeo"
+#~ "Técnico em operação de equipamentos de produção para televisão  e produtoras"
+#~ " de vídeo"
 #~ msgstr ""
-#~ "Técnico em operação de equipamentos de produção para televisão e produtos "
-#~ "de vídeo"
+#~ "Técnico em operação de equipamentos de produção para televisão e produtos de"
+#~ " vídeo"
 
 #~ msgid ""
 #~ "Técnico em operação de equipamentos de transmissão/recepção de televisão"

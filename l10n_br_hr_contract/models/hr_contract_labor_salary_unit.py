@@ -6,11 +6,19 @@ from odoo import fields, models
 
 
 class HrContractSalaryUnit(models.Model):
-    _name = "hr.contract.salary.unit"
-    _inherit = "l10n_br_hr_contract.data.abstract"
-    _description = (
-        "Unidade de pagamento da parte fixa da remuneração "
-        "e-Social - S-2200 undSalFixo"
-    )
+    """Salary Unit of Payment (eSocial Event S-2200 - undSalFixo).
 
-    name = fields.Char(string="Salary Unit")
+    Origin / Legal Basis:
+    - Official Source: eSocial - Governo Federal / MTE
+    - Event: S-2200 (Cadastramento Inicial e Admissão)
+    - Field: undSalFixo (1: Por hora, 2: Por dia, 3: Por semana, 4: Por quinzena,
+      5: Por mês, 6: Por tarefa, 7: Não aplicável - exclusivamente variável)
+    - Layout Version: eSocial Versão S-1.3 (NT 06/2026 rev.)
+    - Legal Basis: CLT Art. 458 e seguintes.
+    """
+
+    _name = "hr.contract.salary.unit"
+    _inherit = "l10n_br_hr.data.abstract"
+    _description = "Salary Unit"
+
+    name = fields.Char(string="Salary Unit", translate=True)

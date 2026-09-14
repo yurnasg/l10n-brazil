@@ -20165,10 +20165,43 @@ msgid "Quixeré"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields.selection,name:l10n_br_base.selection__res_partner__l10n_br_identity_doc_type__rg
+msgid "General Registry (RG)"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_rg_code
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_rg_code
+msgid "Identity Document"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_identity_doc_type
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_identity_doc_type
+msgid "Identity Document Type"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,help:l10n_br_base.field_res_partner__l10n_br_rg_code
+#: model:ir.model.fields,help:l10n_br_base.field_res_users__l10n_br_rg_code
+msgid ""
+"Identity document number (RG, CRNM, foreign document...). For the National "
+"Identity Card (CIN) it is the CPF, filled in automatically."
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields.selection,name:l10n_br_base.selection__res_partner__l10n_br_identity_doc_type__cin
+msgid "National Identity Card (CIN)"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields.selection,name:l10n_br_base.selection__res_partner__l10n_br_identity_doc_type__crnm
+msgid "National Migration Registration Card (CRNM / RNE)"
+msgstr ""
+
+#. module: l10n_br_base
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
-msgid "RG"
+msgid "Number"
 msgstr ""
 
 #. module: l10n_br_base
@@ -26310,6 +26343,7 @@ msgstr ""
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_pix__key_type
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
 msgid "Type"
 msgstr ""
 

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Órgão / Sistema: eSocial - Governo Federal do Brasil
+    - Tabela Oficial: Tabela 01 - Categorias de Trabalhadores
+    - Versão do Leiaute: eSocial Versão S-1.3 (NT 06/2026 rev. de 09/04/2026)
+    - Base Legal: Portaria Conjunta MTP/RFB nº 33/2022, Lei 6.019/74, Lei 10.097/00
+    - Documentação Oficial: https://www.gov.br/esocial/pt-br/documentacao-tecnica/leiautes-esocial-versao-s-1-3-nt-06-2026-rev-09-04-2026/tabelas.html#01
+    - Regra de Arquivamento: Códigos com término de vigência devem ser mantidos
+      no banco para histórico referencial com <field name="active">False</field>.
+    ==============================================================================
+    -->
+
+    <!-- Grupo: Empregado e Trabalhador Temporário (1XX) -->
+    <record id="worker_category_101" model="hr.worker.category">
+        <field name="code">101</field>
+        <field name="name">General Employee - CLT Indeterminate</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_102" model="hr.worker.category">
+        <field name="code">102</field>
+        <field name="name">Rural Employee - Short Term (Law 11.718/2008)</field>
+        <field name="employee_type_default">worker</field>
+    </record>
+
+    <record id="worker_category_103" model="hr.worker.category">
+        <field name="code">103</field>
+        <field name="name">Apprentice (Law 10.097/2000)</field>
+        <field name="employee_type_default">trainee</field>
+    </record>
+
+    <record id="worker_category_104" model="hr.worker.category">
+        <field name="code">104</field>
+        <field name="name">Domestic Employee</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_105" model="hr.worker.category">
+        <field name="code">105</field>
+        <field name="name">Fixed-Term Employee (Law 9.601/1998)</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_106" model="hr.worker.category">
+        <field name="code">106</field>
+        <field name="name">Temporary Worker (Law 6.019/1974)</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <!-- Vigência eSocial: Início 01/01/2020 | Término 31/12/2022 (MP 905/2019 - Arquivado) -->
+    <record id="worker_category_107" model="hr.worker.category">
+        <field name="code">107</field>
+        <field name="name">Green and Yellow Contract without FGTS Advance</field>
+        <field name="employee_type_default">employee</field>
+        <field name="active">False</field>
+    </record>
+
+    <!-- Vigência eSocial: Início 01/01/2020 | Término 31/12/2022 (MP 905/2019 - Arquivado) -->
+    <record id="worker_category_108" model="hr.worker.category">
+        <field name="code">108</field>
+        <field name="name">Green and Yellow Contract with FGTS Advance</field>
+        <field name="employee_type_default">employee</field>
+        <field name="active">False</field>
+    </record>
+
+    <record id="worker_category_111" model="hr.worker.category">
+        <field name="code">111</field>
+        <field name="name">Intermittent Employee</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <!-- Grupo: Avulso (2XX) -->
+    <record id="worker_category_201" model="hr.worker.category">
+        <field name="code">201</field>
+        <field name="name">Port Casual Worker</field>
+        <field name="employee_type_default">worker</field>
+    </record>
+
+    <record id="worker_category_202" model="hr.worker.category">
+        <field name="code">202</field>
+        <field name="name">Non-Port Casual Worker</field>
+        <field name="employee_type_default">worker</field>
+    </record>
+
+    <!-- Grupo: Agente Público (3XX) -->
+    <record id="worker_category_301" model="hr.worker.category">
+        <field name="code">301</field>
+        <field name="name">Public Servant - Tenured / Effective</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_302" model="hr.worker.category">
+        <field name="code">302</field>
+        <field name="name">Public Servant - Commission Only</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_303" model="hr.worker.category">
+        <field name="code">303</field>
+        <field name="name">Elective Mandate Holder</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_304" model="hr.worker.category">
+        <field name="code">304</field>
+        <field
+            name="name"
+        >Public Servant Holding an Elected Office (including Commissioned Position)</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_305" model="hr.worker.category">
+        <field name="code">305</field>
+        <field name="name">Public Servant Appointed to Deliberative Council</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_306" model="hr.worker.category">
+        <field name="code">306</field>
+        <field
+            name="name"
+        >Temporary Public Servant (Special Administrative Regime)</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_307" model="hr.worker.category">
+        <field name="code">307</field>
+        <field name="name">Military of the States and Federal District</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <!-- Vigência eSocial: Início 01/01/2014 | Término 25/04/2023 (Arquivado) -->
+    <record id="worker_category_308" model="hr.worker.category">
+        <field name="code">308</field>
+        <field name="name">Conscript</field>
+        <field name="employee_type_default">employee</field>
+        <field name="active">False</field>
+    </record>
+
+    <record id="worker_category_309" model="hr.worker.category">
+        <field name="code">309</field>
+        <field name="name">Public Agent - Other</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_310" model="hr.worker.category">
+        <field name="code">310</field>
+        <field name="name">Occasional Public Servant</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_311" model="hr.worker.category">
+        <field name="code">311</field>
+        <field
+            name="name"
+        >Ministers, Judges, Prosecutors or Court Officers at the Disposal of the Electoral Justice</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_312" model="hr.worker.category">
+        <field name="code">312</field>
+        <field name="name">Local Assistant</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_313" model="hr.worker.category">
+        <field name="code">313</field>
+        <field
+            name="name"
+        >Public Servant Acting as Instructor, in Courses or Public Exams, or Summoned for Technical Opinions, Testimonies or Attaché Work Abroad</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_314" model="hr.worker.category">
+        <field name="code">314</field>
+        <field name="name">Military of the Armed Forces</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <!-- Grupo: Cessão e Dirigente Sindical (4XX e 5XX) -->
+    <record id="worker_category_401" model="hr.worker.category">
+        <field name="code">401</field>
+        <field name="name">Union Leader (Reported by Union)</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_410" model="hr.worker.category">
+        <field name="code">410</field>
+        <field name="name">Seconded / Assigned Worker</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_501" model="hr.worker.category">
+        <field name="code">501</field>
+        <field name="name">Special Insured Union Leader</field>
+        <field name="employee_type_default">worker</field>
+    </record>
+
+    <!-- Grupo: Contribuinte Individual (7XX) -->
+    <record id="worker_category_701" model="hr.worker.category">
+        <field name="code">701</field>
+        <field name="name">Autonomous Worker / Individual Contributor</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_711" model="hr.worker.category">
+        <field name="code">711</field>
+        <field name="name">Autonomous Passenger Transporter</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_712" model="hr.worker.category">
+        <field name="code">712</field>
+        <field name="name">Autonomous Freight Transporter</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_721" model="hr.worker.category">
+        <field name="code">721</field>
+        <field name="name">Statutory Director with FGTS</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_722" model="hr.worker.category">
+        <field name="code">722</field>
+        <field name="name">Statutory Director without FGTS</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_723" model="hr.worker.category">
+        <field name="code">723</field>
+        <field name="name">Businessman, Partner, Board Member</field>
+        <field name="employee_type_default">employee</field>
+    </record>
+
+    <record id="worker_category_731" model="hr.worker.category">
+        <field name="code">731</field>
+        <field name="name">Cooperative Member (Work Cooperative)</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_734" model="hr.worker.category">
+        <field name="code">734</field>
+        <field name="name">Cooperative Transporter (Work Cooperative)</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_738" model="hr.worker.category">
+        <field name="code">738</field>
+        <field name="name">Cooperative Member (Production Cooperative)</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_741" model="hr.worker.category">
+        <field name="code">741</field>
+        <field name="name">Individual Microentrepreneur (MEI)</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_751" model="hr.worker.category">
+        <field name="code">751</field>
+        <field
+            name="name"
+        >Temporary Lay Judge of the Labor or Electoral Justice, Retired under Any Social Security Regime</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_761" model="hr.worker.category">
+        <field name="code">761</field>
+        <field
+            name="name"
+        >Elected Director of Cooperative / Association / Condominium</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_771" model="hr.worker.category">
+        <field name="code">771</field>
+        <field name="name">Guardianship Council Member (Law 8.069/1990)</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <record id="worker_category_781" model="hr.worker.category">
+        <field name="code">781</field>
+        <field name="name">Minister of Religion / Religious Member</field>
+        <field name="employee_type_default">freelance</field>
+    </record>
+
+    <!-- Grupo: Bolsista e Estagiário (9XX) -->
+    <record id="worker_category_901" model="hr.worker.category">
+        <field name="code">901</field>
+        <field name="name">Intern (Law 11.788/2008)</field>
+        <field name="employee_type_default">student</field>
+    </record>
+
+    <record id="worker_category_902" model="hr.worker.category">
+        <field name="code">902</field>
+        <field name="name">Medical / Health Resident</field>
+        <field name="employee_type_default">student</field>
+    </record>
+
+    <record id="worker_category_903" model="hr.worker.category">
+        <field name="code">903</field>
+        <field name="name">Scholarship Holder</field>
+        <field name="employee_type_default">student</field>
+    </record>
+
+    <record id="worker_category_904" model="hr.worker.category">
+        <field name="code">904</field>
+        <field name="name">Public Contest Training Course Participant</field>
+        <field name="employee_type_default">student</field>
+    </record>
+
+    <record id="worker_category_906" model="hr.worker.category">
+        <field name="code">906</field>
+        <field name="name">National Voluntary Civil Service Beneficiary</field>
+        <field name="employee_type_default">student</field>
+    </record>
+</odoo>

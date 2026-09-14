@@ -6,7 +6,6 @@ import re
 
 import phonenumbers
 from email_validator import EmailSyntaxError, validate_email
-
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 

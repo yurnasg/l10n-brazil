@@ -1,0 +1,422 @@
+{
+  "ad20d038-fa14-4769-aa42-5d3540901b06": {
+    "title": "Padronização da Nomenclatura de Raça/Etnia (Mixed-race) no eSocial",
+    "modules": ["l10n_br_hr"],
+    "category": "Internacionalização & Conformidade Legal",
+    "summary": "Padronização internacional do termo da Tabela 01 do eSocial para a raça/etnia parda. Substituição de termos imprecisos em inglês por 'Mixed-race', mantendo a equivalência legal no Brasil.",
+    "decisions": [
+      "Adoção de 'Mixed-race' para o código 3 (Parda) da Tabela 01 do eSocial em vez de termos com conotação inadequada em inglês.",
+      "Manutenção da tradução pt_BR correspondente a 'Parda' para manter total fidelidade ao formulário e documentação oficial brasileira."
+    ],
+    "key_actions": [
+      "Atualização do arquivo de dados l10n_br_hr/data/hr_ethnicity_data.xml.",
+      "Sincronização dos catálogos de tradução l10n_br_hr.pot e pt_BR.po."
+    ],
+    "status": "Concluído"
+  },
+  "227baf96-d408-449c-b32f-4d37c27aa209": {
+    "title": "Diagnóstico Arquitetural e Modernização da Suíte de RH (Odoo 18 / eSocial S-1.3)",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "Arquitetura & Diagnóstico",
+    "summary": "Análise técnica abrangente como Arquiteto de Software Especialista em Odoo para mapear débitos técnicos, redundâncias e necessidades de modernização para paridade com o Odoo 18 e o eSocial S-1.3.",
+    "decisions": [
+      "Identificação de campos legados obsoletos herdados de versões anteriores (v16/v17) para depreciação e migração suave.",
+      "Alinhamento dos modelos de RH com as diretrizes e padrões de qualidade da OCA (Open Source Collective Addons).",
+      "Mapeamento do plano de ação de integridade referencial com tabelas do eSocial S-1.3."
+    ],
+    "key_actions": [
+      "Auditoria detalhada em modelos, views, dados e regras de segurança.",
+      "Estruturação do roteiro de modernização em PLANO_RH.md e roadmap da suíte de RH."
+    ],
+    "status": "Concluído"
+  },
+  "50e8cbfb-bfa3-4873-bef4-787d15faa7f5": {
+    "title": "Validação da Categoria de Trabalhador 107 ('Verde e Amarelo')",
+    "modules": ["l10n_br_hr"],
+    "category": "Conformidade Legal & Dados Históricos",
+    "summary": "Avaliação legal e técnica sobre a permanência do registro de categoria de trabalhador 107 (Contrato de Trabalho Verde e Amarelo da MP 905/2019 revogada).",
+    "decisions": [
+      "Manutenção do código 107 na Tabela de Categorias (hr.worker.category) para preservação de integridade histórica em bases legadas e importações.",
+      "Conformidade com a prática oficial da OCA de não expurgar dados que possam estar vinculados a contratos antigos no banco de dados."
+    ],
+    "key_actions": [
+      "Validação da definição XML em l10n_br_hr/data/hr_worker_category_data.xml.",
+      "Esclarecimento sobre a vigência da legislação e comportamento do eSocial."
+    ],
+    "status": "Concluído"
+  },
+  "2b6cdd5d-dd28-4e71-ba8b-65ceeacc5d9d": {
+    "title": "Padronização do Campo vat (CPF) e Sincronização Nativa no hr.employee",
+    "modules": ["l10n_br_hr"],
+    "category": "Refatoração de Modelos & Migrações",
+    "summary": "Unificação do cadastro de CPF no campo nativo vat do Odoo 18, eliminando campos duplicados (cpf_number), integrando validações de dígitos e criando migrações automáticas.",
+    "decisions": [
+      "Adoção do campo nativo vat tanto para parceiros (res.partner) quanto para funcionários (hr.employee).",
+      "Criação de script de pré-migração (pre-migrate.py) para transferir dados sem perda para bases em atualização.",
+      "Sanitização e formatação de documentos (remoção de máscaras no banco e exibição formatada na interface)."
+    ],
+    "key_actions": [
+      "Implementação de script pre-migrate.py para a versão 18.0.",
+      "Ajustes em hr_employee.py e hr_employee_view.xml.",
+      "Criação de testes unitários para o validador de CPF."
+    ],
+    "status": "Concluído"
+  },
+  "8c317f0a-76f2-4f0d-b06d-6aba5971e07b": {
+    "title": "Preservação de Documentos Impressos e Investigação Histórica de Modelos",
+    "modules": ["l10n_br_hr"],
+    "category": "Modelagem de Dados & Histórico",
+    "summary": "Manutenção dos campos de documentação física impressa (Certificado de Reservista, Título de Eleitor e CTPS física) como dados históricos, e levantamento minucioso no Git desde 2014 sobre os modelos de dependentes e identidades.",
+    "decisions": [
+      "Preservação dos campos legados com descrições help claras indicando finalidade histórica para admissões antigas.",
+      "Rastreamento histórico da evolução de hr.employee.relative e hr.identity.type desde os primórdios do l10n-brazil."
+    ],
+    "key_actions": [
+      "Refatoração de hr_employee.py com separação visual de documentos físicos e digitais.",
+      "Auditoria do repositório Git identificando autores, commits e motivos de decisões passadas."
+    ],
+    "status": "Concluído"
+  },
+  "a4843ded-eb71-4cf7-bf57-3e84113bcfc7": {
+    "title": "Correção de Validação de CPF em Dependentes (hr.employee.relative)",
+    "modules": ["l10n_br_hr"],
+    "category": "Bugfix & Testes Automatizados",
+    "summary": "Identificação e correção de falha no validador check_cpf de dependentes, onde valores nulos ou vazios causavam bloqueio indevido na criação de registros.",
+    "decisions": [
+      "O validador deve permitir campo vazio (já que dependentes recém-nascidos podem temporariamente não possuir CPF cadastrado na inclusão inicial).",
+      "A validação de dígitos verificadores só deve disparar quando houver caracteres informados."
+    ],
+    "key_actions": [
+      "Correção do método de validação em l10n_br_hr/models/hr_employee_relative.py.",
+      "Criação de testes automatizados em test_l10n_br_hr.py para cobrir cenários nulos, inválidos e válidos."
+    ],
+    "status": "Concluído"
+  },
+  "f059adaa-a267-4e45-909e-67a210b9571b": {
+    "title": "Diagnóstico de Relacionamento e Limpeza de hr.identity.type",
+    "modules": ["l10n_br_hr"],
+    "category": "Auditoria de Modelos",
+    "summary": "Validação técnica sobre o campo employee_ids em models/hr_identity_type.py, avaliando se representava uma redundância ou modelo a ser simplificado.",
+    "decisions": [
+      "Confirmação de que o vínculo One2many direto gerava acoplamento desnecessário no modelo de tipos de identidade.",
+      "Recomendação de descontinuação em favor de campos estruturados ou tabelas de relacionamento apropriadas."
+    ],
+    "key_actions": [
+      "Inspeção de código e cruzamento com as views do módulo de RH.",
+      "Emissão de parecer técnico conclusivo."
+    ],
+    "status": "Concluído"
+  },
+  "b45191a8-72ef-40d8-a6cf-cefcb7b2d275": {
+    "title": "Eliminação de Arquivo Redundante de Menus em l10n_br_hr_contract",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Limpeza & Otimização de Views",
+    "summary": "Diagnóstico e remoção de arquivo XML obsoleto (views/inherited_hr_contract.xml) que apenas redeclarava menus pai de forma duplicada.",
+    "decisions": [
+      "Remoção do arquivo redundante da lista de dados no __manifest__.py para simplificar a carga do módulo.",
+      "Consolidação de menus no arquivo principal de visões contratuais."
+    ],
+    "key_actions": [
+      "Edição do manifesto l10n_br_hr_contract/__manifest__.py.",
+      "Remoção de referências quebradas ou supérfluas."
+    ],
+    "status": "Concluído"
+  },
+  "527f00a4-f630-4f26-822f-b5bb9d20dcc6": {
+    "title": "Refatoração de Regras de Rescisão e Aviso Prévio em hr.contract",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Regras de Negócio & Testes",
+    "summary": "Validação e aprimoramento da lógica em models/hr_contract.py que calcula e valida prazos de aviso prévio e data de término de contratos de trabalho.",
+    "decisions": [
+      "Adequação das constraints para evitar inconsistências de datas entre aviso prévio e rescisão efetiva.",
+      "Inclusão de cobertura de testes unitários dedicada."
+    ],
+    "key_actions": [
+      "Refatoração de métodos em l10n_br_hr_contract/models/hr_contract.py.",
+      "Execução e adição de casos de teste em test_l10n_br_hr_contract.py."
+    ],
+    "status": "Concluído"
+  },
+  "4adbc468-911d-4f03-8fd2-3f792a43e1c4": {
+    "title": "Correção do Posicionamento do Campo by_death na View de Contratos",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Bugfix de Views XML",
+    "summary": "Resolução de inconsistência de herança XPath em views/hr_contract_view.xml no campo de rescisão por falecimento (by_death).",
+    "decisions": [
+      "Reposicionamento do campo na aba de rescisão com XPath resiliente às mudanças da visão base do Odoo 18.",
+      "Garantia de visibilidade condicional correta."
+    ],
+    "key_actions": [
+      "Modificação de views/hr_contract_view.xml.",
+      "Validação de integridade nos testes do módulo de contratos."
+    ],
+    "status": "Concluído"
+  },
+  "ccec619a-dfd1-49a9-b387-1373fc1f0f09": {
+    "title": "Homologação de Diagnóstico do Campo by_death",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Validação Técnica",
+    "summary": "Conferência complementar de integridade e compatibilidade da correção do campo by_death nas diferentes visões de contrato de trabalho.",
+    "decisions": [
+      "Aprovação final do diagnóstico e homologação das mudanças estruturais nas views."
+    ],
+    "key_actions": [
+      "Inspeção de código e validação da ausência de conflitos em heranças de terceiros."
+    ],
+    "status": "Concluído"
+  },
+  "ebb94445-ca8e-4aa7-b058-c208af6efe9b": {
+    "title": "Refatoração de Modelos Abstratos e Tipos de Admissão",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Refatoração de Modelos",
+    "summary": "Eliminação do modelo abstrato redundante l10n_br_hr_contract.data.abstract e consolidação nos tipos concretos de admissão contratual.",
+    "decisions": [
+      "Substituição de heranças abstratas complexas por modelos diretos e enxutos.",
+      "Atualização de catálogos POT e PO com os novos identificadores."
+    ],
+    "key_actions": [
+      "Criação e execução de plano de refatoração.",
+      "Atualização de models/hr_contract_admission_type.py e eliminação de código morto."
+    ],
+    "status": "Concluído"
+  },
+  "e6796877-e1ae-4ca7-90eb-1fc67020e42a": {
+    "title": "Refatoração de Prazos de Aviso Prévio e Conformidade com Rescisão",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Conformidade Trabalhista",
+    "summary": "Ajuste e validação de models/hr_contract_notice_termination.py e seus dados padrão XML conforme as diretrizes CLT/eSocial.",
+    "decisions": [
+      "Padronização dos tipos de aviso prévio com descrições objetivas e códigos numéricos oficiais.",
+      "Documentação detalhada no ROADMAP do módulo."
+    ],
+    "key_actions": [
+      "Edição de data/hr_contract_notice_termination_data.xml.",
+      "Ajustes no modelo hr_contract_notice_termination.py."
+    ],
+    "status": "Concluído"
+  },
+  "c9446e99-4d1d-48d1-b67d-3ae9a8b81571": {
+    "title": "Rastreabilidade e Documentação da Origem de Tabelas do eSocial",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "Documentação & Governança",
+    "summary": "Inclusão de referências oficiais de governança do eSocial S-1.3 em todos os 27 arquivos XML de dados das tabelas auxiliares para garantir manutenibilidade futura.",
+    "decisions": [
+      "Inserção de comentários padronizados com o número oficial da Tabela do eSocial (ex: Tabela 01, Tabela 06, Tabela 19) no cabeçalho de cada XML de dados.",
+      "Documentação consolidada no ROADMAP.md de ambos os módulos."
+    ],
+    "key_actions": [
+      "Atualização de 27 arquivos XML de dados em l10n_br_hr e l10n_br_hr_contract.",
+      "Elaboração de seções explicativas em ROADMAP.md."
+    ],
+    "status": "Concluído"
+  },
+  "b676dd92-2f3e-41c3-a8fc-8f7bb9199063": {
+    "title": "Normalização de Nomenclaturas e Campo de Revisão Cadastral",
+    "modules": ["l10n_br_hr"],
+    "category": "UX & Qualidade de Dados",
+    "summary": "Remoção de sufixos 'inativo' em cadastros normais (CBO, deficiências) e criação de campo indicador para alertar o RH sobre necessidade de revisão cadastral do colaborador.",
+    "decisions": [
+      "Uso de termos limpos e neutros nas descrições de tabelas de apoio.",
+      "Criação do campo needs_review no funcionário para destacar cadastros pendentes de validação documental."
+    ],
+    "key_actions": [
+      "Ajustes em hr_disability_data.xml, hr_employee.py e hr_job.py.",
+      "Inclusão de testes unitários para a sinalização de revisão em test_l10n_br_hr.py."
+    ],
+    "status": "Concluído"
+  },
+  "a167fb0d-b6c5-40a1-98e7-4e74c36077e1": {
+    "title": "Auditoria de Internacionalização (i18n) do Módulo de Recursos Humanos",
+    "modules": ["l10n_br_hr"],
+    "category": "Internacionalização",
+    "summary": "Revisão abrangente de todas as strings do código Python do módulo l10n_br_hr, assegurando termos técnicos em inglês nativo e separando adequadamente os catálogos de tradução.",
+    "decisions": [
+      "O código-fonte Python deve utilizar inglês padrão conforme diretrizes da OCA.",
+      "Manutenção das descrições oficiais da CBO em português nativo nos dados, sem forçar tradução artificial de ocupações tipicamente brasileiras."
+    ],
+    "key_actions": [
+      "Adequação de strings em data_abstract.py, hr_disability.py, hr_employee.py, hr_employee_relative.py e hr_identity_type.py."
+    ],
+    "status": "Concluído"
+  },
+  "1309a1d0-bab8-4db8-9f11-1d50a2409840": {
+    "title": "Desacoplamento de Prefixos 'eSocial' e Limpeza de Nomenclaturas",
+    "modules": ["l10n_br_hr"],
+    "category": "Design de Interface & Usabilidade",
+    "summary": "Identificação e renomeação de campos e rótulos que utilizavam o prefixo burocrático 'eSocial', tornando a experiência de uso no Odoo fluida e moderna.",
+    "decisions": [
+      "Substituição de 'eSocial Category' por 'Worker Category', 'eSocial Race' por 'Race / Ethnicity', etc.",
+      "Preservação da compatibilidade de banco de dados via scripts em hooks.py."
+    ],
+    "key_actions": [
+      "Refatoração de campos em hr_employee.py e hr_employee_relative.py.",
+      "Criação de plano e walkthrough com validações completas."
+    ],
+    "status": "Concluído"
+  },
+  "08d84be3-1091-4a45-b183-e21949096318": {
+    "title": "Sincronização Upstream OCA e Suíte Abrangente de Testes e Dados Demo",
+    "modules": ["l10n_br_hr"],
+    "category": "Testes Automatizados & Upstream",
+    "summary": "Auditoria de commits no repositório remoto upstream da OCA, sincronização de mudanças recentes e implementação de uma bateria de testes unitários e dados de demonstração.",
+    "decisions": [
+      "Garantia de que nenhuma divergência com o upstream 18.0 da OCA fosse introduzida.",
+      "Desenvolvimento de scripts para geração de dados de teste realistas com funcionários completos (populate_all_demo_employees.py)."
+    ],
+    "key_actions": [
+      "Auditoria de PRs e commits remotos.",
+      "Expansão profunda de test_l10n_br_hr.py cobrindo cenários com e sem deficiência, dependentes, documentos civis e regras de rescisão."
+    ],
+    "status": "Concluído"
+  },
+  "e48de49d-904e-4b44-8b97-4be9fae108be": {
+    "title": "Eliminação de Rótulos 'Legado / Legacy' na Interface de Usuário",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "Design de Interface & Usabilidade",
+    "summary": "Remoção de expressões 'Legado' ou 'Legacy' visíveis ao usuário final na interface gráfica, substituindo-as por denominações funcionais como 'Documentos Impressos'.",
+    "decisions": [
+      "Melhoria na experiência visual do usuário corporativo eliminando jargões de desenvolvimento.",
+      "Atualização concomitante nos modelos Python, views XML e arquivos de tradução."
+    ],
+    "key_actions": [
+      "Ajustes nas views de funcionários e contratos.",
+      "Atualização de l10n_br_hr.pot e pt_BR.po."
+    ],
+    "status": "Concluído"
+  },
+  "ce84ec8c-6a01-4b01-87cf-2a8bbbe45e98": {
+    "title": "Internacionalização Completa de l10n_br_hr_contract",
+    "modules": ["l10n_br_hr_contract"],
+    "category": "Internacionalização",
+    "summary": "Revisão e tradução integral do módulo de contratos de trabalho, corrigindo termos que estavam diretamente em português no código Python ou em inglês não traduzido.",
+    "decisions": [
+      "Padronização das mensagens de erro e labels dos campos em inglês no código e fornecimento do arquivo pt_BR.po 100% preenchido.",
+      "Criação de scripts utilitários (analyze_po.py, build_pt_br_po.py) para validação dos termos."
+    ],
+    "key_actions": [
+      "Reconstrução de i18n/l10n_br_hr_contract.pot e i18n/pt_BR.po.",
+      "Refatoração de arquivos de dados XML."
+    ],
+    "status": "Concluído"
+  },
+  "c84749d7-b29b-4348-98b8-6eafd2dd18b2": {
+    "title": "Adequação para Trabalhadores Estrangeiros e Vistos de Trabalho",
+    "modules": ["l10n_br_hr"],
+    "category": "Conformidade Legal & Odoo Nativo",
+    "summary": "Adequação dos modelos cadastrais de RH à realidade de trabalhadores estrangeiros no Brasil, aproveitando os campos de visto nativos do Odoo (hr.employee) e complementando com dados de imigração do eSocial.",
+    "decisions": [
+      "Reaproveitamento dos campos nativos do core do Odoo 18 para vistos (visa_no, visa_expire, permit_no).",
+      "Mapeamento com os eventos do eSocial S-1.3 sem gerar campos duplicados no banco de dados."
+    ],
+    "key_actions": [
+      "Modificação de hr_employee.py e hr_employee_view.xml.",
+      "Criação de testes em test_l10n_br_hr.py para contratação de estrangeiros."
+    ],
+    "status": "Concluído"
+  },
+  "63d3be9f-7e1b-4dcc-99b8-49f58cf60470": {
+    "title": "Implementação da Carteira de Identidade Nacional (CIN - Lei 14.534/2023)",
+    "modules": ["l10n_br_hr", "l10n_br_base"],
+    "category": "Legislação Federal & Documentação Civil",
+    "summary": "Modernização do cadastro civil de pessoas físicas em consonância com a Lei nº 14.534/2023, que institui a CIN com o CPF como número único de identificação no Brasil, garantindo a coexistência elegante com o Registro Geral (RG) tradicional.",
+    "decisions": [
+      "Implementação de suporte explícito à CIN no parceiro e funcionário.",
+      "Manutenção do campo RG sob o nome amigável 'Registro Geral (RG)', sem usar termos depreciativos como 'legado'.",
+      "Sincronização entre res.partner e hr.employee."
+    ],
+    "key_actions": [
+      "Ajustes em res_partner.py, res_partner_view.xml, hr_employee.py e hr_employee_view.xml.",
+      "Criação de testes unitários e atualização do ROADMAP.md."
+    ],
+    "status": "Concluído"
+  },
+  "b19aa344-deaa-42b1-9c2b-3e71c3037416": {
+    "title": "Pipeline de Extração e Validação de Traduções com Docker Odoo",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "Ferramentas & DevOps",
+    "summary": "Criação de esteira para exportar catálogos reais de tradução (--i18n-export) diretamente de uma instância limpa do Odoo 18 rodando em Docker, garantindo cobertura total de termos e eliminação de textos prolixos.",
+    "decisions": [
+      "Utilização do binário oficial do Odoo via container para gerar o modelo POT oficial, garantindo extração de views, python e menus.",
+      "Higienização de frases repetitivas como 'mantido para fins históricos' nos textos de ajuda."
+    ],
+    "key_actions": [
+      "Execução de comandos Docker para exportar exported_l10n_br_hr.pot e exported_l10n_br_hr_contract.pot.",
+      "Scripts de automação para mesclar e validar termos traduzidos em pt_BR.po."
+    ],
+    "status": "Concluído"
+  },
+  "94c62a6d-9e96-47f9-a2f1-3b7ee34460b4": {
+    "title": "Auditoria Automatizada de Nomenclaturas 'eSocial' e 'Legado'",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "Qualidade & Refatoração",
+    "summary": "Execução de script de inspeção de código para mapear ocorrências residuais de nomes 'eSocial' e 'Legado' em strings, campos e documentações dos módulos de RH.",
+    "decisions": [
+      "Inventariar cada ocorrência para correção cirúrgica sem quebrar compatibilidade de migrações."
+    ],
+    "key_actions": [
+      "Desenvolvimento e execução de script de varredura AST / regex em inspect_strings.py."
+    ],
+    "status": "Concluído"
+  },
+  "d8489127-cadd-4157-bf0b-f514081551bb": {
+    "title": "Restauração de Pre-Migrate e Versionamento dos Módulos de RH",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "Migrações & Versionamento",
+    "summary": "Restauração do script 18.0.1.4.0/pre-migrate.py para total paridade com o upstream remoto da OCA e incremento oficial das versões dos módulos para 18.0.1.6.0.",
+    "decisions": [
+      "O script de migração de uma versão remota já lançada não pode divergir do repositório upstream sob risco de quebra de CI/CD.",
+      "Novas migrações e transformações de colunas devem pertencer estritamente à nova versão incrementada (18.0.1.6.0)."
+    ],
+    "key_actions": [
+      "Restauração do arquivo original de pré-migração 18.0.1.4.0.",
+      "Atualização de versão em l10n_br_hr/__manifest__.py e l10n_br_hr_contract/__manifest__.py."
+    ],
+    "status": "Concluído"
+  },
+  "438ed48f-1213-4b6e-914a-db1d34e3e368": {
+    "title": "Investigação Conceitual: CNPJ/CEI em Empresas e Módulo hr_skills",
+    "modules": ["l10n_br_base", "l10n_br_hr"],
+    "category": "Consultoria Arquitetural",
+    "summary": "Esclarecimento arquitetural sobre a presença do campo cnpj_cei em res.company frente ao campo padrão vat, histórico dos módulos de folha de pagamento na OCA e funcionamento do módulo nativo hr_skills no Odoo 18.",
+    "decisions": [
+      "Identificação do papel do CEI/CNO para estabelecimentos e obras vinculadas à empresa matriz.",
+      "Esclarecimento sobre a descontinuação/migração de motores antigos de folha e integração nativa com competências de hr_skills."
+    ],
+    "key_actions": [
+      "Análise aprofundada do código-fonte do Odoo 18 core (odoo-18/addons/hr_skills).",
+      "Elaboração de documento conceitual de referência."
+    ],
+    "status": "Concluído"
+  },
+  "32e7b97b-43b7-4264-be25-7cee149b60ba": {
+    "title": "Harmonização Completa dos Menus com a Estrutura Nativa do Odoo 18",
+    "modules": ["l10n_br_hr", "l10n_br_hr_contract"],
+    "category": "UX & Harmonização de Menus",
+    "summary": "Reestruturação e refinamento de todos os itens de menu dos módulos de RH e Contratos, integrando-os organicamente ao menu nativo de Recursos Humanos do Odoo 18, eliminando menções burocráticas e criando uma hierarquia ergonômica.",
+    "decisions": [
+      "Encaixe perfeito na árvore de menus nativa de Recursos Humanos (hr.menu_hr_root).",
+      "Eliminação de menus de nível superior redundantes.",
+      "Criação de separadores lógicos sem poluição visual e remoção total do termo 'eSocial' dos títulos de menus."
+    ],
+    "key_actions": [
+      "Edição e reestruturação de hr_menu_views.xml e l10n_br_hr_contract_menu.xml.",
+      "Validação completa em banco de dados novo no Docker após docker compose down -v."
+    ],
+    "status": "Concluído"
+  },
+  "2e6b2575-a2da-437c-bc2e-9645176866a6": {
+    "title": "Construção do Script de Resumo e Consolidação do Histórico de Conversas",
+    "modules": ["Repositório / Governança"],
+    "category": "Automação & Documentação",
+    "summary": "Criação de ferramenta automatizada em Python (scripts/summarize_conversations.py) para analisar os logs do Antigravity e gerar o consolidado histórico completo de todas as conversas do projeto em Markdown.",
+    "decisions": [
+      "Implementação de script Python desacoplado e executável via uv run.",
+      "Geração de Markdown estruturado com sumário executivo, categorização temática, navegação por links e detalhamento técnico de cada interação."
+    ],
+    "key_actions": [
+      "Desenvolvimento do script scripts/summarize_conversations.py.",
+      "Geração e armazenamento do documento HISTORICO_CONVERSAS.md."
+    ],
+    "status": "Concluído"
+  }
+}

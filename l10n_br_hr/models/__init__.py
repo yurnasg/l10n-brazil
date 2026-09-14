@@ -1,10 +1,14 @@
-from . import data_abstract
-from . import l10n_br_hr_cbo
-from . import hr_employee
-from . import hr_job
-from . import res_partner
-from . import res_company
-from . import hr_civil_certificate_type
-from . import hr_deficiency
-from . import hr_ethnicity
-from . import hr_identity_type
+from . import (
+    data_abstract,
+    hr_civil_certificate_type,
+    hr_disability,
+    hr_employee,
+    hr_employee_relative,
+    hr_ethnicity,
+    hr_identity_type,
+    hr_job,
+    hr_worker_category,
+    l10n_br_hr_cbo,
+    res_company,
+    res_partner,
+)

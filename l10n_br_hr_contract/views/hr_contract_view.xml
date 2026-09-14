@@ -9,51 +9,66 @@
             <xpath expr="//field[@name='structure_type_id']" position="after">
                 <field
                     name="admission_type_id"
-                    options="{'no_create': True, 'create_edit': False, 'no_open': True}"
+                    options="{'no_create': True, 'no_open': True}"
                     required="1"
                 />
                 <field name="labor_bond_type_id" />
+                <div
+                    class="alert alert-warning mb-2"
+                    role="alert"
+                    invisible="not has_legacy_labor_regime"
+                >
+                    <strong
+                >Attention:</strong> This contract uses a discontinued labor regime. Update the regime to CLT or Statutory.
+                </div>
                 <field
                     name="labor_regime_id"
-                    options="{'no_create': True, 'create_edit': False}"
+                    options="{'no_create': True}"
                     required="1"
                 />
             </xpath>
             <xpath expr="//group[@name='contract_details']" position="after">
                 <group name="union" string="Union">
                     <field name="partner_union" />
-                    <field name="union_name" invisible="1" />
-                    <field name="union_cnpj" invisible="1" />
-                    <field name="union_entity_code" invisible="1" />
                     <field name="discount_union_contribution" />
                 </group>
             </xpath>
-            <xpath expr="//div[@name='wage']" position="replace">
-                <div class="o_row" name="wage" modifiers="{}">
-                    <field name="wage" nolabel="1" modifiers="{'required':true}" />
-                    <field
-                        name="salary_unit"
-                        options="{'no_create': True, 'no_open': True}"
-                        required="1"
-                        can_create="true"
-                        can_write="true"
-                        modifiers="{'required':true}"
-                    />
-                </div>
+            <xpath expr="//div[@name='wage_period_label']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[@name='wage_period_label']" position="after">
+                <field
+                    name="salary_unit"
+                    class="oe_inline"
+                    options="{'no_create': True, 'no_open': True}"
+                    required="1"
+                />
             </xpath>
             <xpath expr="//group[@name='contract_details']" position="inside">
                 <field name="monthly_hours" />
                 <field name="weekly_hours" />
+                <field name="work_schedule_type" />
             </xpath>
             <xpath expr="//page[@name='information']" position="after">
                 <page name="resignation_page" string="Resignation">
+                    <div
+                        class="alert alert-warning"
+                        role="alert"
+                        invisible="not legacy_termination_review"
+                    >
+                        <strong
+                    >Attention:</strong> The resignation cause or notice of termination came from the previous version and has no equivalent in eSocial Table 19. Choose the current values.
+                    </div>
                     <group name="resignation_group" string="Resignation">
                         <field name="resignation_cause_id" />
                         <field name="resignation_date" />
-                        <field name="resignation_code" invisible='1' />
                         <field
                             name="by_death"
-                            invisible="resignation_code not in ['60', '62', '63', '64']"
+                            invisible="resignation_code not in ['10', '48', '49']"
+                        />
+                        <field
+                            name="legacy_termination_review"
+                            invisible="not legacy_termination_review"
                         />
                     </group>
                     <group

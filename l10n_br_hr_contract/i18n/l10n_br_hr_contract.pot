@@ -1,20 +1,82 @@
-# Translation of Odoo Server.
-# This file contains the translation of the following modules:
-# 	* l10n_br_hr_contract
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-12 22:53+0000\n"
+"PO-Revision-Date: 2026-09-12 22:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 
 #. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__work_schedule_type__1
+msgid "1 - Subject to working hours"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__work_schedule_type__2
+msgid "2 - External activity (CLT Art. 62, I)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__work_schedule_type__3
+msgid "3 - Specified position (CLT Art. 62, II)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__work_schedule_type__4
+msgid "4 - Telework (CLT Art. 62, III)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr_contract.l10n_br_hr_contract_view_form
+msgid ""
+"<strong>Attention:</strong> The resignation cause or notice of termination "
+"came from the previous version and has no equivalent in eSocial Table 19. "
+"Choose the current values."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model_terms:ir.ui.view,arch_db:l10n_br_hr_contract.l10n_br_hr_contract_view_form
+msgid ""
+"<strong>Attention:</strong> This contract uses a discontinued labor regime. "
+"Update the regime to CLT or Statutory."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#. odoo-python
+#: code:addons/l10n_br_hr_contract/models/hr_employee.py:0
+msgid "A contract has termination data to review."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#. odoo-python
+#: code:addons/l10n_br_hr_contract/models/hr_employee.py:0
+msgid "A contract uses a discontinued labor regime."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_admission_type__active
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_labor_bond_type__active
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_labor_regime__active
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_notice_termination__active
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_resignation_cause__active
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_salary_unit__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_1
+msgid "Admission"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.actions.act_window,name:l10n_br_hr_contract.action_hr_contract_admission_type
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_admission_type
 #: model:ir.ui.menu,name:l10n_br_hr_contract.menu_hr_contract_admission_type
 msgid "Admission Type"
 msgstr ""
@@ -26,23 +88,89 @@ msgid "Admission type"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_55
+msgid ""
+"Apprentice hired under Art. 428 of CLT, regulated by Decree 5,598 of "
+"December 1, 2005"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_2
+msgid "Biweekly"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__by_death
 msgid "By death"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_40
+msgid ""
+"Casual worker (work managed by labor union or workforce management agency) "
+"entitled to FGTS deposit (CF/1988, art. 7, III)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_6
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_36
+msgid "Change of CPF"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_30
+msgid "Change of employment regime"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_31
+msgid ""
+"Civil servant governed by Single Legal Regime (federal, state, and "
+"municipal) and military, bonded to General Social Security Scheme"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_30
+msgid ""
+"Civil servant governed by Single Legal Regime (federal, state, and "
+"municipal) and military, bonded to Special Social Security Scheme"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__notice_of_termination_code
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_admission_type__code
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_labor_bond_type__code
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_labor_regime__code
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_notice_termination__code
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_salary_unit__code
-#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_l10n_br_hr_contract_data_abstract__code
 msgid "Code"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.labor.regime,name:l10n_br_hr_contract.labor_regime_clt
+msgid "Consolidation of Labor Laws"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_17
+msgid "Constructive dismissal (indirect termination)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model,name:l10n_br_hr_contract.model_hr_contract
-#: model:ir.ui.menu,name:l10n_br_hr_contract.menu_hr_contract_configuration_rais_contract
 msgid "Contract"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_26
+msgid ""
+"Contract termination due to shutdown caused by government acts (Factum "
+"Principis)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_44
+msgid "Contractual grouping"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -66,13 +194,74 @@ msgid "Created on"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_4
+msgid "Daily"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__by_death
 msgid "Death certificate/Process/Beneficiary"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_49
+msgid "Death of domestic employer without continuation of activity"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_48
+msgid "Death of individual employer without continuation of activity"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_16
+msgid ""
+"Declaration of nullity of employment contract due to violation of Art. 37, "
+"II of Federal Constitution"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_80
+msgid ""
+"Director without employment relationship opted into FGTS contribution or "
+"Union Leader"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_39
+msgid "Disability retirement of statutory civil servant"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_45
+msgid ""
+"Discharge of military member from active service, with financial effects"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_46
+msgid ""
+"Discharge of military member from active service, without financial effects"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__discount_union_contribution
 msgid "Discount union contribution in admission"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_24
+msgid "Dismissal"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_01
+msgid "Dismissal with just cause by the employer"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_02
+msgid "Dismissal without just cause by the employer"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -86,13 +275,76 @@ msgid "Display Name"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_04
+msgid "Early termination of fixed-term contract by the employee"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_03
+msgid "Early termination of fixed-term contract by the employer"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_12
+msgid "Employee transfer between consortium member and consortium"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_11
+msgid "Employee transfer to company of the same corporate group"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_40
+msgid "End of term of office"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_23
+msgid "Exoneration"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_resignation_cause__fgts_withdraw_code
 msgid "FGTS withdrawal code"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_l10n_br_hr_contract_data_abstract
-msgid "HR Data Base Abstract"
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_95
+msgid ""
+"Fixed-Term Employment Contract, governed by Law 8,745 of December 9, 1993, "
+"as amended by Law 9,849 of October 26, 1999"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_90
+msgid ""
+"Fixed-Term Employment Contract, governed by Law 9,601 of January 21, 1998"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_97
+msgid "Fixed-Term Employment Contract, governed by Municipal Law"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_96
+msgid "Fixed-Term Employment Contract, governed by State Law"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__welfare_policy__rgps
+msgid "General Social Security Regime (RGPS)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_5
+msgid "Hourly"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -106,8 +358,13 @@ msgid "ID"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__union_cnpj
-msgid "Identification Number for selected type"
+#: model:hr.contract.notice.termination,name:l10n_br_hr_contract.notice_of_termination_2
+msgid "Indemnified"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__has_legacy_labor_regime
+msgid "Indicates that the contract uses a discontinued labor regime."
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -117,22 +374,43 @@ msgid "Labor Bond Type"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_labor_bond_type
+msgid "Labor Bond Type (RAIS / CAGED)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.actions.act_window,name:l10n_br_hr_contract.action_hr_contract_labor_regime
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_labor_regime
 #: model:ir.ui.menu,name:l10n_br_hr_contract.menu_hr_contract_labor_regime
 msgid "Labor Regime"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_labor_bond_type
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__has_legacy_labor_regime
+msgid "Labor Regime Review Flag"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__labor_bond_type_id
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_labor_bond_type__name
 msgid "Labor bond type"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__labor_regime_id
+msgid "Labor legal regime (e.g. CLT, Statutory)."
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__labor_regime_id
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_labor_regime__name
 msgid "Labor regime"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__partner_union
+msgid ""
+"Labor union partner with a defined union entity code (union_entity_code)."
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -156,13 +434,45 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_32
+msgid "Military disappearance (extravio)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_22
+msgid "Military reserve"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_21
+msgid "Military retirement (reforma)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_1
+msgid "Monthly"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__monthly_hours
 msgid "Monthly hours"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_l10n_br_hr_contract_data_abstract__name
-msgid "Name"
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_35
+msgid ""
+"Non-tenured public servant (dismissible ad nutum or admitted under special "
+"legislation, not governed by CLT)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.notice.termination,name:l10n_br_hr_contract.notice_of_termination_3
+msgid "Not applicable"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_7
+msgid "Not applicable - Variable salary only"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -177,6 +487,11 @@ msgid "Notice of Termination"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_notice_termination
+msgid "Notice of Termination Type"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__notice_of_termination_date
 msgid "Notice of termination date"
 msgstr ""
@@ -188,18 +503,13 @@ msgid "Notice of termination type"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__welfare_policy__rgps
-msgid "Regime Geral da Previdência Social"
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_29
+msgid "Redistribution or administrative reform"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__welfare_policy__rpps
-msgid "Regime Próprio da Previdência Social"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__welfare_policy__rpse
-msgid "Regime de Previdência Social no Exterior"
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_37
+msgid "Removal, in case of change of reporting body"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -211,6 +521,16 @@ msgstr ""
 #: model:ir.actions.act_window,name:l10n_br_hr_contract.action_hr_contract_resignation_cause
 #: model:ir.ui.menu,name:l10n_br_hr_contract.menu_hr_contract_resignation_cause
 msgid "Resignation Cause"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_resignation_cause
+msgid "Resignation Causes"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_07
+msgid "Resignation by the employee (voluntary quit)"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -231,15 +551,58 @@ msgid "Resignation date"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_38
+msgid "Retirement, except for disability"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_31
+msgid "Reversal of reinstatement"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_75
+msgid ""
+"Rural worker bonded to individual employer by fixed-term contract governed "
+"by Law 5,889/1973"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_25
+msgid ""
+"Rural worker bonded to individual employer by indeterminate-term contract "
+"governed by Law 5,889/1973"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_70
+msgid ""
+"Rural worker bonded to legal entity employer by fixed-term contract governed"
+" by Law 5,889/1973"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_20
+msgid ""
+"Rural worker bonded to legal entity employer by indeterminate-term contract "
+"governed by Law 5,889/1973"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.actions.act_window,name:l10n_br_hr_contract.action_hr_contract_salary_unit
+#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_salary_unit
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__salary_unit
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract_salary_unit__name
 #: model:ir.ui.menu,name:l10n_br_hr_contract.menu_hr_contract_salary_unit
 msgid "Salary Unit"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__salary_unit
-msgid "Salary Unity"
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__legacy_termination_review
+msgid ""
+"Set by the upgrade when the published resignation cause or notice of "
+"termination has no equivalent in eSocial Table 19. Choose the current values"
+" and uncheck; changing them also unchecks it."
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -248,46 +611,165 @@ msgid "Short Name"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:hr.contract.labor.regime,name:l10n_br_hr_contract.labor_regime_rju
+msgid "Single Legal Regime"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__welfare_policy__rpse
+msgid "Social Security Regime Abroad (RPSE)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__welfare_policy
+msgid "Social security policy regime (RGPS, RPPS, Abroad)."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.regime,name:l10n_br_hr_contract.labor_regime_rjp
+msgid "Special Legal Regime"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields.selection,name:l10n_br_hr_contract.selection__hr_contract__welfare_policy__rpps
+msgid "Special Social Security Regime (RPPS)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.regime,name:l10n_br_hr_contract.labor_regime_est
+msgid "Statutory"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_6
+msgid "Task"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_50
+msgid "Temporary worker, governed by Law 6,019 of January 3, 1974"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__legacy_termination_review
+msgid "Termination Data to Review"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_09
+msgid ""
+"Termination by employee's choice due to death of individual or domestic "
+"employer"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_06
+msgid "Termination by expiry of fixed-term contract"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_33
+msgid "Termination by mutual agreement (CLT Art. 484-A)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_05
+msgid "Termination by mutual fault"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_10
+msgid "Termination due to death of employee"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_27
+msgid "Termination due to force majeure"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_41
+msgid ""
+"Termination of apprenticeship contract due to insufficient performance or "
+"non-adaptation"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_42
+msgid ""
+"Termination of apprenticeship contract due to school absenteeism resulting "
+"in loss of school year"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_14
+msgid ""
+"Termination of contract due to company closure or cessation of activities"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_47
+msgid ""
+"Termination of employment contract due to closure of company / establishment"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_08
+msgid ""
+"Termination of employment contract in the employee's interest (CLT Arts. 394"
+" and 483, § 1)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__union_cnpj
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_13
+msgid "Transfer due to business succession (merger, spin-off or acquisition)"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_4
+msgid "Transfer due to succession, takeover, spin-off or merger"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_2
+msgid "Transfer from company of the same economic group"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_3
+msgid "Transfer from consortium member or consortium"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_5
+msgid "Transfer of domestic employee"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_43
+msgid "Transfer of employee from company deemed ineligible"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_34
+msgid "Transfer of ownership of domestic employee"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.admission.type,name:l10n_br_hr_contract.admission_type_7
+msgid "Transfer when the succeeded company is considered unfit"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__partner_union
-msgid "Sindicato"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__partner_union
-msgid ""
-"Sindicato é um partner que tem código de sindicato (union_entity_code) "
-"definido."
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_resignation_cause
-msgid "Termination Reason"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_admission_type
-msgid "Type of employee hiring"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_labor_regime
-msgid "Type of employment contract"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_notice_termination
-msgid "Type of notice period"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model,name:l10n_br_hr_contract.model_hr_contract_salary_unit
-msgid ""
-"Unidade de pagamento da parte fixa da remuneração e-Social - S-2200 "
-"undSalFixo"
-msgstr ""
-
-#. module: l10n_br_hr_contract
-#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__union_name
 #: model_terms:ir.ui.view,arch_db:l10n_br_hr_contract.l10n_br_hr_contract_view_form
 msgid "Union"
 msgstr ""
@@ -298,8 +780,51 @@ msgid "Union CNPJ"
 msgstr ""
 
 #. module: l10n_br_hr_contract
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__union_name
+msgid "Union Name"
+msgstr ""
+
+#. module: l10n_br_hr_contract
 #: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__union_entity_code
 msgid "Union entity code"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_65
+msgid ""
+"Urban worker bonded to individual employer by fixed-term contract or "
+"specific project governed by CLT"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_15
+msgid ""
+"Urban worker bonded to individual employer by indeterminate-term contract "
+"governed by CLT"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_60
+msgid ""
+"Urban worker bonded to legal entity employer by fixed-term contract or "
+"specific project governed by CLT"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.labor.bond.type,name:l10n_br_hr_contract.labor_bond_type_10
+msgid ""
+"Urban worker bonded to legal entity employer by indeterminate-term contract "
+"governed by CLT"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.resignation.cause,name:l10n_br_hr_contract.resignation_cause_25
+msgid "Vacancy of tenure-track position"
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.salary.unit,name:l10n_br_hr_contract.salary_unit_3
+msgid "Weekly"
 msgstr ""
 
 #. module: l10n_br_hr_contract
@@ -313,11 +838,17 @@ msgid "Welfare policy"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__welfare_policy
-msgid "e-Social: S2200/S2300 - tpRegPrev"
+#: model:ir.model.fields,field_description:l10n_br_hr_contract.field_hr_contract__work_schedule_type
+msgid "Work schedule regime"
 msgstr ""
 
 #. module: l10n_br_hr_contract
-#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__labor_regime_id
-msgid "e-Social: S2200/S2300 - tpRegTrab"
+#: model:ir.model.fields,help:l10n_br_hr_contract.field_hr_contract__work_schedule_type
+msgid ""
+"Work schedule regime of the contract, as reported to eSocial (tpRegJor)."
+msgstr ""
+
+#. module: l10n_br_hr_contract
+#: model:hr.contract.notice.termination,name:l10n_br_hr_contract.notice_of_termination_1
+msgid "Worked"
 msgstr ""

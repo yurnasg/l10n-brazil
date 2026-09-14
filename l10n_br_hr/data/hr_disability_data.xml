@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Órgão / Sistema: eSocial / Ministério do Trabalho e Emprego
+    - Tabela / Evento Oficial: Evento S-2200 (Cadastramento Inicial e Admissão)
+      Campos de Deficiência: defFisica, defVisual, defAuditiva, defMental, defIntelectual, reabReadap
+    - Versão do Leiaute: eSocial Versão S-1.3 (NT 06/2026 rev.)
+    - Base Legal: Lei nº 8.213/1991 (Art. 93 - Lei de Cotas), Decreto nº 3.298/1999,
+      Decreto nº 5.296/2004 e Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
+    - Regra de Arquivamento: Registros protegidos contra exclusão física; arquiváveis
+      via active=False caso haja revogação legal.
+    ==============================================================================
+    -->
+    <record id="disability_physical" model="hr.disability">
+        <field name="name">Physical disability</field>
+        <field name="code">physical</field>
+        <field name="sequence">10</field>
+        <field name="color">4</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="disability_hearing" model="hr.disability">
+        <field name="name">Hearing impairment</field>
+        <field name="code">hearing</field>
+        <field name="sequence">20</field>
+        <field name="color">2</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="disability_visual" model="hr.disability">
+        <field name="name">Visual impairment</field>
+        <field name="code">visual</field>
+        <field name="sequence">30</field>
+        <field name="color">3</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="disability_intellectual" model="hr.disability">
+        <field name="name">Intellectual disability</field>
+        <field name="code">intellectual</field>
+        <field name="sequence">40</field>
+        <field name="color">5</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="disability_mental" model="hr.disability">
+        <field name="name">Mental health condition</field>
+        <field name="code">mental</field>
+        <field name="sequence">50</field>
+        <field name="color">7</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="disability_rehabilitated" model="hr.disability">
+        <field name="name">Rehabilitated / Readapted</field>
+        <field name="code">rehabilitated</field>
+        <field name="sequence">60</field>
+        <field name="color">10</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <!-- Legacy records from old RAIS, archived and colored with warning index 1 (red/orange) -->
+    <record id="disability_intellectual_mental_legacy" model="hr.disability">
+        <field name="name">Intellectual / Mental</field>
+        <field name="code">intellectual_mental_legacy</field>
+        <field name="sequence">90</field>
+        <field name="color">1</field>
+        <field name="active" eval="False" />
+    </record>
+
+    <record id="disability_multiple_legacy" model="hr.disability">
+        <field name="name">Multiple</field>
+        <field name="code">multiple_legacy</field>
+        <field name="sequence">100</field>
+        <field name="color">1</field>
+        <field name="active" eval="False" />
+    </record>
+</odoo>

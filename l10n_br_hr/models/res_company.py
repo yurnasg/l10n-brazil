@@ -7,4 +7,4 @@ from odoo import fields, models
 class ResCompany(models.Model):
     _inherit = "res.company"
 
-    cnpj_cei = fields.Char(string="CNPJ/CEI Tomadora/Obra")
+    cnpj_cei = fields.Char(string="Contractor/Construction CNPJ/CEI")

@@ -1,9 +1,13 @@
-from . import test_amount_to_text
-from . import test_valid_createid
-from . import test_base_onchange
-from . import test_other_ie
-from . import test_valid_pix
-from . import test_partner_bank
-from . import test_cnpj_alfanumerico
-from . import test_duplicate_cnpj
-from . import test_vat_search
+from . import (
+    test_amount_to_text,
+    test_base_onchange,
+    test_cnpj_alfanumerico,
+    test_duplicate_cnpj,
+    test_other_ie,
+    test_partner_bank,
+    test_partner_behavior,
+    test_res_partner,
+    test_valid_createid,
+    test_valid_pix,
+    test_vat_search,
+)

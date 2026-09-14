@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--
+    Civil identity document types. `name` is the short acronym shown in the
+    selector; `description` is the full name, also searchable. Only CIN is
+    `is_cpf_based`: its number is the CPF, filled in automatically.
+    -->
+    <record id="identity_doc_type_cin" model="l10n_br_base.identity.document.type">
+        <field name="name">CIN</field>
+        <field name="description">National Identity Card (CIN)</field>
+        <field name="code">cin</field>
+        <field name="sequence">10</field>
+        <field name="is_cpf_based" eval="True" />
+    </record>
+
+    <record id="identity_doc_type_rg" model="l10n_br_base.identity.document.type">
+        <field name="name">RG</field>
+        <field name="description">General Registry / Identity Card (RG)</field>
+        <field name="code">rg</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="identity_doc_type_crnm" model="l10n_br_base.identity.document.type">
+        <field name="name">CRNM / RNE</field>
+        <field name="description">National Migration Registration Card (CRNM / RNE)</field>
+        <field name="code">crnm</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="identity_doc_type_other" model="l10n_br_base.identity.document.type">
+        <field name="name">Other</field>
+        <field name="description">Other Identity Document</field>
+        <field name="code">other</field>
+        <field name="sequence">40</field>
+    </record>
+</odoo>

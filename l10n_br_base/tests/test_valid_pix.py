@@ -2,11 +2,10 @@
 # @author Antônio S. Pereira Neto <neto@engenere.one>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from psycopg2 import IntegrityError
-
 from odoo.exceptions import ValidationError
 from odoo.tests import TransactionCase
 from odoo.tools import mute_logger
+from psycopg2 import IntegrityError
 
 from .tools import load_fixture_files
 
