@@ -226,10 +226,16 @@ class Partner(models.Model):
         this method call others methods because this validation is State wise
         :Return: True or False.
         """
+        allow_cnpj_multi_ie = bool(
+            self.env["ir.config_parameter"]
+            .sudo()
+            .get_param("l10n_br_base.allow_cnpj_multi_ie")
+        )
         codes_by_state = defaultdict(set)
         for line in self.state_tax_number_ids:
             codes_by_state[line.state_id.id].add(line.l10n_br_ie_code)
-        partner_ids_by_key = defaultdict(list)
+        partners_by_key = defaultdict(list)
+        other_partners_by_key = defaultdict(list)
         if codes_by_state:
             domain = expression.OR(
                 [
@@ -242,9 +248,24 @@ class Partner(models.Model):
             )
             for partner in self.env["res.partner"].search(domain):
                 key = (partner.state_id.id, partner.l10n_br_ie_code)
-                partner_ids_by_key[key].append(partner.id)
+                partners_by_key[key].append(partner)
+            for other_line in self.env["state.tax.numbers"].search(
+                expression.AND([[("partner_id", "!=", False)], domain])
+            ):
+                key = (other_line.state_id.id, other_line.l10n_br_ie_code)
+                other_partners_by_key[key].append(other_line.partner_id)
 
         for record in self:
+            # With allow_cnpj_multi_ie, the partners sharing the CNPJ are one
+            # taxpayer registered once per State Tax Number (see
+            # _check_cnpj_l10n_br_ie_code): its numbers may repeat among them.
+            same_taxpayer_vat = (
+                record.vat
+                if allow_cnpj_multi_ie
+                and record.vat
+                and cnpj_cpf.validar_cnpj(record.vat)
+                else False
+            )
             for l10n_br_ie_code_line in record.state_tax_number_ids:
                 check_ie(
                     record.env,
@@ -264,16 +285,23 @@ class Partner(models.Model):
                     l10n_br_ie_code_line.state_id.id,
                     l10n_br_ie_code_line.l10n_br_ie_code,
                 )
-                duplicate_ie = self.env["res.partner"].browse(
-                    [pid for pid in partner_ids_by_key[key] if pid != record.id]
-                )
-                if duplicate_ie:
-                    raise ValidationError(
-                        self.env._(
-                            "State Tax Number already used %(name)s",
-                            name=duplicate_ie.name,
+                for candidates in (
+                    partners_by_key[key],
+                    other_partners_by_key[key],
+                ):
+                    duplicates = [
+                        partner
+                        for partner in candidates
+                        if partner.id != record.id
+                        and not (same_taxpayer_vat and partner.vat == same_taxpayer_vat)
+                    ]
+                    if duplicates:
+                        raise ValidationError(
+                            self.env._(
+                                "State Tax Number already used %(name)s",
+                                name=duplicates[0].name,
+                            )
                         )
-                    )
 
     @api.model
     def _address_fields(self):

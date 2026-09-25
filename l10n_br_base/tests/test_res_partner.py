@@ -301,6 +301,56 @@ class StateTaxNumberTest(L10nBrBaseCase):
                 }
             )
 
+    def test_other_ie_duplicated_on_another_partner(self):
+        """An other State Tax Number already used by another partner (also as
+        an other State Tax Number) is rejected."""
+
+        def other_ie():
+            return [(0, 0, {"state_id": self.state_ba.id, "l10n_br_ie_code": IE_BA})]
+
+        self._company(
+            name="Company SP",
+            state_id=self.state_sp.id,
+            state_tax_number_ids=other_ie(),
+        )
+        other = self._company(name="Company RJ", state_id=self.state_rj.id)
+        with self.assertRaises(ValidationError):
+            other.write({"state_tax_number_ids": other_ie()})
+
+    def _add_other_ie_skipping_check_digit(self, partner, state, ie_code):
+        # each state has its own check digit rule, so a number valid in BA
+        # is not valid elsewhere: the check digit is not the subject here
+        partner.with_context(disable_ie_validation=True).write(
+            {
+                "state_tax_number_ids": [
+                    (0, 0, {"state_id": state.id, "l10n_br_ie_code": ie_code})
+                ]
+            }
+        )
+
+    def test_same_other_ie_number_in_another_state_accepted(self):
+        """Each state's SEFAZ issues its own State Tax Numbers and there is
+        no national registry: the same number in another state belongs to
+        another company and is accepted."""
+        self._company(
+            name="Company SP",
+            state_id=self.state_sp.id,
+            state_tax_number_ids=[
+                (0, 0, {"state_id": self.state_ba.id, "l10n_br_ie_code": IE_BA})
+            ],
+        )
+        other = self._company(name="Company RJ", state_id=self.state_rj.id)
+        self._add_other_ie_skipping_check_digit(other, self.state_sp, IE_BA)
+        self.assertEqual(other.state_tax_number_ids.l10n_br_ie_code, IE_BA)
+
+    def test_other_ie_equal_to_main_ie_in_another_state_accepted(self):
+        self._company(
+            name="Company BA", state_id=self.state_ba.id, l10n_br_ie_code=IE_BA
+        )
+        other = self._company(name="Company SP", state_id=self.state_sp.id)
+        self._add_other_ie_skipping_check_digit(other, self.state_rj, IE_BA)
+        self.assertEqual(other.state_tax_number_ids.l10n_br_ie_code, IE_BA)
+
     def test_partner_adds_second_other_ie(self):
         """Revalidating the partner's existing lines must not match the
         partner itself."""
@@ -318,3 +368,55 @@ class StateTaxNumberTest(L10nBrBaseCase):
             }
         )
         self.assertEqual(len(partner.state_tax_number_ids), 2)
+
+    def _add_other_ie_ba(self, partner):
+        partner.write(
+            {
+                "state_tax_number_ids": [
+                    (0, 0, {"state_id": self.state_ba.id, "l10n_br_ie_code": IE_BA})
+                ]
+            }
+        )
+
+    def test_other_ie_used_as_main_ie_by_two_partners(self):
+        """The main State Tax Number may repeat in partners with different
+        CNPJs (its check only compares the same CNPJ): the error names one of
+        them."""
+        for name in ("Company BA 1", "Company BA 2"):
+            self._company(name=name, state_id=self.state_ba.id, l10n_br_ie_code=IE_BA)
+        other = self._company(name="Company SP", state_id=self.state_sp.id)
+        with self.assertRaisesRegex(ValidationError, "State Tax Number already used"):
+            self._add_other_ie_ba(other)
+
+    def test_other_ie_repeated_in_the_same_cnpj_with_multi_ie(self):
+        """With allow_cnpj_multi_ie, the partners sharing a CNPJ are one
+        taxpayer registered once per State Tax Number: a number may repeat
+        among them, as the main one or as another one."""
+        self.config.set_param("l10n_br_base.allow_cnpj_multi_ie", True)
+        self._company(
+            name="Branch BA",
+            vat=CNPJ_1,
+            state_id=self.state_ba.id,
+            l10n_br_ie_code=IE_BA,
+        )
+        branch_sp = self._company(
+            name="Branch SP", vat=CNPJ_1, state_id=self.state_sp.id
+        )
+        self._add_other_ie_ba(branch_sp)
+        branch_rj = self._company(
+            name="Branch RJ", vat=CNPJ_1, state_id=self.state_rj.id
+        )
+        self._add_other_ie_ba(branch_rj)
+        self.assertEqual(branch_rj.state_tax_number_ids.l10n_br_ie_code, IE_BA)
+
+    def test_other_ie_of_another_cnpj_rejected_with_multi_ie(self):
+        self.config.set_param("l10n_br_base.allow_cnpj_multi_ie", True)
+        self._company(
+            name="Company BA",
+            vat=CNPJ_1,
+            state_id=self.state_ba.id,
+            l10n_br_ie_code=IE_BA,
+        )
+        other = self._company(name="Company SP", vat=CNPJ_2, state_id=self.state_sp.id)
+        with self.assertRaisesRegex(ValidationError, "State Tax Number already used"):
+            self._add_other_ie_ba(other)
