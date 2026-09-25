@@ -48,10 +48,6 @@ class Company(models.Model):
         for company in self:
             company.partner_id.l10n_br_ie_code = company.l10n_br_ie_code
 
-    def _inverse_state(self):
-        for company in self:
-            company.partner_id.state_id = company.state_id
-
     def _inverse_state_tax_number_ids(self):
         """Write the l10n_br specific functional fields."""
         for company in self:
@@ -129,13 +125,6 @@ class Company(models.Model):
         compute="_compute_address",
         inverse="_inverse_l10n_br_isuf_code",
     )
-
-    @api.model
-    def _get_view(self, view_id=None, view_type="form", **options):
-        arch, view = super()._get_view(view_id, view_type, **options)
-        if view_type == "form":
-            arch = self._view_get_address(arch)
-        return arch, view
 
     @api.onchange("state_id")
     def _onchange_state_id(self):
