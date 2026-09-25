@@ -5,6 +5,7 @@ from odoo.exceptions import ValidationError
 
 from .common import (
     CNPJ_1,
+    CNPJ_1_FORMATTED,
     CNPJ_2,
     CPF_1,
     CPF_1_FORMATTED,
@@ -134,6 +135,18 @@ class PartnerSearchTest(L10nBrBaseCase):
     def test_name_search_by_unmasked_cnpj(self):
         partner = self._company(name="Searchable", vat=CNPJ_1)
         self.assertIn(partner.id, self._found(CNPJ_1))
+
+    def test_name_search_masked_cnpj_and_cpf(self):
+        """The CNPJ/CPF typed with mask in a many2one finds the partner."""
+        company = self._company(name="Masked Search Company", vat=CNPJ_1_FORMATTED)
+        person = self._person(name="Masked Search Person", vat=CPF_1_FORMATTED)
+        self.assertIn(company.id, self._found(CNPJ_1_FORMATTED))
+        self.assertIn(company.id, self._found("14.500.536"))
+        self.assertIn(person.id, self._found(CPF_1_FORMATTED))
+        self.assertEqual(
+            self.partner_model.search([("display_name", "ilike", CPF_1_FORMATTED)]),
+            person,
+        )
 
     def test_name_search_by_state_tax_number(self):
         partner = self._company(

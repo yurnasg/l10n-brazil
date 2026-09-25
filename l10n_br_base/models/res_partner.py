@@ -8,6 +8,7 @@ from erpbrasil.base.fiscal import cnpj_cpf
 
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+from odoo.osv import expression
 
 from ..tools import check_cnpj_cpf, check_ie
 
@@ -21,6 +22,23 @@ class Partner(models.Model):
         names = super()._rec_names_search
         # not "names +=": that would extend the parent class attribute in place
         return names + ["cnpj_cpf_stripped", "legal_name", "l10n_br_ie_code"]
+
+    @api.model
+    def _search_display_name(self, operator, value):
+        """Match a masked CNPJ/CPF typed in name_search (many2one fields).
+        The display_name leaf is only turned into "vat ilike <masked>" here,
+        after _expand_vat_search_domain ran, so the unmasked value must be
+        searched explicitly."""
+        domain = super()._search_display_name(operator, value)
+        if operator in ("ilike", "=ilike", "like", "=like", "=") and isinstance(
+            value, str
+        ):
+            stripped = "".join(char for char in value if char.isalnum())
+            if stripped and stripped != value:
+                domain = expression.OR(
+                    [domain, [("cnpj_cpf_stripped", operator, stripped)]]
+                )
+        return domain
 
     def _inverse_street_data(self):
         """In Brazil the address format is street_name, street_number
