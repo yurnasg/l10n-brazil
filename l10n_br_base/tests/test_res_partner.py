@@ -1,5 +1,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+from unittest.mock import patch
 
 from odoo.exceptions import ValidationError
 
@@ -207,6 +208,20 @@ class PartnerCommercialSyncTest(L10nBrBaseCase):
         company.vat = CNPJ_2
         self.assertFalse(contact.vat)
 
+    def test_br_company_cnpj_not_synced_to_foreign_address(self):
+        """The CNPJ identifies the Brazilian company only, whatever the
+        country of its contact addresses."""
+        company = self._company(vat=CNPJ_1)
+        address = self.partner_model.create(
+            {
+                "name": "Office abroad",
+                "type": "other",
+                "parent_id": company.id,
+                "country_id": self.us.id,
+            }
+        )
+        self.assertFalse(address.vat)
+
     def test_foreign_company_vat_synced_to_contact(self):
         company = self._company(country_id=self.us.id, vat=FOREIGN_VAT)
         contact = self.partner_model.create(
@@ -235,6 +250,100 @@ class PartnerCommercialSyncTest(L10nBrBaseCase):
         self.assertEqual(contact.industry_id, industry_1)
         company.industry_id = industry_2
         self.assertEqual(contact.industry_id, industry_2)
+
+    def test_commercial_sync_only_changed_fields(self):
+        """Like the core, only the commercial fields written on the company
+        are propagated to its contacts."""
+        industry_parent, industry_child = self.env["res.partner.industry"].create(
+            [{"name": "Industry Parent"}, {"name": "Industry Child"}]
+        )
+        company = self._company(industry_id=industry_parent.id)
+        child = self._person(name="Contact", parent_id=company.id)
+        child.industry_id = industry_child
+        company.write({"company_registry": "REG-123"})
+        self.assertEqual(child.company_registry, "REG-123")
+        self.assertEqual(child.industry_id, industry_child)
+
+    def test_commercial_sync_only_changed_fields_reaches_grandchild(self):
+        """Same one level deeper (the core recurses into the contacts of a
+        contact)."""
+        industry_parent, industry_grandchild = self.env["res.partner.industry"].create(
+            [{"name": "Industry Parent"}, {"name": "Industry Grandchild"}]
+        )
+        company = self._company(industry_id=industry_parent.id)
+        child = self._person(name="Contact", parent_id=company.id)
+        grandchild = self._person(name="Grandchild", parent_id=child.id)
+        grandchild.industry_id = industry_grandchild
+        company.write({"company_registry": "REG-123"})
+        self.assertEqual(grandchild.company_registry, "REG-123")
+        self.assertEqual(grandchild.industry_id, industry_grandchild)
+
+    def test_br_contact_gets_company_dependent_commercial_fields(self):
+        """The core also syncs the company dependent commercial fields (e.g.
+        the fiscal position and payment terms added by account) in the other
+        companies. Brazilian contacts must go through it too."""
+        company = self._company(vat=CNPJ_1)
+        with patch.object(
+            type(self.partner_model),
+            "_company_dependent_commercial_sync",
+            autospec=True,
+        ) as company_dependent_sync:
+            contact = self._person(name="Contact", parent_id=company.id)
+        company_dependent_sync.assert_called_once()
+        self.assertEqual(company_dependent_sync.call_args.args[0], contact)
+
+    def test_import_contact_does_not_get_br_company_cnpj(self):
+        """An import (load) syncs the commercial fields in batch, without
+        _commercial_sync_from_company: the CNPJ must not be copied either."""
+        company = self._company(vat=CNPJ_1)
+        result = self.partner_model.load(
+            ["name", "parent_id/.id"], [["Imported Contact", str(company.id)]]
+        )
+        self.assertFalse(result["messages"])
+        contact = self.partner_model.browse(result["ids"])
+        self.assertEqual(contact.parent_id, company)
+        self.assertFalse(contact.vat)
+
+    def test_import_contact_gets_foreign_company_vat(self):
+        company = self._company(country_id=self.us.id, vat=FOREIGN_VAT)
+        result = self.partner_model.load(
+            ["name", "parent_id/.id"], [["Imported Contact", str(company.id)]]
+        )
+        self.assertFalse(result["messages"])
+        self.assertEqual(self.partner_model.browse(result["ids"]).vat, FOREIGN_VAT)
+
+    def test_foreign_company_vat_change_keeps_br_address_cpf(self):
+        """A foreign company changing its VAT does not copy it to its
+        addresses in Brazil, which keep their own CPF/CNPJ (the foreign VAT
+        would fail their CPF/CNPJ validation)."""
+        company = self._company(country_id=self.us.id, vat=FOREIGN_VAT)
+        br_address = self.partner_model.create(
+            {
+                "name": "Address in Brazil",
+                "type": "other",
+                "parent_id": company.id,
+                "vat": CPF_1,
+            }
+        )
+        contact = self.partner_model.create(
+            {"name": "Contact", "parent_id": company.id, "country_id": self.us.id}
+        )
+        company.vat = "98-7654321"
+        self.assertEqual(br_address.country_id, self.br)
+        self.assertEqual(br_address.vat, CPF_1)
+        self.assertEqual(contact.vat, "98-7654321")
+
+    def test_import_br_address_of_foreign_company(self):
+        """Same in the batch sync of an import."""
+        company = self._company(country_id=self.us.id, vat=FOREIGN_VAT)
+        result = self.partner_model.load(
+            ["name", "type", "parent_id/.id", "country_id/.id"],
+            [["Imported Address", "other", str(company.id), str(self.br.id)]],
+        )
+        self.assertFalse(result["messages"])
+        address = self.partner_model.browse(result["ids"])
+        self.assertEqual(address.country_id, self.br)
+        self.assertFalse(address.vat)
 
 
 class PartnerCopyTest(L10nBrBaseCase):

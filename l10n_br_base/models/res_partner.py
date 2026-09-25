@@ -62,38 +62,59 @@ class Partner(models.Model):
                     vals["vat"] = None
         return vals_list
 
-    def _commercial_sync_from_company(self):
-        """
-        Overriden to avoid copying the CNPJ (vat field) to children companies
-        """
-        if not self.is_br_partner:
-            return super()._commercial_sync_from_company()
+    # In Brazil the CNPJ/CPF (vat) identifies a single taxpayer: unlike the
+    # other commercial fields it is not shared between a company and its
+    # contacts, who may have their own CPF. The core synchronization is kept
+    # (only the changed fields, company dependent fields, batch import), with
+    # two exceptions for the vat: the CNPJ/CPF of a Brazilian partner is not
+    # copied (_update_fields_values), and a partner in Brazil does not get the
+    # vat of its commercial partner (write, while syncing).
 
-        commercial_partner = self.commercial_partner_id
-        if commercial_partner != self:
-            sync_vals = commercial_partner._update_fields_values(
-                [field for field in self._commercial_fields() if field != "vat"]
-            )
-            self.write(sync_vals)
-            self._commercial_sync_to_children()
+    def _commercial_sync_from_company(self):
+        return super(
+            Partner, self.with_context(l10n_br_commercial_sync=True)
+        )._commercial_sync_from_company()
 
     def _commercial_sync_to_children(self, fields_to_sync=None):
-        """
-        Overriden to avoid copying the CNPJ (vat field) to parent partners
-        """
-        if not self.is_br_partner:
-            return super()._commercial_sync_to_children(fields_to_sync)
+        return super(
+            Partner, self.with_context(l10n_br_commercial_sync=True)
+        )._commercial_sync_to_children(fields_to_sync)
 
-        commercial_partner = self.commercial_partner_id
-        sync_vals = commercial_partner._update_fields_values(
-            [field for field in self._commercial_fields() if field != "vat"]
-        )
-        sync_children = self.child_ids.filtered(lambda c: not c.is_company)
-        for child in sync_children:
-            child._commercial_sync_to_children(fields_to_sync)
-        res = sync_children.write(sync_vals)
-        sync_children._compute_commercial_partner()
-        return res
+    def _load_records_create(self, vals_list):
+        # an import syncs the commercial fields in batch, without the methods
+        # above
+        partners = super(
+            Partner, self.with_context(l10n_br_commercial_sync=True)
+        )._load_records_create(vals_list)
+        return partners.with_env(self.env)
+
+    def _update_fields_values(self, fields):
+        """``self`` is the partner the values are copied from."""
+        if "vat" in fields and self.is_br_partner:
+            fields = [fname for fname in fields if fname != "vat"]
+        return super()._update_fields_values(fields)
+
+    def write(self, vals):
+        if "vat" in vals and self.env.context.get("l10n_br_commercial_sync"):
+            # The core writes the same values on every contact, but a partner
+            # in Brazil keeps its own CPF/CNPJ: a foreign vat is not one, and
+            # would fail its validation.
+            if "country_id" in vals:
+                in_brazil = vals["country_id"] == self.env.ref("base.br").id
+                receivers = self if in_brazil else self.browse()
+            else:
+                receivers = self.filtered("is_br_partner")
+            receivers = receivers.filtered(
+                lambda partner: partner.commercial_partner_id != partner
+                and partner.commercial_partner_id.vat == vals["vat"]
+            )
+            if receivers:
+                if self - receivers:
+                    super(Partner, self - receivers).write(vals)
+                return super(Partner, receivers).write(
+                    {fname: value for fname, value in vals.items() if fname != "vat"}
+                )
+        return super().write(vals)
 
     @api.constrains("vat", "l10n_br_ie_code")
     def _check_cnpj_l10n_br_ie_code(self):
