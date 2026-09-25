@@ -1,5 +1,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+from odoo.tests import Form
 
 from .common import (
     CNPJ_1,
@@ -54,6 +55,21 @@ class CompanyTest(L10nBrBaseCase):
         )
         company._onchange_state_id()
         self.assertFalse(company.l10n_br_ie_code)
+
+    def test_onchange_state_writes_partner_only_on_save(self):
+        """Changing the state in the form clears the IE, but the partner of
+        the company is only written when the form is saved (the user may
+        still discard the change)."""
+        company = self._br_company(state_id=self.state_sp.id, l10n_br_ie_code=IE_SP)
+        partner = company.partner_id
+        company_form = Form(company)
+        company_form.state_id = self.state_rj
+        self.assertFalse(company_form.l10n_br_ie_code)
+        self.assertEqual(partner.state_id, self.state_sp)
+        self.assertEqual(partner.l10n_br_ie_code, IE_SP)
+        company_form.save()
+        self.assertEqual(partner.state_id, self.state_rj)
+        self.assertFalse(partner.l10n_br_ie_code)
 
     def test_form_views_load(self):
         company_arch = self.env["res.company"].get_view(view_type="form")["arch"]

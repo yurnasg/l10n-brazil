@@ -137,10 +137,22 @@ class Company(models.Model):
             arch = self._view_get_address(arch)
         return arch, view
 
+    def write(self, vals):
+        if "state_id" in vals and "l10n_br_ie_code" in vals:
+            # The partner validates its IE against its state (_check_ie), but
+            # the inverses write them one at a time, so the new state would
+            # be checked with the old IE: write both on the partner at once.
+            self.partner_id.write(
+                {
+                    "state_id": vals["state_id"],
+                    "l10n_br_ie_code": vals["l10n_br_ie_code"],
+                }
+            )
+        return super().write(vals)
+
     @api.onchange("state_id")
     def _onchange_state_id(self):
         res = super()._onchange_state_id()
+        # the IE belongs to one state; the partner gets both on save (inverses)
         self.l10n_br_ie_code = False
-        self.partner_id.l10n_br_ie_code = False
-        self.partner_id.state_id = self.state_id
         return res
