@@ -42,6 +42,29 @@ class PartnerVatTest(L10nBrBaseCase):
         partner.write({"country_id": self.br.id, "vat": CPF_1_FORMATTED})
         self.assertEqual(partner.vat, CPF_1)
 
+    def test_write_single_foreign_partner_keeps_vat_format(self):
+        partner = self._company(country_id=self.us.id)
+        partner.write({"vat": FOREIGN_VAT})
+        self.assertEqual(partner.vat, FOREIGN_VAT)
+
+    def test_write_multi_foreign_partners_keeps_vat_format(self):
+        """Writing the VAT on several foreign partners must not strip its
+        punctuation just because the current company is Brazilian."""
+        partners = self._company(name="US Co 1", country_id=self.us.id) | self._company(
+            name="US Co 2", country_id=self.us.id
+        )
+        partners.write({"vat": FOREIGN_VAT})
+        self.assertEqual(partners.mapped("vat"), [FOREIGN_VAT, FOREIGN_VAT])
+
+    def test_write_multi_mixed_countries_vat_format(self):
+        """With Brazilian and foreign partners in the same write, only the
+        Brazilian ones get the VAT unformatted."""
+        br_partner = self._person(name="BR Person")
+        us_partner = self._person(name="US Person", country_id=self.us.id)
+        (br_partner | us_partner).write({"vat": "529.982.247-25"})
+        self.assertEqual(br_partner.vat, CPF_3)
+        self.assertEqual(us_partner.vat, "529.982.247-25")
+
     def test_onchange_vat_unformats(self):
         partner = self.partner_model.new(
             {"name": "Draft", "country_id": self.br.id, "vat": CPF_1_FORMATTED}

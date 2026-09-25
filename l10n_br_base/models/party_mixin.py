@@ -203,10 +203,11 @@ class PartyMixin(models.AbstractModel):
             self._normalize_vat(vals)
             self.vat = vals["vat"]
 
-    @api.model
     def _normalize_vat(self, vals):
         """Strip punctuation from Brazilian VAT values so they are stored
-        unformatted.
+        unformatted. The country comes from ``vals``, else from the records
+        (all from the same BR/non-BR group, see write()), else from the
+        current company (create).
         """
         if not isinstance(vals, dict):
             return
@@ -216,8 +217,10 @@ class PartyMixin(models.AbstractModel):
         country_id = vals.get("country_id")
         if country_id:
             country = self.env["res.country"].browse(country_id)
-        elif self and len(self) == 1:
-            country = self.country_id
+        elif self:
+            # write() only calls this on records sharing the same BR/non-BR
+            # country, so the first record is representative
+            country = self[:1].country_id
         else:
             country = self.env.company.country_id
         if country and country.code == "BR":
@@ -230,6 +233,16 @@ class PartyMixin(models.AbstractModel):
         return super().create(vals_list)
 
     def write(self, vals):
+        if vals.get("vat") and not vals.get("country_id") and len(self) > 1:
+            br_records = self.filtered(lambda r: r.country_id.code == "BR")
+            if br_records and br_records != self:
+                # Mixed countries: only the Brazilian records get the VAT
+                # unformatted, so write each group separately.
+                br_vals = dict(vals)
+                br_records._normalize_vat(br_vals)
+                super(PartyMixin, br_records).write(br_vals)
+                super(PartyMixin, self - br_records).write(vals)
+                return True
         self._normalize_vat(vals)
         return super().write(vals)
 
