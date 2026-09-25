@@ -55,6 +55,18 @@ class CompanyTest(L10nBrBaseCase):
         company._onchange_state_id()
         self.assertFalse(company.l10n_br_ie_code)
 
+    def test_form_uses_br_address_view_without_writing_it(self):
+        """The Brazilian address view (a res.partner view) is also used in
+        the company form, and loading that form does not modify the view."""
+        address_view = self.env.ref("l10n_br_base.l10n_br_base_res_partner_address")
+        self.env.registry.clear_cache("templates")
+        company_arch = self.env["res.company"].get_view(view_type="form")["arch"]
+        self.assertIn('placeholder="District..."', company_arch)
+        partner_arch = self.partner_model.get_view(view_type="form")["arch"]
+        self.assertIn('placeholder="District..."', partner_arch)
+        address_view.invalidate_recordset(["model"])
+        self.assertEqual(address_view.model, "res.partner")
+
     def test_form_views_load(self):
         company_arch = self.env["res.company"].get_view(view_type="form")["arch"]
         self.assertIn("l10n_br_ie_code", company_arch)
