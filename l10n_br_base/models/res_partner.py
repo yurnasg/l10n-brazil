@@ -308,6 +308,7 @@ class Partner(models.Model):
             return True
         return False
 
+    @api.depends("country_id", "vat")
     def _compute_br_partner(self):
         """Check if is a Brazilian Partner."""
         for record in self:

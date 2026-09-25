@@ -97,6 +97,14 @@ class PartnerVatTest(L10nBrBaseCase):
         foreign = self._company(country_id=self.us.id, vat=FOREIGN_VAT)
         self.assertFalse(foreign.is_br_partner)
 
+    def test_is_br_partner_follows_country_change(self):
+        """is_br_partner decides the vat rules (copy, contacts sync): it must
+        not keep the value computed before the country changed."""
+        partner = self._person(country_id=self.us.id)
+        self.assertFalse(partner.is_br_partner)
+        partner.country_id = self.br
+        self.assertTrue(partner.is_br_partner)
+
     def test_show_l10n_br_follows_partner_country(self):
         self.assertTrue(self._person().show_l10n_br)
         self.assertFalse(self._person(country_id=self.us.id).show_l10n_br)
