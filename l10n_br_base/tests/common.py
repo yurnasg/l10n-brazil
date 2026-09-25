@@ -13,6 +13,9 @@ CNPJ_2 = "71222913000109"
 IE_SP = "932.446.119.086"
 IE_BA = "41902653"
 FOREIGN_VAT = "12-3456789"
+# longer than the former sizes of legal_name (128) and district (32)
+LONG_LEGAL_NAME = ("Cooperativa Agroindustrial dos Produtores " * 4).strip()
+LONG_DISTRICT = "Conjunto Residencial dos Trabalhadores da Industria"
 
 
 class L10nBrBaseCase(TransactionCase):

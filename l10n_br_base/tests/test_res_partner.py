@@ -14,6 +14,8 @@ from .common import (
     FOREIGN_VAT,
     IE_BA,
     IE_SP,
+    LONG_DISTRICT,
+    LONG_LEGAL_NAME,
     L10nBrBaseCase,
 )
 
@@ -143,6 +145,14 @@ class PartnerSearchTest(L10nBrBaseCase):
 
 
 class PartnerAddressTest(L10nBrBaseCase):
+    def test_long_legal_name_and_district_kept(self):
+        """Both are filled by the CNPJ and zip code lookups: a long value
+        must be stored whole, not silently cut."""
+        partner = self._company(legal_name=LONG_LEGAL_NAME, district=LONG_DISTRICT)
+        partner.invalidate_recordset(["legal_name", "district"])
+        self.assertEqual(partner.legal_name, LONG_LEGAL_NAME)
+        self.assertEqual(partner.district, LONG_DISTRICT)
+
     def test_br_street_uses_comma(self):
         partner = self._person(
             street_name="Rua Acre", street_number="47", street_number2="Sala 1310"

@@ -5,6 +5,8 @@ from .common import (
     CNPJ_1,
     CNPJ_1_FORMATTED,
     IE_SP,
+    LONG_DISTRICT,
+    LONG_LEGAL_NAME,
     L10nBrBaseCase,
 )
 
@@ -37,6 +39,14 @@ class CompanyTest(L10nBrBaseCase):
         self.assertEqual(partner.city_id, self.city_sp)
         self.assertEqual(partner.state_id, self.state_sp)
         self.assertEqual(partner.l10n_br_ie_code, IE_SP)
+
+    def test_long_legal_name_and_district_kept(self):
+        company = self._br_company(legal_name=LONG_LEGAL_NAME, district=LONG_DISTRICT)
+        company.invalidate_recordset(["legal_name", "district"])
+        self.assertEqual(company.legal_name, LONG_LEGAL_NAME)
+        self.assertEqual(company.district, LONG_DISTRICT)
+        self.assertEqual(company.partner_id.legal_name, LONG_LEGAL_NAME)
+        self.assertEqual(company.partner_id.district, LONG_DISTRICT)
 
     def test_company_vat_unformatted(self):
         company = self._br_company(vat=CNPJ_1_FORMATTED)

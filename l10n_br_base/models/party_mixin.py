@@ -61,8 +61,9 @@ class PartyMixin(models.AbstractModel):
         size=18,
     )
 
+    # No size on legal_name and district: a Char size silently truncates the
+    # value, and both are filled by the CNPJ and zip code lookups.
     legal_name = fields.Char(
-        size=128,
         help="Used in fiscal documents",
         # trigram GIN index to speed up the name_search ilike on legal_name.
         # Names carry accents and must match accent-insensitively; the index
@@ -86,9 +87,7 @@ class PartyMixin(models.AbstractModel):
         default=lambda self: self._default_country_id(),
     )
 
-    district = fields.Char(
-        size=32,
-    )
+    district = fields.Char()
 
     show_l10n_br = fields.Boolean(
         compute="_compute_show_l10n_br",
