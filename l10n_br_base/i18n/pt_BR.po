@@ -2089,7 +2089,7 @@ msgstr "BIC/Swift Code"
 #: model:ir.model.fields,field_description:l10n_br_base.field_account_setup_bank_manual_config__bra_bank_bic
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_bank__bra_bank_bic
 msgid "BIC/Swift Final Code."
-msgstr "BIC/Swift Final Code."
+msgstr "Código final BIC/Swift."
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_1703008
@@ -3597,7 +3597,7 @@ msgstr "Sistema Brasileiro de Pagamento Instantâneo (PIX)"
 #. module: l10n_br_base
 #: model:ir.model,name:l10n_br_base.model_l10n_br_base_party_mixin
 msgid "Brazilian partner and company data mixin"
-msgstr "Brazilian partner and company data mixin"
+msgstr "Mixin de dados brasileiros de parceiro e empresa"
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3108909
@@ -3939,7 +3939,7 @@ msgstr "CNPJ/Id Estrangeiro"
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__compe_member
 msgid "COMPE Member"
-msgstr "COMPE Member"
+msgstr "Participante da COMPE"
 
 #. module: l10n_br_base
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
@@ -10256,7 +10256,7 @@ msgstr "IE"
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_im_code
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_im_code
 msgid "IM"
-msgstr ""
+msgstr "IM"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__ispb_number
@@ -13595,7 +13595,7 @@ msgstr "Última Atualização em"
 #: model:ir.model.fields,help:l10n_br_base.field_account_setup_bank_manual_config__bra_bank_bic
 #: model:ir.model.fields,help:l10n_br_base.field_res_partner_bank__bra_bank_bic
 msgid "Last part of BIC/Swift Code."
-msgstr "Last part of BIC/Swift Code."
+msgstr "Parte final do código BIC/Swift."
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_2508406
@@ -16058,7 +16058,7 @@ msgstr "Natalândia"
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_country__nationality_code
 msgid "Nationality Code"
-msgstr "Nationality Code"
+msgstr "Código de nacionalidade"
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_1714203
@@ -21153,7 +21153,7 @@ msgstr "Ruy Barbosa"
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_city__siafi_code
 msgid "SIAFI Code"
-msgstr "SIAFI Code"
+msgstr "Código SIAFI"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_isuf_code
@@ -26722,7 +26722,7 @@ msgstr "Utinga"
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_company_tree
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_partner_tree
 msgid "VAT"
-msgstr "CNPJ/CPF"
+msgstr "Id Estrangeiro"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__vat_formatted_cnpj
@@ -26898,7 +26898,7 @@ msgstr "Vassouras"
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__vat
 msgid "Vat"
-msgstr "CNPJ/CPF"
+msgstr "Identificação fiscal"
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3171006
