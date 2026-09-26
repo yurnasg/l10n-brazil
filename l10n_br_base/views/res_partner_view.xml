@@ -21,17 +21,23 @@
         <field name="inherit_id" ref="base.view_partner_tree" />
         <field name="arch" type="xml">
             <field name="display_name" position="after">
+                <!-- each column is editable exactly where it shows the value:
+                     the multi-edit skips the rows where it is read-only, not
+                     hidden, and the inverse of vat_formatted_cnpj only applies
+                     to partners in Brazil -->
                 <field
                     name="vat_formatted_cnpj"
                     string="CNPJ/CPF"
                     optional="show"
-                    invisible="not show_br_vat_format"
+                    invisible="not show_br_vat_format or not show_l10n_br"
+                    readonly="not show_br_vat_format or not show_l10n_br"
                 />
                 <field
                     name="vat"
                     string="VAT"
                     optional="hide"
-                    invisible="show_br_vat_format"
+                    invisible="show_br_vat_format and show_l10n_br"
+                    readonly="show_br_vat_format and show_l10n_br"
                 />
             </field>
         </field>
