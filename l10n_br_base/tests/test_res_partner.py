@@ -1,7 +1,12 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 
+from lxml import etree
+
 from odoo.exceptions import ValidationError
+from odoo.tests import Form
+from odoo.tools.safe_eval import safe_eval
+from odoo.tools.view_validation import get_expression_field_names
 
 from .common import (
     CNPJ_1,
@@ -115,6 +120,92 @@ class PartnerVatTest(L10nBrBaseCase):
             {"name": "No Default Country"}
         )
         self.assertFalse(partner_us.country_id)
+
+
+class PartnerFormTest(L10nBrBaseCase):
+    """The forms and the contacts list hide vat for partners in Brazil and
+    show the editable vat_formatted_cnpj instead."""
+
+    def test_br_vat_editable_in_partner_form(self):
+        partner_form = Form(self.partner_model)
+        partner_form.name = "Form Person"
+        partner_form.country_id = self.br
+        partner_form.vat_formatted_cnpj = CPF_1_FORMATTED
+        partner = partner_form.save()
+        self.assertEqual(partner.vat, CPF_1)
+        self.assertEqual(partner.vat_formatted_cnpj, CPF_1_FORMATTED)
+
+    def test_edit_br_vat_in_form(self):
+        partner = self._person(vat=CPF_3)
+        with Form(partner) as partner_form:
+            partner_form.vat_formatted_cnpj = "111.444.777-35"
+        self.assertEqual(partner.vat, CPF_4)
+
+    def _list_cell(self, partner, field_name):
+        """The cell of partner in the column of field_name added by this
+        module to the contacts list, with its attributes evaluated as the web
+        client does."""
+        arch = etree.fromstring(self.partner_model.get_view(view_type="list")["arch"])
+        [column] = arch.xpath(
+            "//field[@name='display_name']"
+            f"/following-sibling::field[@name='{field_name}'][1]"
+        )
+
+        def evaluate(attribute):
+            expression = column.get(attribute, "False")
+            names = get_expression_field_names(expression)
+            return safe_eval(expression, {name: partner[name] for name in names})
+
+        hidden, read_only = evaluate("invisible"), evaluate("readonly")
+        if hidden:
+            return "hidden" if read_only else "hidden but editable"
+        return "read-only" if read_only else "editable"
+
+    def test_vat_editable_in_list_where_shown(self):
+        """In the list of a Brazilian company, a partner in Brazil shows its
+        CPF/CNPJ in the CNPJ/CPF column, and the other partners their VAT in
+        the VAT column; in other companies every partner uses the VAT column.
+        Each column is editable exactly where it shows the value: the
+        multi-edit only skips the rows where it is read-only, and a value
+        typed in vat_formatted_cnpj of a foreign partner would be lost."""
+        br_partner = self._person(vat=CPF_3)
+        foreign_partner = self._company(country_id=self.us.id, vat=FOREIGN_VAT)
+        us_company = self.env["res.company"].create(
+            {"name": "US Company", "country_id": self.us.id}
+        )
+        in_brazil = {"vat_formatted_cnpj": "editable", "vat": "hidden"}
+        elsewhere = {"vat_formatted_cnpj": "hidden", "vat": "editable"}
+        for partner, expected in (
+            (br_partner, in_brazil),
+            (foreign_partner, elsewhere),
+            (br_partner.with_company(us_company), elsewhere),
+            (foreign_partner.with_company(us_company), elsewhere),
+        ):
+            with self.subTest(partner=partner.name, company=partner.env.company.name):
+                cells = {name: self._list_cell(partner, name) for name in expected}
+                self.assertEqual(cells, expected)
+
+    def test_edit_br_vat_in_list(self):
+        """For a partner in Brazil the list only sends vat_formatted_cnpj, as
+        its vat is read-only there."""
+        partner = self._person(vat=CPF_3)
+        partner.write({"vat_formatted_cnpj": "111.444.777-35"})
+        self.assertEqual(partner.vat, CPF_4)
+
+    def test_change_country_keeps_vat(self):
+        """Leaving Brazil empties vat_formatted_cnpj; that must not be
+        copied to the vat."""
+        partner = self._person(vat=CPF_3)
+        with Form(partner) as partner_form:
+            partner_form.country_id = self.us
+            self.assertEqual(partner_form.vat, CPF_3)
+        self.assertEqual(partner.vat, CPF_3)
+
+    def test_clear_country_keeps_vat(self):
+        partner = self._person(vat=CPF_3)
+        with Form(partner) as partner_form:
+            partner_form.country_id = self.env["res.country"]
+        self.assertEqual(partner.vat, CPF_3)
 
 
 class PartnerSearchTest(L10nBrBaseCase):

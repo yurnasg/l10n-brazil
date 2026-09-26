@@ -1,5 +1,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+from odoo.tests import Form
 
 from .common import (
     CNPJ_1,
@@ -42,6 +43,21 @@ class CompanyTest(L10nBrBaseCase):
         company = self._br_company(vat=CNPJ_1_FORMATTED)
         self.assertEqual(company.vat, CNPJ_1)
         self.assertEqual(company.partner_id.vat, CNPJ_1)
+
+    def test_br_vat_editable_in_company_form(self):
+        company_form = Form(self.env["res.company"])
+        company_form.name = "Form Company"
+        company_form.country_id = self.br
+        company_form.vat_formatted_cnpj = CNPJ_1_FORMATTED
+        company = company_form.save()
+        self.assertEqual(company.vat, CNPJ_1)
+        self.assertEqual(company.partner_id.vat, CNPJ_1)
+
+    def test_company_change_country_keeps_vat(self):
+        company = self._br_company(vat=CNPJ_1)
+        with Form(company) as company_form:
+            company_form.country_id = self.us
+        self.assertEqual(company.vat, CNPJ_1)
 
     def test_company_onchange_state_clears_ie(self):
         company = self.env["res.company"].new(
