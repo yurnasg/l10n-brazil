@@ -27,6 +27,8 @@ class PartyMixin(models.AbstractModel):
     vat_formatted_cnpj = fields.Char(
         string="VAT Formatted (Brazil)",
         compute="_compute_vat_formatted_cnpj",
+        # editable: the partner and company forms show this field instead of
+        # vat for Brazilian records
         inverse="_inverse_vat_formatted_cnpj",
         help="CNPJ or CPF formatted with proper punctuation and special characters",
     )
@@ -162,13 +164,22 @@ class PartyMixin(models.AbstractModel):
             record.vat_formatted_cnpj = vat_formatted_cnpj
 
     def _inverse_vat_formatted_cnpj(self):
-        """Write user edits of the formatted CNPJ/CPF back to vat, unformatted."""
-        for record in self:
-            record.vat = (
-                misc.punctuation_rm(record.vat_formatted_cnpj)
-                if record.vat_formatted_cnpj
-                else False
-            )
+        # Only Brazilian records show this field. For the others it is
+        # computed empty (e.g. right after the country changed) and must not
+        # clear their vat.
+        for record in self.filtered(lambda rec: rec.country_id.code == "BR"):
+            # write() stores the Brazilian VAT unformatted
+            record.vat = record.vat_formatted_cnpj
+
+    @api.onchange("vat_formatted_cnpj")
+    def _onchange_vat_formatted_cnpj(self):
+        # The form also sends the hidden vat on save, so it must follow the
+        # typed value (the inverse alone runs too late). Same restriction to
+        # Brazilian records as the inverse.
+        if self.country_id.code == "BR" and self.vat_formatted_cnpj != (
+            cnpj_cpf.formata(self.vat or "")
+        ):
+            self.vat = self.vat_formatted_cnpj
 
     @api.depends_context("company")
     def _compute_show_br_vat_format(self):
@@ -210,9 +221,6 @@ class PartyMixin(models.AbstractModel):
         """
         if not isinstance(vals, dict):
             return
-        vat = vals.get("vat")
-        if not vat:
-            return
         country_id = vals.get("country_id")
         if country_id:
             country = self.env["res.country"].browse(country_id)
@@ -220,7 +228,14 @@ class PartyMixin(models.AbstractModel):
             country = self.country_id
         else:
             country = self.env.company.country_id
-        if country and country.code == "BR":
+        if not country or country.code != "BR":
+            return
+        vat = vals.get("vat")
+        if not vat and vals.get("vat_formatted_cnpj"):
+            # The company form (and RPC callers) can send `vat: False`
+            # alongside `vat_formatted_cnpj`; promote it before super() runs.
+            vat = vals["vat_formatted_cnpj"]
+        if vat:
             vals["vat"] = misc.punctuation_rm(str(vat))
 
     @api.model_create_multi
