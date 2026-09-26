@@ -1,7 +1,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+from lxml import etree
 
 from odoo.exceptions import ValidationError
+from odoo.tests import Form
 
 from .common import (
     CNPJ_1,
@@ -119,6 +121,60 @@ class PartnerVatTest(L10nBrBaseCase):
             {"name": "No Default Country"}
         )
         self.assertFalse(partner_us.country_id)
+
+
+class PartnerFormLabelTest(L10nBrBaseCase):
+    def test_rg_visible_for_br_people_only(self):
+        """The RG is shown, with its label, for Brazilian people only: a
+        foreign person has the vat, which l10n_br_nfe sends as idEstrangeiro
+        before the RG."""
+        person_form = Form(self.partner_model)
+        person_form.name = "Person"
+        person_form.country_id = self.br
+        person_form.l10n_br_rg_code = "12.345.678-9"
+        foreign_form = Form(self.partner_model)
+        foreign_form.name = "Foreign person"
+        foreign_form.country_id = self.us
+        with self.assertRaises(AssertionError):
+            foreign_form.l10n_br_rg_code = "12.345.678-9"
+        company_form = Form(self.partner_model)
+        company_form.company_type = "company"
+        company_form.name = "Company"
+        company_form.country_id = self.br
+        with self.assertRaises(AssertionError):
+            company_form.l10n_br_rg_code = "12.345.678-9"
+
+    def test_ie_visible_for_br_commercial_partners_only(self):
+        company_form = Form(self.partner_model)
+        company_form.company_type = "company"
+        company_form.name = "BR Company"
+        company_form.country_id = self.br
+        company_form.state_id = self.state_sp
+        company_form.l10n_br_ie_code = IE_SP
+        foreign_form = Form(self.partner_model)
+        foreign_form.company_type = "company"
+        foreign_form.name = "US Company"
+        foreign_form.country_id = self.us
+        with self.assertRaises(AssertionError):
+            foreign_form.l10n_br_ie_code = "123"
+        contact_form = Form(self.partner_model)
+        contact_form.name = "Contact"
+        contact_form.parent_id = company_form.save()
+        with self.assertRaises(AssertionError):
+            contact_form.l10n_br_ie_code = IE_SP
+
+    def test_foreign_vat_label_in_partner_form(self):
+        """The foreign VAT is labeled VAT. A label bound to the vat would get
+        the vat_label of the company's country from the core
+        format.vat.label.mixin: CNPJ/CPF in a Brazilian company."""
+        arch = etree.fromstring(self.partner_model.get_view(view_type="form")["arch"])
+        labels = arch.xpath(
+            "//*[@invisible='show_l10n_br']/descendant-or-self::*"
+            "[self::label or contains(@class, 'o_form_label')]"
+        )
+        self.assertEqual(
+            [label.get("string") or label.text for label in labels], ["VAT"]
+        )
 
 
 class PartnerSearchTest(L10nBrBaseCase):

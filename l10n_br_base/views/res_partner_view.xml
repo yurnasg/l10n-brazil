@@ -59,21 +59,29 @@
                 </div>
                 <field name="legal_name" nolabel="1" invisible="not show_l10n_br" />
                 <div invisible="not show_l10n_br">
-                    <label for="vat" string="CPF" invisible="is_company" />
                     <label
-                        for="vat"
+                        for="vat_formatted_cnpj"
+                        string="CPF"
+                        invisible="is_company"
+                    />
+                    <label
+                        for="vat_formatted_cnpj"
                         string="CNPJ/Vat Number"
                         invisible="not is_company"
                     />
                 </div>
+                <!-- not a label bound to the field: the core format.vat.label.mixin
+                     gives label[@for='vat'] the vat_label of the company's country
+                     (CNPJ/CPF), and l10n_br_cnpj_search replaces this field -->
+                <div class="o_form_label" invisible="show_l10n_br">VAT</div>
                 <field name="vat" nolabel="1" invisible="show_l10n_br" />
                 <field
                     name="vat_formatted_cnpj"
                     nolabel="1"
                     invisible="not show_l10n_br"
                 />
-                <div invisible="not show_l10n_br">
-                    <label for="l10n_br_rg_code" string="RG" invisible="is_company" />
+                <div invisible="is_company or not show_l10n_br">
+                    <label for="l10n_br_rg_code" string="RG" />
                 </div>
                 <field
                     name="l10n_br_rg_code"
@@ -91,7 +99,7 @@
                     colspan="4"
                     name="l10n_br_ie_code"
                     nolabel="1"
-                    invisible="not is_company and parent_id and not show_l10n_br"
+                    invisible="not show_l10n_br or (not is_company and parent_id)"
                 />
             </xpath>
             <page position="after" name="sales_purchases">
