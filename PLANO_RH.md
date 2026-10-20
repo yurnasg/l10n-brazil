@@ -13,7 +13,11 @@ com um registro da **base legal** (para validar vigência) e do **que já foi me
 - "Cedido" publicado é ambíguo → sinal de revisão. Formato: **específico + geral**.
 - Endereço: campos brasileiros (cidade é o mais importante), **sincronizados com o endereço nativo**; sem busca de CEP agora.
 
-**Situação (13/09/2026) — fases 0 a 4 executadas localmente, nada commitado.**
+**Situação (20/10/2026) — Branch rebaseada sobre o upstream 18.0 (d9fcf6b393).**
+- **Rebase & Conflitos:** Rebase concluído com sucesso sobre o upstream mais recente; conflitos no party_mixin.py, 
+es_partner_view.xml, __manifest__.py e i18n resolvidos; dados de demonstração (demo/) atualizados para os novos modelos.
+- **Validação técnica:** 0 erros de sintaxe (python -m compileall limpo em todos os módulos).
+- **Alinhamento com Mantenedores:** Guia de perguntas e validação de overengineering consolidado em QUESTIONARIO_DEVS_RH.md.
 - **Validação:**
   - 192 testes (base + CRM + RH + contrato, com `pt_BR`), 0 falhas;
   - atualização publicada → atual sem ERROR/WARNING;
