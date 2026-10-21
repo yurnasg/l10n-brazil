@@ -89,25 +89,35 @@ class HrContract(models.Model):
         related="resignation_cause_id.code",
     )
 
-    @api.onchange("job_id")
-    def set_job_in_employee(self):
-        """
-        Definir o campo função no funcionário.
-        Caso o funcionário venha a ter um segundo contrato, popular o campo
-        no employee. Caso tenha uma alteração contratual, popular o campo
-        """
+    @api.onchange("employee_id")
+    def _onchange_employee_id_set_default_job(self):
         for record in self:
-            if record.employee_id:
-                if not record.job_id == record.employee_id.job_id:
-                    record.employee_id.with_context(alteracaocontratual=True).write(
-                        {"job_id": record.job_id.id}
-                    )
+            if record.employee_id and not record.job_id:
+                record.job_id = record.employee_id.job_id
+
+    def _sync_employee_job(self):
+        for record in self:
+            if (
+                record.employee_id
+                and record.job_id
+                and record.state in ("draft", "open")
+                and record.job_id != record.employee_id.job_id
+            ):
+                record.employee_id.with_context(alteracaocontratual=True).write(
+                    {"job_id": record.job_id.id}
+                )
 
     @api.model_create_multi
     def create(self, vals_list):
         res = super().create(vals_list)
-        for vals in vals_list:
-            if vals.get("department_id") and vals.get("employee_id"):
-                employee = self.env["hr.employee"].browse(vals.get("employee_id"))
-                employee.department_id = vals.get("department_id")
+        for record in res:
+            if record.department_id and record.employee_id:
+                record.employee_id.department_id = record.department_id
+        res._sync_employee_job()
+        return res
+
+    def write(self, vals):
+        res = super().write(vals)
+        if "job_id" in vals or "state" in vals:
+            self._sync_employee_job()
         return res
