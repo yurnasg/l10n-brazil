@@ -59,7 +59,6 @@
                     groups="hr.group_hr_manager,hr.group_hr_user"
                     invisible="company_country_code not in (False, 'BR')"
                 >
-                    <form string="Documents" version="7.0">
                         <group>
                             <group name="ctps" string="CTPS">
                                 <field name="ctps" string="Number" />
@@ -122,7 +121,6 @@
                                 <field name="mother_name" />
                             </group>
                         </group>
-                    </form>
                 </page>
             </xpath>
             <xpath expr="//page[@name='public']" position="after">

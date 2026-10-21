@@ -68,7 +68,6 @@ class HrEmployee(models.Model):
             ("2", "Second Category"),
             ("3", "Third Category"),
         ],
-        default="3",
         groups="hr.group_hr_user",
     )
 
@@ -219,6 +218,5 @@ class HrEmployee(models.Model):
     @api.model
     def _get_marital_status_selection(self):
         return super()._get_marital_status_selection() + [
-            ("common_law_marriage", _("Common law marriage")),
             ("separated", _("Separated")),
         ]

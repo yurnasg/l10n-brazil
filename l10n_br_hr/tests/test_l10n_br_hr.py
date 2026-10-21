@@ -82,3 +82,13 @@ class TestL10nBr(TransactionCase):
         )
         with self.assertRaises(ValidationError):
             emp_no_country.write({"cpf": "123.456.789-00"})
+
+    def test_no_phantom_reservist_default_and_no_duplicate_marital(self):
+        emp = self.env["hr.employee"].create({"name": "Test Defaults"})
+        self.assertFalse(emp.cresv_categ)
+        marital_keys = [
+            key
+            for key, _label in self.env["hr.employee"]._get_marital_status_selection()
+        ]
+        self.assertIn("cohabitant", marital_keys)
+        self.assertNotIn("common_law_marriage", marital_keys)

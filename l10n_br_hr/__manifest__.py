@@ -19,7 +19,6 @@
         "views/l10n_br_hr_cbo_view.xml",
         "views/hr_employee_view.xml",
         "views/hr_job_view.xml",
-        "views/inherited_hr_contract.xml",
     ],
     "demo": [
         "demo/hr_department_demo.xml",
