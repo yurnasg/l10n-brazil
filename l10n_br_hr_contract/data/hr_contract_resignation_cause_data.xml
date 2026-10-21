@@ -11,7 +11,7 @@
     <record id="hr_contract_resignation_11" model="hr.contract.resignation.cause">
         <field
             name="name"
-        >Rescisão de contrato de trabalho por justa causa e iniciativa do empregador ou demissão de servidor</field>
+        >Rescisão de contrato de trabalho sem justa causa por iniciativa do empregador ou exoneração de ofício de servidor</field>
         <field name="code">11</field>
         <field name="fgts_withdraw_code">01</field>
     </record>

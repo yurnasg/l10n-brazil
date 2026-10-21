@@ -17,14 +17,14 @@ class TestL10nBrContract(TransactionCase):
                 #     self.env["resource.calendar"].search([])[0].id,
                 "admission_type_id": self.env["hr.contract.admission.type"]
                 .search([])[0]
-                .code,
+                .id,
                 "labor_bond_type_id": self.env["hr.contract.labor.bond.type"]
                 .search([])[0]
-                .code,
+                .id,
                 "labor_regime_id": self.env["hr.contract.labor.regime"]
                 .search([])[0]
-                .code,
-                "salary_unit": self.env["hr.contract.salary.unit"].search([])[0].code,
+                .id,
+                "salary_unit": self.env["hr.contract.salary.unit"].search([])[0].id,
                 "union_cnpj": "00.874.955/0001-78",
                 "union_entity_code": "DU",
                 "discount_union_contribution": True,
@@ -33,7 +33,7 @@ class TestL10nBrContract(TransactionCase):
                 "resignation_date": "2016-06-20",
                 "resignation_cause_id": self.env["hr.contract.resignation.cause"]
                 .search([])[0]
-                .code,
+                .id,
                 "notice_of_termination_id": self.env["hr.contract.notice.termination"]
                 .search([])[0]
                 .id,
@@ -96,3 +96,33 @@ class TestL10nBrContract(TransactionCase):
             "The resignation cause name by name_get is not valid,"
             " expected 'code - name'",
         )
+
+    def test_contract_job_sync_does_not_wipe_employee_job(self):
+        jobs = self.env["hr.job"].search([], limit=2)
+        emp = self.env["hr.employee"].create(
+            {"name": "Job Sync Employee", "job_id": jobs[0].id}
+        )
+        # Creating a contract without job_id must not clear employee.job_id
+        contract = self.env["hr.contract"].create(
+            {
+                "name": "Contract Without Job",
+                "employee_id": emp.id,
+                "job_id": False,
+                "wage": 3000,
+                "date_start": "2025-01-01",
+                "state": "open",
+            }
+        )
+        self.assertEqual(emp.job_id, jobs[0])
+        # Updating job on a closed contract must not overwrite employee's active job
+        contract.write({"state": "close", "job_id": jobs[1].id})
+        self.assertEqual(emp.job_id, jobs[0])
+        # Updating job on an active contract updates employee.job_id
+        contract.write({"state": "open", "job_id": jobs[1].id})
+        self.assertEqual(emp.job_id, jobs[1])
+
+    def test_resignation_cause_10_and_11_distinct(self):
+        cause_10 = self.env.ref("l10n_br_hr_contract.hr_contract_resignation_10")
+        cause_11 = self.env.ref("l10n_br_hr_contract.hr_contract_resignation_11")
+        self.assertNotEqual(cause_10.name, cause_11.name)
+        self.assertIn("sem justa causa", cause_11.name)
