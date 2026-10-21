@@ -16,7 +16,24 @@ class HrEmployee(models.Model):
     _inherit = "hr.employee"
 
     def _default_country(self):
-        return self.env["res.country"].search([("code", "=", "BR")])
+        company_country = self.env.company.country_id
+        if not company_country or company_country.code == "BR":
+            return self.env.ref("base.br", raise_if_not_found=False)
+        return False
+
+    country_of_birth = fields.Many2one(
+        comodel_name="res.country", default=_default_country
+    )
+
+    @api.onchange("birth_city_id")
+    def _onchange_birth_city_id(self):
+        if self.birth_city_id:
+            self.place_of_birth = self.birth_city_id.name
+
+    @api.onchange("country_of_birth")
+    def _onchange_country_of_birth(self):
+        if self.country_of_birth and self.country_of_birth.code != "BR":
+            self.birth_city_id = False
 
     birth_city_id = fields.Many2one(comodel_name="res.city", groups="hr.group_hr_user")
 
@@ -44,6 +61,7 @@ class HrEmployee(models.Model):
     ctps_uf_id = fields.Many2one(
         string="CTPS district",
         comodel_name="res.country.state",
+        domain="[('country_id.code', '=', 'BR')]",
         groups="hr.group_hr_user",
     )
 
@@ -144,6 +162,7 @@ class HrEmployee(models.Model):
     identity_uf_id = fields.Many2one(
         string="ID expedition district",
         comodel_name="res.country.state",
+        domain="[('country_id.code', '=', 'BR')]",
         groups="hr.group_hr_user",
     )
 
@@ -255,10 +274,19 @@ class HrEmployee(models.Model):
                     )
                 )
 
-    @api.constrains("vat")
+    @api.constrains("vat", "country_id", "company_id")
     def _check_cpf(self):
+        br_country = self.env.ref("base.br")
         for record in self:
-            check_cnpj_cpf(record.env, record.vat, record.country_id)
+            company_country = (
+                record.company_id.country_id or self.env.company.country_id
+            )
+            if (
+                not company_country
+                or company_country == br_country
+                or record.country_id == br_country
+            ):
+                check_cnpj_cpf(record.env, record.vat, br_country)
 
     @api.depends("vat", "country_id")
     def _compute_vat_formatted_cnpj(self):

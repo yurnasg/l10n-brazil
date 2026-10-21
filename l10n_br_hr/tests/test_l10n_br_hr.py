@@ -6,6 +6,7 @@ class TestL10nBr(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env.company.country_id = cls.env.ref("base.br")
 
         cls.employee = cls.env["hr.employee"]
         cls.employee = cls.employee.create(
@@ -139,3 +140,18 @@ class TestL10nBr(TransactionCase):
             "1 - Branca",
             "The ethnicity get is not valid, expectded" " '1 - Branca'",
         )
+
+    def test_document_uf_domains_and_cpf_validation_without_country(self):
+        self.assertEqual(
+            self.env["hr.employee"]._fields["ctps_uf_id"].domain,
+            "[('country_id.code', '=', 'BR')]",
+        )
+        self.assertEqual(
+            self.env["hr.employee"]._fields["identity_uf_id"].domain,
+            "[('country_id.code', '=', 'BR')]",
+        )
+        emp_no_country = self.env["hr.employee"].create(
+            {"name": "Employee Without Country", "country_id": False}
+        )
+        with self.assertRaises(ValidationError):
+            emp_no_country.write({"vat": "123.456.789-00"})
