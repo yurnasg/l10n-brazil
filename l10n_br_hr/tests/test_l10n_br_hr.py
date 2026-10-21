@@ -67,3 +67,18 @@ class TestL10nBr(TransactionCase):
             "1 - Branca",
             "The ethnicity get is not valid, expectded" " '1 - Branca'",
         )
+
+    def test_document_uf_domains_and_cpf_validation_without_country(self):
+        self.assertEqual(
+            self.env["hr.employee"]._fields["ctps_uf_id"].domain,
+            "[('country_id.code', '=', 'BR')]",
+        )
+        self.assertEqual(
+            self.env["hr.employee"]._fields["identity_uf_id"].domain,
+            "[('country_id.code', '=', 'BR')]",
+        )
+        emp_no_country = self.env["hr.employee"].create(
+            {"name": "Employee Without Country", "country_id": False}
+        )
+        with self.assertRaises(ValidationError):
+            emp_no_country.write({"cpf": "123.456.789-00"})

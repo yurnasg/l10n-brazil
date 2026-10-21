@@ -7,17 +7,32 @@
         <field name="priority">999</field>
         <field name="arch" type="xml">
             <field name="place_of_birth" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute
+                    name="invisible"
+                    add="country_of_birth == %(base.br)d"
+                    separator=" or "
+                />
             </field>
             <field name="place_of_birth" position="after">
                 <field
                     name="birth_city_id"
+                    invisible="country_of_birth != %(base.br)d"
                     options="{'no_create': True, 'no_open': True}"
                 />
             </field>
-            <xpath expr="//field[@name='identification_id']" position="replace">
-                <field name="cpf" />
-            </xpath>
+            <field name="identification_id" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="company_country_code in (False, 'BR')"
+                    separator=" or "
+                />
+            </field>
+            <field name="identification_id" position="after">
+                <field
+                    name="cpf"
+                    invisible="company_country_code not in (False, 'BR')"
+                />
+            </field>
             <xpath expr="//page[@name='personal_information']" position="inside">
                 <group name="characteristics" string="Characteristics">
                     <field
@@ -42,6 +57,7 @@
                     name="documents"
                     string="Documents"
                     groups="hr.group_hr_manager,hr.group_hr_user"
+                    invisible="company_country_code not in (False, 'BR')"
                 >
                     <form string="Documents" version="7.0">
                         <group>
@@ -52,7 +68,6 @@
                                 <field
                                     name="ctps_uf_id"
                                     groups="hr.group_hr_user"
-                                    domain="[('country_id','=',country_id)]"
                                 />
                             </group>
                             <group name="civil_certificate" string="Civil certificate">
@@ -67,18 +82,25 @@
                                 <field
                                     name="identity_uf_id"
                                     groups="hr.group_hr_user"
-                                    domain="[('country_id','=',country_id)]"
                                 />
                                 <field
                                     name="identity_city_id"
                                     groups="hr.group_hr_user"
                                 />
                             </group>
-                            <group name="reservist" string="Reservist">
+                            <group
+                                name="reservist"
+                                string="Reservist"
+                                invisible="country_id and country_id != %(base.br)d"
+                            >
                                 <field name="creservist" string="Number" />
                                 <field name="cresv_categ" />
                             </group>
-                            <group name="vote_registration" string="Voter Registration">
+                            <group
+                                name="vote_registration"
+                                string="Voter Registration"
+                                invisible="country_id and country_id != %(base.br)d"
+                            >
                                 <field name="voter_title" string="Number" />
                                 <field name="voter_zone" />
                                 <field name="voter_section" />
@@ -116,9 +138,48 @@
                     </group>
                 </page>
             </xpath>
-            <xpath expr="//field[@name='country_id']" position="replace">
-                <field name="country_id" invisible="1" />
-            </xpath>
+            <separator name="has_work_permit" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="country_id == (company_country_id or %(base.br)d)"
+                    separator=" or "
+                />
+            </separator>
+            <field name="visa_no" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="country_id == (company_country_id or %(base.br)d)"
+                    separator=" or "
+                />
+            </field>
+            <field name="permit_no" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="country_id == (company_country_id or %(base.br)d)"
+                    separator=" or "
+                />
+            </field>
+            <field name="visa_expire" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="country_id == (company_country_id or %(base.br)d)"
+                    separator=" or "
+                />
+            </field>
+            <field name="work_permit_expiration_date" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="country_id == (company_country_id or %(base.br)d)"
+                    separator=" or "
+                />
+            </field>
+            <field name="has_work_permit" position="attributes">
+                <attribute
+                    name="invisible"
+                    add="country_id == (company_country_id or %(base.br)d)"
+                    separator=" or "
+                />
+            </field>
             <xpath
                 expr="//page[@name='hr_settings']//field[@name='employee_type']"
                 position="after"
