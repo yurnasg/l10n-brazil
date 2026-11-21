@@ -8,7 +8,7 @@ class HrIdentityType(models.Model):
     _name = "hr.identity.type"
     _description = "Identity Types"
 
-    name = fields.Char(string="Identity type", required=True)
+    name = fields.Char(string="Identity type", required=True, translate=True)
 
     initials = fields.Char(required=True)
 

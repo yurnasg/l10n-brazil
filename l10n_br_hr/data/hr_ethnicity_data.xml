@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!-- ETHNICITY -->
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Órgão / Sistema: Instituto Brasileiro de Geografia e Estatística (IBGE) / eSocial
+    - Tabela / Evento Oficial: Evento S-2200 - Campo racaCor
+      (1: Branca, 2: Preta, 3: Parda, 4: Amarela, 5: Indígena, 6: Não informado)
+    - Versão do Leiaute: eSocial Versão S-1.3 (NT 06/2026 rev.)
+    - Base Legal: Padrão Censitário de Autodeclaração Étnico-Racial do IBGE
+    ==============================================================================
+    -->
     <record id="ethnicity_1" model="hr.ethnicity">
-        <field name="name">Branca</field>
+        <field name="name">White</field>
         <field name="code">1</field>
     </record>
 
     <record id="ethnicity_2" model="hr.ethnicity">
-        <field name="name">Preta</field>
+        <field name="name">Black</field>
         <field name="code">2</field>
     </record>
 
     <record id="ethnicity_3" model="hr.ethnicity">
-        <field name="name">Parda</field>
+        <field name="name">Mixed-race</field>
         <field name="code">3</field>
     </record>
 
     <record id="ethnicity_4" model="hr.ethnicity">
-        <field name="name">Amarela</field>
+        <field name="name">Asian</field>
         <field name="code">4</field>
     </record>
 
     <record id="ethnicity_5" model="hr.ethnicity">
-        <field name="name">Indígena</field>
+        <field name="name">Indigenous</field>
         <field name="code">5</field>
     </record>
 
     <record id="ethnicity_6" model="hr.ethnicity">
-        <field name="name">Não Informado</field>
+        <field name="name">Not informed</field>
         <field name="code">6</field>
     </record>
 </odoo>

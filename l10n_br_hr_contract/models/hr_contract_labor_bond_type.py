@@ -6,8 +6,18 @@ from odoo import fields, models
 
 
 class HrContractLaborBondType(models.Model):
-    _name = "hr.contract.labor.bond.type"
-    _inherit = "l10n_br_hr_contract.data.abstract"
-    _description = "Labor bond type"
+    """Labor Bond Type according to RAIS/CAGED nomenclature.
 
-    name = fields.Char(string="Labor bond type")
+    Origin / Legal Basis:
+    - Official Source: Ministério do Trabalho e Previdência (MTP / MTE)
+    - Table: Tabela de Vínculos Empregatícios da RAIS / CAGED (Códigos 10 a 97)
+    - Reference: Manual de Orientação da RAIS (Ano-Base 2023/2024)
+    - Legal Basis: Portaria MTP / Decreto Federal nº 76.900/1975.
+    - Note: Legacy pre-eSocial table maintained for historical employee contracts.
+    """
+
+    _name = "hr.contract.labor.bond.type"
+    _inherit = "l10n_br_hr.data.abstract"
+    _description = "Labor Bond Type (RAIS / CAGED)"
+
+    name = fields.Char(string="Labor bond type", translate=True)

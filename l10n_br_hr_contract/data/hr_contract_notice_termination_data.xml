@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!-- NOTICE OF TERMINATION TYPE -->
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Base Legal: CLT Art. 487 e Lei Federal nº 12.506/2011 (Aviso Prévio Proporcional)
+    - eSocial: o evento S-2299 (leiaute S-1.3) não tem campo de tipo de aviso
+      prévio; informa a data do aviso (dtAvPrv) e se foi indenizado
+      (indPagtoAPI = S), que corresponde ao código 2.
+    ==============================================================================
+    -->
     <record id="notice_of_termination_1" model="hr.contract.notice.termination">
-        <field name="name">Trabalhado</field>
+        <field name="name">Worked</field>
+        <field name="code">1</field>
     </record>
 
     <record id="notice_of_termination_2" model="hr.contract.notice.termination">
-        <field name="name">Indenizado</field>
+        <field name="name">Indemnified</field>
+        <field name="code">2</field>
     </record>
 
     <record id="notice_of_termination_3" model="hr.contract.notice.termination">
-        <field name="name">Com justa causa</field>
-    </record>
-
-    <record id="notice_of_termination_4" model="hr.contract.notice.termination">
-        <field name="name">Sem justa causa</field>
+        <field name="name">Not applicable</field>
+        <field name="code">3</field>
     </record>
 </odoo>

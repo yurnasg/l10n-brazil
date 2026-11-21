@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!-- LABOR REGIME -->
+    <!--
+    ==============================================================================
+    ORIGEM E PROVENIÊNCIA DA TABELA:
+    - Órgão / Sistema: eSocial - Governo Federal / Ministério do Trabalho e Emprego
+    - Tabela / Evento Oficial: Evento S-2200 (Cadastramento Inicial e Admissão)
+      Campo: tpRegTrab (Tipo de Regime Trabalhista)
+    - Versão do Leiaute: eSocial Versão S-1.3 (NT 06/2026 rev.)
+    - Base Legal: CLT (Decreto-Lei nº 5.452/1943) e Legislação Previdenciária
+    ==============================================================================
+    -->
     <record id="labor_regime_clt" model="hr.contract.labor.regime">
-        <field name="name">Consolidação das Leis de Trabalho</field>
+        <field name="name">Consolidation of Labor Laws</field>
         <field name="short_name">CLT</field>
         <field name="code">1</field>
     </record>
 
     <record id="labor_regime_est" model="hr.contract.labor.regime">
-        <field name="name">Estatutário</field>
+        <field name="name">Statutory</field>
         <field name="short_name">EST</field>
         <field name="code">2</field>
     </record>
 
     <record id="labor_regime_rju" model="hr.contract.labor.regime">
-        <field name="name">Regime Jurídico Único</field>
+        <field name="name">Single Legal Regime</field>
         <field name="short_name">RJU</field>
         <field name="code">9</field>
+        <field name="active" eval="False" />
     </record>
 
     <record id="labor_regime_rjp" model="hr.contract.labor.regime">
-        <field name="name">Regime Jurídico Próprio</field>
+        <field name="name">Special Legal Regime</field>
         <field name="short_name">RJP</field>
         <field name="code">9</field>
+        <field name="active" eval="False" />
     </record>
 </odoo>
