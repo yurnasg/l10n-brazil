@@ -1,4 +1,5 @@
 from . import format_address_mixin
+from . import l10n_br_identity_document_type
 from . import res_bank
 from . import res_city
 from . import res_country_state
